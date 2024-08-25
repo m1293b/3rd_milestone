@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal assistant</title> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Personal assistant</title>
 </head>
+
 <body>
-    
-    <nav>
+
+    <nav class="nav">
         <ul>
-            <li><a href="{{ url_for('index') }}">Home</a></li>
-            <li><a href="{{ url_for('about') }}">About</a></li>
-            <li><a href="{{ url_for('contact') }}">Contact</a></li>
-            <li><a href="{{ url_for('login') }}">Login</a></li>
+            <li><a class="nav-link" href="{{ url_for('index') }}">Home</a></li>
+            <li><a class="nav-link" href="{{ url_for('about') }}">About</a></li>
+            <li><a class="nav-link" href="{{ url_for('contact') }}">Contact</a></li>
+            <li><a class="nav-link" href="{{ url_for('login') }}">Login</a></li>
         </ul>
     </nav>
 
     {% block content %}
-
-
     {% endblock content%}
 
 </body>
+<script src="{{ url_for('static', filename='js/scripts.js')}}"></script>
 </html>

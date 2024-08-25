@@ -22,6 +22,6 @@ def login():
 if __name__ == "__main__":
     app.run(
         host = os.environ.get("IP", "0.0.0.0"),
-        # port = int(os.environ.get("PORT", "5000")),
+        port = int(os.environ.get("PORT", "5001")), #don't forget to change the port to 5000 for the live site
         debug = True #delete this line before submiting project
     )
