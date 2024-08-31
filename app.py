@@ -4,20 +4,23 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 @app.route('/')
-def index():
+def index_page():
     return render_template("index.html")
 
 @app.route('/recipes')
-def recipes():
+def recipes_page():
     return render_template("recipes.html")
 
 @app.route('/about')
-def about():
+def about_page():
     return render_template("about.html")
 
 @app.route('/login')
-def login():
+def login_page():
     return render_template("login.html")
+
+def login_check():
+    print('hello')
 
 if __name__ == "__main__":
     app.run(

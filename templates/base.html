@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/cookbook.png')}}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" type="text/css">
     <title>No. 39 Recepies</title>
 </head>
 
@@ -24,10 +24,10 @@
                 aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="{{ url_for('index') }}">Main</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ url_for('recipes') }}">Recipes</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ url_for('about') }}">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ url_for('login') }}">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('index_page') }}">Main</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('recipes_page') }}">Recipes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('about_page') }}">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('login_page') }}">Login</a></li>
                 </ul>
             </div>
         </div>
