@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .navbar-main {
+        @apply top-0 fixed w-screen h-16 shadow-lg mx-auto bg-slate-700 text-cyan-100 flex;
+    }
+    .navbar-link-list {
+        @apply mt-2 mb-auto flex justify-end items-center mr-0 ml-auto;
+    }
+    .navbar-links {
+        @apply bg-inherit font-bold m-2 p-2 text-cyan-100 hover:bg-cyan-100 hover:text-slate-700 hover:rounded-md transition-all duration-250 ease-linear cursor-pointer;
+    }
+    .navbar-brand {
+        @apply ml-5 items-center text-center flex;
+    }
+    .nav-small-screen {
+    }
+}

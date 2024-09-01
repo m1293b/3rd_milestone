@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="icon" type="image/x-icon" href="../static/css/styles.css" />
+    <link rel="stylesheet" href="../static/css/styles.css" type="text/css" />
+    <title>No. 39 Recepies</title>
+  </head>
+
+  <body>
+    <!-- Responsive navbar-->
+    <nav class="navbar-main">
+      <a class="navbar-brand" href="#!">No. 39 Recipes</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <ul class="navbar-link-list nav-small-screen">
+        <li class="navbar-links">
+          <a class="nav-link" href="{{ url_for('index_page') }}">Main</a>
+        </li>
+        <li class="navbar-links">
+          <a class="nav-link" href="{{ url_for('recipes_page') }}">Recipes</a>
+        </li>
+        <li class="navbar-links">
+          <a class="nav-link" href="{{ url_for('about_page') }}">About</a>
+        </li>
+        <li class="navbar-links">
+          <a class="nav-link" href="{{ url_for('login_page') }}">Login</a>
+        </li>
+      </ul>
+    </nav>
+
+    {% block header %} {% endblock header %} {% block content %} {% endblock
+    content %}
+
+    <!-- Footer-->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">
+          Copyright &copy; No. 39 Recipes <span id="copyright"></span>
+        </p>
+      </div>
+    </footer>
+    <!-- JQuery JS -->
+    <script src="{{ url_for('static', filename='js/jquery-3.7.1.min.js')}}"></script>
+    <!-- Core theme JS-->
+    <script src="{{ url_for('static', filename='js/scripts.js')}}"></script>
+  </body>
+</html>
