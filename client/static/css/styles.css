@@ -603,26 +603,74 @@ video {
 }
 
 .navbar-brand {
-  margin-left: 1rem;
+  margin-left: 0.75rem;
   display: flex;
   align-items: center;
   text-align: center;
 }
 
+.brand-in-header {
+  display: none;
+  cursor: pointer;
+}
+
+@media (min-width: 640px) {
+  .brand-in-header {
+    visibility: visible;
+    left: 0px;
+    display: flex;
+  }
+}
+
+.menu-icon {
+  display: flex;
+  --tw-scale-x: 1.5;
+  --tw-scale-y: 1.5;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  cursor: pointer;
+}
+
+@media (min-width: 640px) {
+  .menu-icon {
+    left: 0px;
+    --tw-scale-x: 0;
+    --tw-scale-y: 0;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+}
+
+.menu-icon-nonclicked {
+  top: 300%;
+}
+
+.menu-icon-clicked {
+  top: 4rem;
+}
+
 .navbar-links-list-div {
   position: absolute;
-  left: 0px;
-  top: 9%;
+  left: 1.25rem;
+  top: -300%;
   display: flex;
-  min-height: 30vh;
-  width: 100%;
+  min-height: -moz-min-content;
+  min-height: min-content;
   justify-content: flex-start;
+  border-bottom-right-radius: 0.75rem;
+  border-bottom-left-radius: 0.75rem;
+  border-top-left-radius: -5;
+  border-top-right-radius: -5;
+  --tw-bg-opacity: 1;
+  background-color: rgb(51 65 85 / var(--tw-bg-opacity));
   padding-left: 1.25rem;
   padding-right: 1.25rem;
 }
 
 @media (min-width: 640px) {
   .navbar-links-list-div {
+    left: 0px;
+    top: 0.25rem;
+    margin-left: 33%;
+    min-height: 0px;
     justify-content: center;
   }
 }
@@ -643,6 +691,7 @@ video {
   cursor: pointer;
   border-radius: 0.25rem;
   padding: 0.5rem;
+  text-align: center;
   font-weight: 700;
   --tw-text-opacity: 1;
   color: rgb(207 250 254 / var(--tw-text-opacity));
@@ -721,12 +770,32 @@ video {
   left: 0px;
 }
 
+.left-5 {
+  left: 1.25rem;
+}
+
 .top-0 {
   top: 0px;
 }
 
-.top-\[9\%\] {
-  top: 9%;
+.top-1 {
+  top: 0.25rem;
+}
+
+.top-16 {
+  top: 4rem;
+}
+
+.top-2 {
+  top: 0.5rem;
+}
+
+.top-\[-300\%\] {
+  top: -300%;
+}
+
+.top-\[300\%\] {
+  top: 300%;
 }
 
 .m-0 {
@@ -843,8 +912,13 @@ video {
   height: 4rem;
 }
 
-.min-h-\[30vh\] {
-  min-height: 30vh;
+.min-h-0 {
+  min-height: 0px;
+}
+
+.min-h-min {
+  min-height: -moz-min-content;
+  min-height: min-content;
 }
 
 .w-\[92\%\] {
@@ -872,6 +946,12 @@ video {
 .scale-100 {
   --tw-scale-x: 1;
   --tw-scale-y: 1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.scale-150 {
+  --tw-scale-x: 1.5;
+  --tw-scale-y: 1.5;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -907,6 +987,10 @@ video {
   align-items: center;
 }
 
+.justify-start {
+  justify-content: flex-start;
+}
+
 .justify-end {
   justify-content: flex-end;
 }
@@ -921,6 +1005,16 @@ video {
 
 .rounded {
   border-radius: 0.25rem;
+}
+
+.rounded-b-xl {
+  border-bottom-right-radius: 0.75rem;
+  border-bottom-left-radius: 0.75rem;
+}
+
+.rounded-t-\[-5\] {
+  border-top-left-radius: -5;
+  border-top-right-radius: -5;
 }
 
 .border {
@@ -1099,6 +1193,36 @@ video {
 }
 
 @media (min-width: 640px) {
+  .tablet\:visible {
+    visibility: visible;
+  }
+
+  .tablet\:left-0 {
+    left: 0px;
+  }
+
+  .tablet\:top-1 {
+    top: 0.25rem;
+  }
+
+  .tablet\:ml-\[33\%\] {
+    margin-left: 33%;
+  }
+
+  .tablet\:flex {
+    display: flex;
+  }
+
+  .tablet\:min-h-0 {
+    min-height: 0px;
+  }
+
+  .tablet\:scale-0 {
+    --tw-scale-x: 0;
+    --tw-scale-y: 0;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
   .tablet\:justify-center {
     justify-content: center;
   }

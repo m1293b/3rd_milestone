@@ -26,9 +26,12 @@
     <header class="header">
       <nav class="navbar">
         <div class="navbar-brand">
-          <a class="" href="#!">No. 39 Recipes</a>
+          <a class="brand-in-header" href="#!">No. 39 Recipes</a>
+          <div class="menu-icon">
+            <ion-icon name="menu"></ion-icon>
+          </div>
         </div>
-        <div class="navbar-links-list-div">
+        <div class="navbar-links-list-div menu-icon-nonclicked">
           <ul class="navbar-link-list">
             <li class="navbar-links">
               <a class="nav-link" href="{{ url_for('index_page') }}">Main</a>
@@ -64,5 +67,14 @@
     <script src="{{ url_for('static', filename='js/jquery-3.7.1.min.js')}}"></script>
     <!-- Core theme JS-->
     <script src="{{ url_for('static', filename='js/scripts.js')}}"></script>
+    <!-- Ionicons JS -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>

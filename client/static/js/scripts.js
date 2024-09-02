@@ -1,10 +1,23 @@
-/*!
-* Start Bootstrap - Full Width Pics v5.0.6 (https://startbootstrap.com/template/full-width-pics)
-* Copyright 2013-2023 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-full-width-pics/blob/master/LICENSE)
-*/
-// This file is intentionally blank
-// Use this file to add JavaScript to your project
 
-// To have the current year displayed at the bottom of the page after the copyright
 $('#copyright').text(new Date().getFullYear());
+
+$(window).on('resize', function(){
+    const win = $(this);
+    if (win.width() >= 640) { 
+        $("div.navbar-links-list-div").css('top', '4px')
+     }
+    if (win.width() <= 640) { 
+        $("div.navbar-links-list-div").css('top', '-192px')
+    }
+});
+
+$('div.menu-icon').on('click', function () {
+    console.log($("div.navbar-links-list-div").css('top'))
+    if ($("div.navbar-links-list-div").css('top') === '-192px') {
+        $("div.navbar-links-list-div").css('top', '64px')
+    }
+    else if ($("div.navbar-links-list-div").css('top') === '64px') {
+        $("div.navbar-links-list-div").css('top', '-192px')
+    }
+})
+ 
