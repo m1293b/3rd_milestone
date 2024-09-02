@@ -1,15 +1,13 @@
-{% extends "base.html" %}
-
-{% block header %}
-    <!-- Header - set the background image for the header in the line below-->
-    <header class="py-5 bg-image-full">
-        <div class="text-center my-5">
-            <!-- This will only be needed on the home page for the registered users, not for every visitor -->
-            <!-- <img class="img-fluid rounded-circle mb-4" id='chef-profile-pic' src="{{ url_for('static', filename='assets/chef.png')}}" -->
-                <!-- alt="..." /> -->
-                <h1>{{page_title}}</h1>
-                <p class="text-white-50 mb-0">{{rand_recom_dish}}</p>
-        </div>
-    </header>
-    <!-- Content section-->
+{% extends "base.html" %} {% block header %}
+<!-- Header - set the background image for the header in the line below-->
+<header class="py-5 bg-image-full">
+  <div class="text-center my-5">
+    <!-- This will only be needed on the home page for the registered users, not for every visitor -->
+    <!-- <img class="img-fluid rounded-circle mb-4" id='chef-profile-pic' src="{{ url_for('static', filename='assets/chef.png')}}" -->
+    <!-- alt="..." /> -->
+    <h1>{{page_title}}</h1>
+    <p class="text-white-50 mb-0">{{rand_recom_dish}}</p>
+  </div>
+</header>
+<!-- Content section-->
 {% endblock header %}

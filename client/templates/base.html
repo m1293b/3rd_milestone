@@ -8,41 +8,46 @@
     />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <link rel="icon" type="image/x-icon" href="../static/css/styles.css" />
-    <link rel="stylesheet" href="../static/css/styles.css" type="text/css" />
-    <title>No. 39 Recepies</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="{{ url_for('static', filename='assets/cookbook.png') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+      type="text/css"
+    />
+    <title>No. 39 Recipes</title>
   </head>
 
   <body>
     <!-- Responsive navbar-->
-    <nav class="navbar-main">
-      <a class="navbar-brand" href="#!">No. 39 Recipes</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <ul class="navbar-link-list nav-small-screen">
-        <li class="navbar-links">
-          <a class="nav-link" href="{{ url_for('index_page') }}">Main</a>
-        </li>
-        <li class="navbar-links">
-          <a class="nav-link" href="{{ url_for('recipes_page') }}">Recipes</a>
-        </li>
-        <li class="navbar-links">
-          <a class="nav-link" href="{{ url_for('about_page') }}">About</a>
-        </li>
-        <li class="navbar-links">
-          <a class="nav-link" href="{{ url_for('login_page') }}">Login</a>
-        </li>
-      </ul>
-    </nav>
+    <header class="header">
+      <nav class="navbar">
+        <div class="navbar-brand">
+          <a class="" href="#!">No. 39 Recipes</a>
+        </div>
+        <div class="navbar-links-list-div">
+          <ul class="navbar-link-list">
+            <li class="navbar-links">
+              <a class="nav-link" href="{{ url_for('index_page') }}">Main</a>
+            </li>
+            <li class="navbar-links">
+              <a class="nav-link" href="{{ url_for('recipes_page') }}"
+                >Recipes</a
+              >
+            </li>
+            <li class="navbar-links">
+              <a class="nav-link" href="{{ url_for('about_page') }}">About</a>
+            </li>
+          </ul>
+        </div>
+        <div class="navbar-sign-in">
+          <button>Sign in</button>
+        </div>
+      </nav>
+    </header>
 
     {% block header %} {% endblock header %} {% block content %} {% endblock
     content %}
