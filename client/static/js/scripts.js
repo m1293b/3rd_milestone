@@ -3,16 +3,15 @@ $('#copyright').text(new Date().getFullYear());
 
 $(window).on('resize', function(){
     const win = $(this);
-    if (win.width() >= 640) { 
+    if (win.width() >= 655) { 
         $("div.navbar-links-list-div").css('top', '4px')
      }
-    if (win.width() <= 640) { 
+    if (win.width() <= 655) { 
         $("div.navbar-links-list-div").css('top', '-192px')
     }
 });
 
 $('div.menu-icon').on('click', function () {
-    console.log($("div.navbar-links-list-div").css('top'))
     if ($("div.navbar-links-list-div").css('top') === '-192px') {
         $("div.navbar-links-list-div").css('top', '64px')
     }
@@ -20,4 +19,3 @@ $('div.menu-icon').on('click', function () {
         $("div.navbar-links-list-div").css('top', '-192px')
     }
 })
- 
