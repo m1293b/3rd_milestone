@@ -558,9 +558,9 @@ video {
   width: 100%;
 }
 
-@media (min-width: 655px) {
+@media (min-width: 707px) {
   .container {
-    max-width: 655px;
+    max-width: 707px;
   }
 }
 
@@ -614,7 +614,7 @@ video {
   cursor: pointer;
 }
 
-@media (min-width: 655px) {
+@media (min-width: 707px) {
   .brand-in-header {
     visibility: visible;
     left: 0px;
@@ -630,7 +630,7 @@ video {
   cursor: pointer;
 }
 
-@media (min-width: 655px) {
+@media (min-width: 707px) {
   .menu-icon {
     left: 0px;
     --tw-scale-x: 0;
@@ -661,27 +661,29 @@ video {
   border-top-right-radius: -5;
   --tw-bg-opacity: 1;
   background-color: rgb(51 65 85 / var(--tw-bg-opacity));
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
-@media (min-width: 655px) {
+@media (min-width: 707px) {
   .navbar-links-list-div {
     position: static;
     left: 0px;
     top: 0.25rem;
     min-height: 0px;
     min-width: 50%;
-    justify-content: space-between;
+    justify-content: center;
   }
 }
 
 .navbar-link-list {
   display: flex;
+  min-width: 100%;
   flex-direction: column;
+  justify-content: space-between;
 }
 
-@media (min-width: 655px) {
+@media (min-width: 707px) {
   .navbar-link-list {
     flex-direction: row;
   }
@@ -709,7 +711,7 @@ video {
   color: rgb(51 65 85 / var(--tw-text-opacity));
 }
 
-@media (min-width: 655px) {
+@media (min-width: 707px) {
   .navbar-links {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
@@ -966,6 +968,10 @@ video {
   width: 100vw;
 }
 
+.min-w-\[100\%\] {
+  min-width: 100%;
+}
+
 .border-collapse {
   border-collapse: collapse;
 }
@@ -1107,6 +1113,11 @@ video {
   padding-right: 1.25rem;
 }
 
+.px-\[5\%\] {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
@@ -1229,7 +1240,7 @@ video {
   color: rgb(51 65 85 / var(--tw-text-opacity));
 }
 
-@media (min-width: 655px) {
+@media (min-width: 707px) {
   .tablet\:visible {
     visibility: visible;
   }
@@ -1269,7 +1280,11 @@ video {
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
-  .tablet\:justify-between {
-    justify-content: space-between;
+  .tablet\:flex-row {
+    flex-direction: row;
+  }
+
+  .tablet\:justify-center {
+    justify-content: center;
   }
 }

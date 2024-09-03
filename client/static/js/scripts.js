@@ -3,10 +3,10 @@ $('#copyright').text(new Date().getFullYear());
 
 $(window).on('resize', function(){
     const win = $(this);
-    if (win.width() >= 655) { 
+    if (win.width() >= 707) { 
         $("div.navbar-links-list-div").css('top', '4px')
      }
-    if (win.width() <= 655) { 
+    if (win.width() <= 707) { 
         $("div.navbar-links-list-div").css('top', '-192px')
     }
 });
