@@ -1,5 +1,6 @@
 .myvenv/
 .gitignore
+rapid_spoonacular_api
 
 # Logs
 logs

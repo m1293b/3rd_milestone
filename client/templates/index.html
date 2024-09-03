@@ -1,56 +1,15 @@
-{% extends "base.html" %} {% block header %}
-<!-- Header - set the background image for the header in the line below-->
-<header class="py-5 bg-image-full">
-  <div class="text-center my-5">
-    <!-- This will only be needed on the home page for the registered users, not for every visitor -->
-    <!-- <img class="img-fluid rounded-circle mb-4" id='chef-profile-pic' src="{{ url_for('static', filename='assets/chef.png')}}" -->
-    <!-- alt="..." /> -->
-    <h1>{{page_title}}</h1>
-    <p class="text-white-50 mb-0">{{rand_recom_dish}}</p>
-  </div>
-</header>
+{% extends "base.html" %} {% block content %}
 <!-- Content section-->
-{% endblock header %} {% block content %}
-<!-- Content section-->
-<section class="py-5">
-  <div class="container my-5">
-    <div class="row justify-content-center">
-      <div class="col-lg-12">
-        <h2 class="text-center">Recipes</h2>
-        <hr />
-        <hr />
-      </div>
-    </div>
-    <div class="row jusity-content-center text-center">
-      <div class="col-lg-6">
-        <p>Starters</p>
-      </div>
-      <div class="col-lg-6">
-        <p>Mains</p>
-      </div>
-    </div>
-    <div class="row jusity-content-center text-center">
-      <div class="col-lg-6">
-        <p>Desserts</p>
-      </div>
-      <div class="col-lg-6">
-        <p>Kids</p>
-      </div>
-    </div>
-  </div>
-</section>
+<div class="relative top-16 min-h-20 bg-golden">
+  <p>hello
+  </p>
+</div>
 <!-- Image element - set the background image for the header in the line below-->
-<div
-  class="py-5 bg-image-full"
-  style="
-    background-image: url('https://source.unsplash.com/4ulffa6qoKA/1200x800');
-  "
->
   <!-- Put anything you want here! The spacer below with inline CSS is just for demo purposes!-->
   <div style="height: 20rem"></div>
 </div>
 <!-- Content section-->
-<section class="py-5">
+<section class="">
   <div class="container my-5">
     <div class="row justify-content-center">
       <div class="col-lg-6">

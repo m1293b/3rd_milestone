@@ -4,7 +4,7 @@
 
 @layer components {
   .header {
-    @apply fixed top-0 w-screen h-16 mx-auto shadow-lg bg-slate-700 text-cyan-100 flex;
+    @apply fixed top-0 w-screen h-16 mx-auto shadow-lg bg-main-bg text-main-text flex;
   }
   .navbar {
     @apply flex justify-between items-center w-[92%] mx-auto;
@@ -25,15 +25,18 @@
     @apply top-16;
   }
   .navbar-links-list-div {
-    @apply bg-slate-700 absolute tablet:static min-h-min tablet:min-h-0 left-3 tablet:left-0 tablet:top-1 tablet:min-w-[50%] top-[-300%] flex tablet:justify-center px-[5%] justify-start rounded-b-xl rounded-t-[-5];
+    @apply bg-main-bg text-main-text absolute tablet:static min-h-min tablet:min-h-0 left-3 tablet:left-0 tablet:top-1 tablet:min-w-[50%] top-[-300%] flex tablet:justify-center px-[5%] justify-start rounded-b-xl rounded-t-[-5];
   }
   .navbar-link-list {
     @apply flex flex-col tablet:flex-row min-w-[100%] justify-between;
   }
   .navbar-links {
-    @apply font-bold tablet:mx-6 p-2 rounded text-cyan-100 hover:bg-cyan-100 hover:text-slate-700 hover:rounded-xl transition-all duration-200 ease-linear cursor-pointer text-center;
+    @apply font-bold tablet:mx-6 p-2 rounded text-main-text hover:bg-main-text hover:text-main-bg hover:rounded-xl transition-all duration-200 ease-linear cursor-pointer text-center;
   }
   .navbar-sign-in {
-    @apply font-bold mx-6 p-2 border-solid border border-yellow-400 rounded bg-yellow-400 text-slate-700 hover:bg-slate-700 hover:text-cyan-100 hover:rounded-md hover:border hover:border-solid hover:border-cyan-100 transition-all duration-200 ease-linear cursor-pointer;
+    @apply font-bold mx-6 p-2 border-solid border border-golden rounded bg-golden text-main-bg hover:bg-main-bg hover:text-golden hover:rounded-3xl hover:border hover:border-solid hover:border-golden transition-all duration-200 ease-linear cursor-pointer;
+  }
+  .nav {
+    position: ;
   }
 }
