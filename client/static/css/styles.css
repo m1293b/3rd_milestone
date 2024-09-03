@@ -719,7 +719,8 @@ video {
 }
 
 .navbar-sign-in {
-  margin: 0.5rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
   cursor: pointer;
   border-radius: 0.25rem;
   border-width: 1px;
@@ -824,6 +825,14 @@ video {
 
 .m-4 {
   margin: 1rem;
+}
+
+.m-5 {
+  margin: 1.25rem;
+}
+
+.m-6 {
+  margin: 1.5rem;
 }
 
 .m-auto {
