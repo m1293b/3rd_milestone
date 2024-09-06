@@ -4,7 +4,7 @@
 
 @layer components {
   .header {
-    @apply fixed top-0 w-screen h-16 mx-auto shadow-lg bg-main-bg text-main-text flex;
+    @apply fixed top-0 w-screen h-16 shadow-lg bg-main-bg text-main-text flex;
   }
   .navbar {
     @apply flex justify-between items-center w-[92%] mx-auto;
@@ -36,7 +36,10 @@
   .navbar-sign-in {
     @apply font-bold mx-6 p-2 border-solid border border-golden rounded bg-golden text-main-bg hover:bg-main-bg hover:text-golden hover:rounded-3xl hover:border hover:border-solid hover:border-golden transition-all duration-200 ease-linear cursor-pointer;
   }
-  .nav {
-    position: ;
+  .menu-icon {
+    @apply max-h-[15px] max-w-[15px];
+  }
+  .main-page {
+    @apply top-16 grid grid-flow-row grid-cols-1 tablet:grid-cols-2 gap-4;
   }
 }

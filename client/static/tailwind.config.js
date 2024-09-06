@@ -2,7 +2,7 @@
 module.exports = {
   mode: 'jit',
   // purge: ['../static/**/*.{js,jsx,ts,css,tsx,html}'],
-  content: ['../static/**/*.{js,jsx,ts,css,tsx,html}'],
+  content: ['../static/**/*.{html,js,jsx,ts,css,tsx}', '../templates/**/*.{html,js,jsx,ts,css,tsx}'],
   theme: {
     colors: {
       'transparent': 'transparent',
