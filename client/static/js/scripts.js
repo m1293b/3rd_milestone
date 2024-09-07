@@ -22,3 +22,5 @@ $("div.cone").on("click", function () {
     $("div.navbar-links-list-div").css("top", "-192px");
   }
 });
+
+// I have to find a way to move the dropdown menu above the rest of the body elements, so the links remain clickable
