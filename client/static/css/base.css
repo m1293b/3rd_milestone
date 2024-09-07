@@ -15,13 +15,10 @@
   .brand-in-header {
     @apply hidden tablet:visible tablet:flex tablet:left-0 cursor-pointer;
   }
-  .menu-icon {
-    @apply flex scale-150 tablet:scale-0 tablet:left-0 cursor-pointer;
-  }
-  .menu-icon-nonclicked {
+  .cone-nonclicked {
     @apply top-[300%];
   }
-  .menu-icon-clicked {
+  .cone-clicked {
     @apply top-16;
   }
   .navbar-links-list-div {
@@ -36,10 +33,29 @@
   .navbar-sign-in {
     @apply font-bold mx-6 p-2 border-solid border border-golden rounded bg-golden text-main-bg hover:bg-main-bg hover:text-golden hover:rounded-3xl hover:border hover:border-solid hover:border-golden transition-all duration-200 ease-linear cursor-pointer;
   }
-  .menu-icon {
-    @apply max-h-[15px] max-w-[15px];
-  }
   .main-page {
-    @apply top-16 grid grid-flow-row grid-cols-1 tablet:grid-cols-2 gap-4;
+    @apply relative top-16 grid grid-flow-row grid-cols-1 tablet:grid-cols-2 gap-4;
+  }
+  .cone {
+    width: 0;
+    height: 0;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    border-top: 20px solid #d2d6db;
+    border-radius: 33%;
+    @apply transition-all duration-300 ease-linear cursor-pointer;
+  }
+  .cone:after {
+    position: relative;
+    top: -7px;
+    left: -8px;
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 10px solid #334155;
+    border-radius: 33%;
+    @apply transition-all duration-300 ease-linear cursor-pointer;
   }
 }
