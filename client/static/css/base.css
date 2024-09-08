@@ -4,7 +4,7 @@
 
 @layer components {
   .header {
-    @apply fixed top-0 w-screen h-16 shadow-lg bg-main-bg text-main-text flex;
+    @apply fixed top-0 w-screen h-16 shadow-lg bg-main-bg text-main-text flex z-[1];
   }
   .navbar {
     @apply flex justify-between items-center w-[92%] mx-auto;
@@ -14,27 +14,6 @@
   }
   .brand-in-header {
     @apply hidden tablet:visible tablet:flex tablet:left-0 cursor-pointer;
-  }
-  .cone-nonclicked {
-    @apply top-[300%];
-  }
-  .cone-clicked {
-    @apply top-16;
-  }
-  .navbar-links-list-div {
-    @apply bg-main-bg text-main-text absolute tablet:static min-h-min tablet:min-h-0 left-3 tablet:left-0 tablet:top-1 tablet:min-w-[50%] top-[-300%] flex tablet:justify-center px-[5%] justify-start rounded-b-xl rounded-t-[-5];
-  }
-  .navbar-link-list {
-    @apply flex flex-col tablet:flex-row min-w-[100%] justify-between;
-  }
-  .navbar-links {
-    @apply font-bold tablet:mx-6 p-2 rounded text-main-text hover:bg-main-text hover:text-main-bg hover:rounded-xl transition-all duration-200 ease-linear cursor-pointer text-center;
-  }
-  .navbar-sign-in {
-    @apply font-bold mx-6 p-2 border-solid border border-golden rounded bg-golden text-main-bg hover:bg-main-bg hover:text-golden hover:rounded-3xl hover:border hover:border-solid hover:border-golden transition-all duration-200 ease-linear cursor-pointer;
-  }
-  .main-page {
-    @apply relative top-16 grid grid-flow-row grid-cols-1 tablet:grid-cols-2 gap-4;
   }
   .cone {
     width: 0;
@@ -57,5 +36,26 @@
     border-top: 10px solid #334155;
     border-radius: 33%;
     @apply transition-all duration-300 ease-linear cursor-pointer;
+  }
+  .cone-nonclicked {
+    @apply top-[300%];
+  }
+  .cone-clicked {
+    @apply top-16;
+  }
+  .navbar-links-list-div {
+    @apply absolute tablet:static bg-main-bg text-main-text min-h-min tablet:min-h-0 left-3 tablet:-left-32 tablet:top-1 tablet:min-w-[50%] top-[-300%] flex tablet:justify-center px-[5%] justify-start rounded-b-xl rounded-t-[-5] z-[-1] tablet:z-auto;
+  }
+  .navbar-link-list {
+    @apply flex flex-col tablet:flex-row min-w-[100%] justify-between;
+  }
+  .navbar-links {
+    @apply font-bold tablet:mx-6 p-2 rounded text-main-text hover:bg-main-text hover:text-main-bg hover:rounded-xl transition-all duration-200 ease-linear cursor-pointer text-center;
+  }
+  .navbar-sign-in {
+    @apply font-bold mx-6 p-2 border-solid border border-golden rounded bg-golden text-main-bg hover:bg-main-bg hover:text-golden hover:rounded-3xl hover:border hover:border-solid hover:border-golden transition-all duration-200 ease-linear cursor-pointer;
+  }
+  .main-page {
+    @apply relative top-16 grid grid-cols-1 tablet:grid-cols-2 gap-4;
   }
 }

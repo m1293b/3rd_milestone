@@ -579,6 +579,7 @@ video {
 .header {
   position: fixed;
   top: 0px;
+  z-index: 1;
   display: flex;
   height: 4rem;
   width: 100vw;
@@ -620,6 +621,38 @@ video {
   }
 }
 
+.cone {
+  width: 0;
+  height: 0;
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-top: 20px solid #d2d6db;
+  border-radius: 33%;
+  cursor: pointer;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+  transition-timing-function: linear;
+}
+
+.cone:after {
+  position: relative;
+  top: -7px;
+  left: -8px;
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 10px solid #334155;
+  border-radius: 33%;
+  cursor: pointer;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+  transition-timing-function: linear;
+}
+
 .cone-nonclicked {
   top: 300%;
 }
@@ -632,6 +665,7 @@ video {
   position: absolute;
   left: 0.75rem;
   top: -300%;
+  z-index: -1;
   display: flex;
   min-height: -moz-min-content;
   min-height: min-content;
@@ -651,8 +685,9 @@ video {
 @media (min-width: 720px) {
   .navbar-links-list-div {
     position: static;
-    left: 0px;
+    left: -8rem;
     top: 0.25rem;
+    z-index: auto;
     min-height: 0px;
     min-width: 50%;
     justify-content: center;
@@ -738,7 +773,6 @@ video {
   position: relative;
   top: 4rem;
   display: grid;
-  grid-auto-flow: row;
   grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 1rem;
 }
@@ -747,38 +781,6 @@ video {
   .main-page {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-}
-
-.cone {
-  width: 0;
-  height: 0;
-  border-left: 14px solid transparent;
-  border-right: 14px solid transparent;
-  border-top: 20px solid #d2d6db;
-  border-radius: 33%;
-  cursor: pointer;
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 300ms;
-  transition-timing-function: linear;
-}
-
-.cone:after {
-  position: relative;
-  top: -7px;
-  left: -8px;
-  content: "";
-  width: 0;
-  height: 0;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  border-top: 10px solid #334155;
-  border-radius: 33%;
-  cursor: pointer;
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 300ms;
-  transition-timing-function: linear;
 }
 
 .visible {
@@ -803,6 +805,10 @@ video {
 
 .relative {
   position: relative;
+}
+
+.-left-32 {
+  left: -8rem;
 }
 
 .left-0 {
@@ -831,6 +837,14 @@ video {
 
 .top-\[300\%\] {
   top: 300%;
+}
+
+.z-\[-1\] {
+  z-index: -1;
+}
+
+.z-\[1\] {
+  z-index: 1;
 }
 
 .m-0 {
@@ -986,6 +1000,10 @@ video {
 
 .justify-between {
   justify-content: space-between;
+}
+
+.gap-4 {
+  gap: 1rem;
 }
 
 .rounded {
@@ -1168,6 +1186,10 @@ video {
 
   .tablet\:static {
     position: static;
+  }
+
+  .tablet\:-left-32 {
+    left: -8rem;
   }
 
   .tablet\:left-0 {
