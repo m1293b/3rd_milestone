@@ -1,41 +1,39 @@
-{% extends "base.html" %} {% block header %}
-<!-- Header - set the background image for the header in the line below-->
-<header class="py-5 bg-image-full">
-  <div class="text-center my-5">
-    <!-- This will only be needed on the home page for the registered users, not for every visitor -->
-    <!-- <img class="img-fluid rounded-circle mb-4" id='chef-profile-pic' src="{{ url_for('static', filename='assets/chef.png')}}" -->
-    <!-- alt="..." /> -->
-    <h1>{{page_title}}</h1>
-    <p class="text-white-50 mb-0">{{rand_recom_dish}}</p>
-  </div>
-</header>
-<!-- Content section-->
-{% endblock header %} {% block content %}
+{% extends "base.html" %} {% block content %}
 
-<div class="relative mt-16">
-  <form action="{{ login_check }}">
-    <div class="">
-      <label for="email">Email address:</label>
+<div
+  class="relative mt-20 tablet:mt-60 mb-4 mx-2 tablet:mx-8 p-10 tablet:p-4 tablet:min-h-[500px] items-center justify-center border rounded-md border-main-bg shadow-lg"
+>
+  <h1 class="text-center mb-16 font-bold font-mono text-xl">Welcome back!</h1>
+  <form action="{{ login_check }}" class="m-8 tablet:min-h-fit">
+    <div class="tablet:m-4 grid grid-cols-1 tablet:grid-cols-2">
+      <label for="email" class="text-center mb-2">Email address:</label>
       <input
         type="email"
         name="email"
         id="email"
         placeholder="youremail@address.com"
-        class="form-control"
+        class="form-control border rounded-md border-main-bg shadow-sm p-[3px] text-center mb-2"
       />
     </div>
 
-    <div class="form-group">
-      <label for="password">Password:</label>
+    <div class="tablet:m-4 grid grid-cols-1 tablet:grid-cols-2">
+      <label for="password" class="text-center mb-2">Password:</label>
       <input
         type="password"
         name="password"
         id="password"
         placeholder="#tryharder"
-        class="form-control"
+        class="form-control border rounded-md border-main-bg shadow-sm text-center mb-2"
       />
+    </div>
+    <div class="grid grid-cols-1 tablet:grid-cols-2 justify-center items-center mt-8 gap-8 tablet:px-32">
+      <button class="border rounded-lg p-1">Login</button>
+      <button class="border rounded-lg p-1">Forgot password</button>
+      <button class="border rounded-lg p-1 tablet:col-span-2">Sign up</button>
     </div>
   </form>
 </div>
+
+<!-- update buttons -->
 
 {% endblock content %}
