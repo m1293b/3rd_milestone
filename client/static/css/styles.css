@@ -839,6 +839,10 @@ video {
   top: 300%;
 }
 
+.bottom-0 {
+  bottom: 0px;
+}
+
 .z-\[-1\] {
   z-index: -1;
 }
@@ -879,6 +883,10 @@ video {
 
 .ms-auto {
   margin-inline-start: auto;
+}
+
+.mt-16 {
+  margin-top: 4rem;
 }
 
 .block {
@@ -932,6 +940,22 @@ video {
 
 .w-screen {
   width: 100vw;
+}
+
+.w-\[\] {
+  width: ;
+}
+
+.w-\[100\] {
+  width: 100;
+}
+
+.w-\[100\%\] {
+  width: 100%;
+}
+
+.w-auto {
+  width: auto;
 }
 
 .min-w-\[100\%\] {

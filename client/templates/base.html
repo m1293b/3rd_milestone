@@ -18,7 +18,7 @@
       href="{{ url_for('static', filename='css/styles.css') }}"
       type="text/css"
     />
-    <title>No. 39 Recipes</title>
+    <title>{{ page_title }}</title>
   </head>
 
   <body>
@@ -45,18 +45,17 @@
           </ul>
         </div>
         <div class="navbar-sign-in">
-          <button>Sign in</button>
+          <button><a href="{{ url_for('login_page') }}">Sign in</a></button>
         </div>
       </nav>
     </header>
-    
-    {% block content %}
-    {% endblock content %}
+
+    {% block content %} {% endblock content %}
 
     <!-- Footer-->
-    <footer class="">
-      <div class="container">
-        <p class="m-0 text-center text-white">
+    <footer class="fixed bottom-0">
+      <div class="justify-center w-screen mb-2">
+        <p class="text-center">
           Copyright &copy; No. 39 Recipes <span id="copyright"></span>
         </p>
       </div>

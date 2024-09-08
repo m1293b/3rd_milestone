@@ -5,19 +5,19 @@ app = Flask(__name__, template_folder='../client/templates', static_folder='../c
 
 @app.route('/')
 def index_page():
-    return render_template("index.html", page_tile = 'Main page')
+    return render_template("index.html", page_title = 'Main page')
 
 @app.route('/recipes')
 def recipes_page():
-    return render_template("recipes.html", page_tile = 'Recipes page')
+    return render_template("recipes.html", page_title = 'Recipes page')
 
 @app.route('/about')
 def about_page():
-    return render_template("about.html", page_tile = 'About page')
+    return render_template("about.html", page_title = 'About page')
 
 @app.route('/login')
 def login_page():
-    return render_template("login.html", page_tile = 'Login page')
+    return render_template("login.html", page_title = 'Login page')
 
 def login_check():
     print('hello')
