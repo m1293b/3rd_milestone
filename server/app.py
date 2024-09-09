@@ -19,6 +19,14 @@ def about_page():
 def login_page():
     return render_template("login.html", page_title = 'Login page')
 
+@app.route('/signup')
+def signup_page():
+    return render_template("signup.html", page_title = 'Sign up page')
+
+@app.route('/forgot')
+def forgot_page():
+    return render_template("forgot.html", page_title = 'Forgot my password')
+
 def login_check():
     print('hello')
 

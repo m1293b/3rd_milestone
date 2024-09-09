@@ -1,10 +1,49 @@
 {% extends "base.html" %} {% block content %}
-<!-- Content section-->
 
-<div class="main-page">
-  <div class="cards">Starters</div>
-  <div class="cards">Mains</div>
-  <div class="cards">Desserts</div>
-  <div class="cards">Kids</div>
+<div
+  class="relative mt-20 tablet:mt-60 mb-4 mx-2 tablet:mx-8 p-10 tablet:p-4 tablet:min-h-[500px] items-center justify-center border rounded-md border-main-bg shadow-lg"
+>
+  <h1 class="text-center mb-16 font-bold font-mono text-xl">
+    Let's get you an account
+  </h1>
+  <form action="{{ login_check }}" class="m-8 tablet:min-h-fit">
+    <div class="tablet:m-4 grid grid-cols-1 tablet:grid-cols-2">
+      <label for="email" class="text-center mb-2">Email address:</label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="youremail@address.com"
+        class="form-control border rounded-md border-main-bg shadow-sm p-[3px] text-center mb-2"
+      />
+    </div>
+
+    <div class="tablet:m-4 grid grid-cols-1 tablet:grid-cols-2">
+      <label for="password" class="text-center mb-2">Password:</label>
+      <input
+        type="password"
+        name="password"
+        id="password"
+        placeholder="#tryharder"
+        class="form-control border rounded-md border-main-bg shadow-sm text-center mb-2"
+      />
+    </div>
+    <div
+      class="grid grid-cols-1 tablet:grid-cols-2 justify-center items-center mt-8 gap-8 tablet:px-32"
+    >
+      <button class="border rounded-lg p-1">
+        <a href="">Login</a>
+      </button>
+      <button class="border rounded-lg p-1">
+        <a href="{{ url_for('forgot_page')}}">Forgot password</a>
+      </button>
+      <button class="border rounded-lg p-1 tablet:col-span-2">
+        <a href="{{ url_for('signup_page')}}">Sign up</a>
+      </button>
+    </div>
+  </form>
 </div>
+
+<!-- update buttons -->
+
 {% endblock content %}
