@@ -32,12 +32,16 @@
       <button class="border rounded-lg p-1">
         <a href="">Login</a>
       </button>
-      <button class="border rounded-lg p-1">
-        <a href="{{ url_for('forgot_page')}}">Forgot password</a>
-      </button>
-      <button class="border rounded-lg p-1 tablet:col-span-2">
-        <a href="{{ url_for('signup_page')}}">Sign up</a>
-      </button>
+      <a
+        href="{{ url_for('forgot_page')}}"
+        class="border rounded-lg p-1 text-center"
+        >Forgot password</a
+      >
+      <a
+        href="{{ url_for('signup_page')}}"
+        class="border rounded-lg p-1 tablet:col-span-2 text-center"
+        >Sign up</a
+      >
     </div>
   </form>
 </div>
