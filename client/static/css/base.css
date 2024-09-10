@@ -58,4 +58,10 @@
   .main-page {
     @apply relative top-16 grid grid-cols-1 tablet:grid-cols-2 gap-4;
   }
+  .cards {
+    padding: 8px;
+    border: solid 1px #334155;
+    border-radius: 2px;
+    @apply m-2;
+  }
 }

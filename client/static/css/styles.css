@@ -783,6 +783,13 @@ video {
   }
 }
 
+.cards {
+  padding: 8px;
+  border: solid 1px #334155;
+  border-radius: 2px;
+  margin: 0.5rem;
+}
+
 .visible {
   visibility: visible;
 }
@@ -901,6 +908,11 @@ video {
 .mx-8 {
   margin-left: 2rem;
   margin-right: 2rem;
+}
+
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .my-5 {
@@ -1110,8 +1122,16 @@ video {
   gap: 1rem;
 }
 
+.gap-6 {
+  gap: 1.5rem;
+}
+
 .gap-8 {
   gap: 2rem;
+}
+
+.gap-2 {
+  gap: 0.5rem;
 }
 
 .rounded {
