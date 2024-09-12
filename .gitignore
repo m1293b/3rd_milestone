@@ -1,6 +1,7 @@
 .myvenv/
 .gitignore
 rapid_spoonacular_api
+__pycache__/
 
 # Logs
 logs

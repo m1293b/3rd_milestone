@@ -1048,6 +1048,10 @@ video {
   min-width: 100%;
 }
 
+.flex-auto {
+  flex: 1 1 auto;
+}
+
 .border-collapse {
   border-collapse: collapse;
 }
@@ -1268,6 +1272,10 @@ video {
   text-align: center;
 }
 
+.align-middle {
+  vertical-align: middle;
+}
+
 .font-mono {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
@@ -1459,6 +1467,14 @@ video {
 
   .tablet\:min-w-\[50\%\] {
     min-width: 50%;
+  }
+
+  .tablet\:max-w-\[\] {
+    max-width: ;
+  }
+
+  .tablet\:max-w-\[70\%\] {
+    max-width: 70%;
   }
 
   .tablet\:grid-cols-2 {
