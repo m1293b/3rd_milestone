@@ -1,8 +1,8 @@
 import os
 import user
 from flask import Flask, render_template, jsonify, request, flash
-if os.path.exists("env.py"):
-    import env
+# if os.path.exists("env.py"):
+#     import env
 
 app = Flask(__name__, template_folder='../client/templates', static_folder='../client/static')
 app.secret_key = os.environ.get("SECRET_KEY")

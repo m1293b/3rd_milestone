@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.4.10 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.11 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -1467,10 +1467,6 @@ video {
 
   .tablet\:min-w-\[50\%\] {
     min-width: 50%;
-  }
-
-  .tablet\:max-w-\[\] {
-    max-width: ;
   }
 
   .tablet\:max-w-\[70\%\] {
