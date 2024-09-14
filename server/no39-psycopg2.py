@@ -3,7 +3,7 @@ import app.py
 
 # connect to database
 
-connection = psycopg2.connect(dbname="no39_recipes", user={username}, password={password})
+connection = psycopg2.connect(dbname="no39_recipes")
 
 # build a cursor object of the database
 
