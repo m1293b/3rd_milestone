@@ -1,4 +1,4 @@
-.myvenv/
+.venv/
 .gitignore
 rapid_spoonacular_api
 __pycache__/

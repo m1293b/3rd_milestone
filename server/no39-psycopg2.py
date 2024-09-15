@@ -1,9 +1,9 @@
 import psycopg2
-import app.py
+# import app.py
 
 # connect to database
 
-connection = psycopg2.connect(dbname="no39_recipes")
+connection = psycopg2.connect(database="no39_recipes")
 
 # build a cursor object of the database
 
