@@ -1,5 +1,7 @@
 $("#copyright").text(new Date().getFullYear());
 
+// nav bar made responsive
+
 $(window).on("resize", function () {
   const win = $(this);
   if (win.width() >= 720) {
@@ -23,4 +25,9 @@ $("div.cone").on("click", function () {
   }
 });
 
-// I have to find a way to move the dropdown menu above the rest of the body elements, so the links remain clickable
+// sign up page input checks
+
+$("input#email").on("change", function (){
+  if (!$(this).text().includes('@'))
+    console.log('Invalid email address.');
+})

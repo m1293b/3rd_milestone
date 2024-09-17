@@ -9,7 +9,7 @@ connection = psycopg2.connect(database="no39_recipes")
 
 cursor = connection.cursor()
 
-# fetch the restults (multiple)
+# fetch the results (multiple)
 
 results = cursor.fetchall()
 
@@ -20,7 +20,7 @@ results = cursor.fetchall()
 
 connection.close()
 
-# print restults
+# print results
 
 for result in results:
     print(result)

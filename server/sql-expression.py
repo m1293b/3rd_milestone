@@ -12,7 +12,7 @@ meta = MetaData()
 users_userid_seq = Sequence('users_userid_seq')
 
 users_table = Table("users", meta,
-                    Column("userid", users_userid_seq, primary_key=True, server_default=users_userid_seq.next_value()),
+                    Column("userid", Integer, primary_key=True),
                     Column("username", String, nullable=False),
                     Column("password", String, nullable=False),
                     Column("email_address", String, nullable=False),

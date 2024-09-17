@@ -856,6 +856,10 @@ video {
   grid-column: span 2 / span 2;
 }
 
+.row-span-2 {
+  grid-row: span 2 / span 2;
+}
+
 .clear-both {
   clear: both;
 }
@@ -1428,10 +1432,6 @@ video {
 
   .tablet\:col-span-2 {
     grid-column: span 2 / span 2;
-  }
-
-  .tablet\:row-span-2 {
-    grid-row: span 2 / span 2;
   }
 
   .tablet\:m-4 {

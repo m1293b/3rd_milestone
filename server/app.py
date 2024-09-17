@@ -33,6 +33,9 @@ def forgot_page():
 
 def login_check():
     print('hello')
+    
+def register_new_account():
+    
 
 if __name__ == "__main__":
     app.run(
