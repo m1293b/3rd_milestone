@@ -5,7 +5,7 @@
   <h1 class="text-center mb-16 font-bold font-mono text-xl">
     Let's get you an account
   </h1>
-  <form action="{{ login_check }}" class="m-8 tablet:min-h-fit">
+  <form methods="POST" id="register-form" action="{{ url_for('register') }}" class="m-8 tablet:min-h-fit">
     <div class="tablet:m-4 grid grid-cols-1 tablet:grid-cols-2">
       <label for="username" class="text-center mb-2">Username:</label>
       <input type="text" name="username" id="username" placeholder="memyselfandi"

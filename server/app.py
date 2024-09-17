@@ -28,7 +28,7 @@ class Users(base):
     __tablename__ = "users"
     Column("user_id", Integer, primary_key=True),
     Column("username", String, unique=True, nullable=False),
-    Column("password", String, nullable=False),
+    Column("password_hash", String, nullable=False),
     Column("email_address", String, nullable=False),
     Column("points", Integer),
     Column("liked_recipes", ARRAY(Integer))
@@ -81,29 +81,36 @@ def login_page():
 def signup_page():
     return render_template("signup.html", page_title = 'Sign up page')
 
+## route for Home page, login required
+
+@app.route('/home')
+def home_page():
+    return render_template("home.html", page_title = 'Home page')
+
 ## route for Main page, no login required
 
 @app.route('/login', methods=["POST"])
 def login():
     username = request.form('username')
     password = request.form('password')
-    user = User.query.filter_by(username=username).first()
+    user = base.query.filter_by(username=username).first()
     if user and user.check_password():
         session['username'] = username
-        return redirect(url_for('home'))
+        return redirect(url_for('home_page'))
     else:
         return render_template('login_page.html')
+
 
 ## route for Main page, no login required
 
 @app.route('/register', methods=["POST"])
-def register_new_account():
+def register():
     username = request.form('username')
     password = request.form('password')
     email_address = request.form('email_address')
     points = 0
     liked_recipes = []
-    user = User.query.filter_by(username=username).first()
+    user = base.query.filter_by(username=username).first()
     
     
     if user and user.check_password():
@@ -117,7 +124,7 @@ def register_new_account():
         db.session.add(new_user)
         db.session.commit()
         session['username'] = username
-        return redirect(url_fopr('home'))
+        return redirect(url_for('home_page'))
         
 
 if __name__ == "__main__":
