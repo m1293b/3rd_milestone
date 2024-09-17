@@ -11,11 +11,19 @@ base = declerative_base()
 # create a class-based model for the "users" table
 class Users(base):
     __tablename__ = "users"
-    Column("userid", users_userid_seq, primary_key=True, server_default=users_userid_seq.next_value()),
+    Column("userid", Integer, primary_key=True),
     Column("username", String, nullable=False),
     Column("password", String, nullable=False),
     Column("email_address", String, nullable=False),
-    Column("recipes", ),
+    Column("points", Integer),
+    Column("liked_recipes", Integer)
+    
+class Recipes(base):
+    __tablename__ = "recipes"
+    Column("recipeid", Integer, primary_key=True),
+    Column("recipe_name", String, nullable=False),
+    Column("ingredients", ARRAY(String), nullable=False),
+    Column("email_address", String, nullable=False),
     Column("points", Integer),
     Column("liked_recipes", Integer)
 
@@ -28,3 +36,4 @@ session = Session()
 # creating the database using declarative_base subclass
 base.metadata.create_all(db)
 
+# Query 1 - create new account

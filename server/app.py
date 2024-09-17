@@ -35,7 +35,7 @@ def login_check():
     print('hello')
     
 def register_new_account():
-    
+    print();
 
 if __name__ == "__main__":
     app.run(
