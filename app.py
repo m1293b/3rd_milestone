@@ -1,5 +1,5 @@
 import os
-from server import app
+from server import app, routes, models
 
 from flask import Flask, render_template, request, flash, redirect, url_for
 

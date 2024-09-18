@@ -1,5 +1,5 @@
 import os
-from server import app, db
+from server import app, db, base
 from flask import render_template, request, flash, redirect, url_for
 
 @app.route('/')

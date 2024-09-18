@@ -1,27 +1,19 @@
-import os
-from app import app, db
-from sqlalchemy.orm import sessionmaker
+from server import db, base
 
 from sqlalchemy import (
-    create_engine, Column, ForeignKey, Integer, String
+    Column, ForeignKey, Integer, String, ARRAY, Boolean
 )
 from werkzeug.security import generate_password_hash, check_password_hash
 
 # create a class-based model for the "users" table
 class Users(base):
     __tablename__ = "users"
-    Column("user_id", Integer, primary_key=True),
-    Column("username", String, unique=True, nullable=False),
-    Column("password_hash", String, nullable=False),
-    Column("email_address", String, nullable=False),
-    Column("points", Integer),
-    Column("liked_recipes", ARRAY(Integer))
-    Relationship("recipes", backref="users", cascade="all, delete", lazy=True)
-    
-    def __repr__(self):
-        return "#{0} is your username, {1} is you email address and these are your favorite recipes: {2}".format(
-            self.username, self.email_address, self.liked_recipes
-        )
+    user_id = Column("user_id", Integer, primary_key=True)
+    username = Column("username", String, unique=True, nullable=False)
+    password_hash = Column("password_hash", String, nullable=False)
+    email_address = Column("email_address", String, nullable=False)
+    points = Column("points", Integer)
+    liked_recipes = Column("liked_recipes", ARRAY(Integer))
     
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
@@ -32,22 +24,15 @@ class Users(base):
 # create a class-based model for the "recipes" table
 class Recipes(base):
     __tablename__ = "recipes"
-    Column("recipe_id", Integer, primary_key=True),
-    Column("recipe_name", String, nullable=False),
-    Column("user_id", Integer, foreign_key=True, nullable=False),
-    Column("ingredients", ARRAY(String), nullable=False),
-    Column("instructions", String, nullable=False),
-    Column("vegetarian", Boolean, nullable=False),
-    Column("gluten_free", Boolean, nullable=False)
-    Column("nut_free", Boolean, nullable=False)
-    Column("shellfish_free", Boolean, nullable=False)
-    
-# instead of connecting to the database directly, we will ask for a session
-# create a new instance of sessionmaker, then point to our engine (the db)
-Session = sessionmaker(db)
-
-# opens an actual session by calling the Session() subclass defined above
-session = Session()
+    recipes_id = Column("recipe_id", Integer, primary_key=True)
+    recipes_name = Column("recipe_name", String, nullable=False)
+    user_id = Column("user_id", Integer, ForeignKey('users.user_id'), nullable=False)
+    ingredients = Column("ingredients", ARRAY(String), nullable=False)
+    instructions = Column("instructions", String, nullable=False)
+    vegetarian = Column("vegetarian", Boolean, nullable=False)
+    gluten_free = Column("gluten_free", Boolean, nullable=False)
+    nut_free = Column("nut_free", Boolean, nullable=False)
+    shellfish_free = Column("shellfish_free", Boolean, nullable=False)
 
 # create tables if they don't exist
 
