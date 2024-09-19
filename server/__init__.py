@@ -14,7 +14,6 @@ app.config["NO39_RECIPES_DATABASE_URI"] = os.environ.get("DB_URL")
 
 # executing the instructions from the "no39_recipes" database
 db = create_engine("postgresql+psycopg2:///no39_recipes")
-base = declarative_base()
 
 # instead of connecting to the database directly, we will ask for a session
 # create a new instance of sessionmaker, then point to our engine (the db)
@@ -22,3 +21,6 @@ Session = sessionmaker(db)
 
 # opens an actual session by calling the Session() subclass defined above
 session = Session()
+
+base = declarative_base()
+base.query = session.query()
