@@ -1,5 +1,6 @@
 import os
 from server import app, db, base, session
+from server.models import Users
 from flask import render_template, request, flash, redirect, url_for
 
 @app.route('/')
@@ -42,7 +43,7 @@ def home_page():
 def login():
     username = request.form['username']
     password = request.form['password']
-    user = base.query.filter_by(username=username).first()
+    user = Users.query(Users).filter_by(username=username).first()
     if user and user.check_password(password):
         session['username'] = username
         session['logged_in'] = True
@@ -61,8 +62,7 @@ def register():
     email_address = request.form['email_address']
     points = 0
     liked_recipes = []
-    print(base.query.filter_by(username=username).first())
-    user = base.query.filter_by(username=username).first()
+    user = Users.query(Users).filter_by(username=username).first()
     
     if user:
         return render_template('sign_up.html', error="User already exists")
