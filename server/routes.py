@@ -42,8 +42,9 @@ def home_page():
 @app.route('/login', methods=["POST"])
 def login():
     username = request.form['username']
+    print(username)
     password = request.form['password']
-    user = Users.query(Users).filter_by(username=username).first()
+    user = base.query.filter_by(username = username).first()
     if user and user.check_password(password):
         session['username'] = username
         session['logged_in'] = True
@@ -58,21 +59,22 @@ def login():
 @app.route('/register', methods=["POST"])
 def register():    
     username = request.form['username']
+    print(username)
     password = request.form['password']
     email_address = request.form['email_address']
     points = 0
     liked_recipes = []
-    user = Users.query(Users).filter_by(username=username).first()
+    user = base.query.filter_by(username = username).first()
     
     if user:
         return render_template('sign_up.html', error="User already exists")
     else:
-        new_user = base(username=username)
+        new_user = Users()
         new_user.set_password(password)
         new_user.email_address = email_address
         new_user.points = points
         new_user.liked_recipes = liked_recipes
-        db.session.add(new_user)
-        db.session.commit()
+        session.add(new_user)
+        session.commit()
         session['username'] = username
         return redirect(url_for('home_page'))
