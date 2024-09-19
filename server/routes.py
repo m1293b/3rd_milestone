@@ -18,17 +18,11 @@ def recipes_page():
 def about_page():
     return render_template("about.html", page_title = 'About page')
 
-## route for Login page, no login required
-
-@app.route('/login_page')
-def login_page():
-    return render_template("login_page.html", page_title = 'Login page')
-
 ## route for Sign page, no login required
 
-@app.route('/signup')
-def signup_page():
-    return render_template("signup.html", page_title = 'Sign up page')
+@app.route('/signin')
+def signin_page():
+    return render_template("signin.html", page_title = 'Sign in page')
 
 ## route for Home page, login required
 
@@ -47,7 +41,7 @@ def login():
         session['username'] = username
         return redirect(url_for('home_page'))
     else:
-        return render_template('login_page.html')
+        return render_template('signin.html')
 
 
 ## route for Main page, no login required
