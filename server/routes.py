@@ -1,5 +1,5 @@
 import os
-from server import app, db, base
+from server import app, db, base, session
 from flask import render_template, request, flash, redirect, url_for
 
 @app.route('/')
@@ -61,12 +61,13 @@ def register():
     email_address = request.form['email_address']
     points = 0
     liked_recipes = []
+    print(base.query.filter_by(username=username).first())
     user = base.query.filter_by(username=username).first()
     
     if user:
         return render_template('sign_up.html', error="User already exists")
     else:
-        new_user = User(username=username)
+        new_user = base(username=username)
         new_user.set_password(password)
         new_user.email_address = email_address
         new_user.points = points
