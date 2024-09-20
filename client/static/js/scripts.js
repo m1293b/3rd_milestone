@@ -36,6 +36,10 @@ $('input[type="submit"]').on('mouseover', function () {
   $('input[type="submit"]').css("color","green");
 })
 
+$('input[type="submit"]').on('mouseleave', function () {
+  $('input[type="submit"]').css("color","green");
+})
+
 function loggedIn() {
   
 }
