@@ -50,7 +50,10 @@
     @apply flex flex-col tablet:flex-row min-w-[100%] justify-between;
   }
   .navbar-links {
-    @apply font-bold tablet:mx-6 p-2 rounded text-main-text hover:bg-main-text hover:text-main-bg hover:rounded-xl transition-all duration-200 ease-linear cursor-pointer text-center;
+    @apply tablet:mx-6 my-1 p-2;
+  }
+  .nav-link {
+    @apply font-bold p-2 rounded text-main-text hover:bg-main-text hover:text-main-bg hover:rounded-xl transition-all duration-200 ease-linear cursor-pointer text-center;
   }
   .navbar-sign-in {
     @apply font-bold mx-6 p-2 border-solid border border-golden rounded bg-golden text-main-bg hover:bg-main-bg hover:text-golden hover:rounded-3xl hover:border hover:border-solid hover:border-golden transition-all duration-200 ease-linear cursor-pointer;

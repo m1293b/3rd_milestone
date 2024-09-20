@@ -708,6 +708,19 @@ video {
 }
 
 .navbar-links {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  padding: 0.5rem;
+}
+
+@media (min-width: 720px) {
+  .navbar-links {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+}
+
+.nav-link {
   cursor: pointer;
   border-radius: 0.25rem;
   padding: 0.5rem;
@@ -721,19 +734,12 @@ video {
   transition-timing-function: linear;
 }
 
-.navbar-links:hover {
+.nav-link:hover {
   border-radius: 0.75rem;
   --tw-bg-opacity: 1;
   background-color: rgb(210 214 219 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(51 65 85 / var(--tw-text-opacity));
-}
-
-@media (min-width: 720px) {
-  .navbar-links {
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-  }
 }
 
 .navbar-sign-in {
@@ -906,6 +912,16 @@ video {
 .mx-8 {
   margin-left: 2rem;
   margin-right: 2rem;
+}
+
+.my-1 {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .my-4 {

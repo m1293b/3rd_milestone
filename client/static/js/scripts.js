@@ -31,3 +31,15 @@ $("input#email").on("change", function (){
   if (!$(this).text().includes('@'))
     console.log('Invalid email address.');
 })
+
+$('input[type="submit"]').on('mouseover', function () {
+  $('input[type="submit"]').css("color","green");
+})
+
+function loggedIn() {
+  
+}
+
+function loggedOut() {
+
+}
