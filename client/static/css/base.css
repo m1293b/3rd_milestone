@@ -70,4 +70,7 @@
   input[value=Login] {
     margin: 0 auto;
   }
+  .button {
+    @apply transition-all duration-200 ease-linear;
+  }
 }

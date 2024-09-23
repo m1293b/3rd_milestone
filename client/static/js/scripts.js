@@ -27,23 +27,21 @@ $("div.cone").on("click", function () {
 
 // sign up page input checks
 
-$("input#email").on("change", function (){
+$("input[type=email]").on("change", function (){
   if (!$(this).text().includes('@'))
     console.log('Invalid email address.');
 })
 
-$('input[type="submit"]').on('mouseover', function () {
-  $('input[type="submit"]').css("color","green");
+$('.button').on('mouseover', function () {
+  $(this).css("color","#d2d6db");
+  $(this).css("background","#334155");
 })
 
-$('input[type="submit"]').on('mouseleave', function () {
-  $('input[type="submit"]').css("color","green");
+$('.button').on('mouseleave', function () {
+  $(this).css("color","#334155");
+  $(this).css("background","#d2d6db");
 })
 
-function loggedIn() {
-  
-}
-
-function loggedOut() {
-
-}
+$('input[type="password"]').on('change', function () {
+  console.log('#yep');
+})

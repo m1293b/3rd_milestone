@@ -794,6 +794,13 @@ input[value=Login] {
   margin: 0 auto;
 }
 
+.button {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+  transition-timing-function: linear;
+}
+
 .visible {
   visibility: visible;
 }
@@ -1602,10 +1609,6 @@ input[value=Login] {
 
   .laptop\:max-w-\[20\%\] {
     max-width: 20%;
-  }
-
-  .laptop\:max-w-\[50\%\] {
-    max-width: 50%;
   }
 
   .laptop\:max-w-\[60\%\] {

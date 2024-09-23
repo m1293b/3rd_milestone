@@ -22,20 +22,20 @@
         type="password"
         name="password"
         id="password"
-        placeholder="#tryharder"
+        placeholder="Your password"
         class="form-control border rounded-md border-main-bg shadow-sm text-center mb-2 justify-self-center min-w-[80%] tablet:min-w-[100%] laptop:min-w-[40%] laptop:max-w-[60%]"
       />
     </div>
     <div
       class="grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-1 col-span-2 mt-8 tablet:px-32 text-center"
     >
-      <input type="submit" value='Login' class="tablet:col-span-2 border rounded-lg p-1 cursor-pointer min-w-[40%] laptop:max-w-[20%] justify-self-center">
+      <input type="submit" value='Login' class="button tablet:col-span-2 border-2 rounded-lg p-1 cursor-pointer min-w-[40%] laptop:max-w-[20%] justify-self-center">
     </div>
     <!-- Next up is the button that takes the user to the sign_up_page when they would like to register an account instead of logging in -->
     <div
       class="grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-1 col-span-2 mt-8 tablet:px-32 text-center"
     >
-      <a href="{{url_for('sign_up_page')}}" class="tablet:col-span-2 border rounded-lg p-1 cursor-pointer min-w-[40%] laptop:max-w-[20%] justify-self-center">Register</a>
+      <a href="{{url_for('sign_up_page')}}" class="button tablet:col-span-2 border-2 rounded-lg p-1 cursor-pointer min-w-[40%] laptop:max-w-[20%] justify-self-center">Register</a>
     </div>
   </form>
 </div>
