@@ -67,4 +67,7 @@
     border-radius: 2px;
     @apply m-2;
   }
+  input[value=Login] {
+    margin: 0 auto;
+  }
 }
