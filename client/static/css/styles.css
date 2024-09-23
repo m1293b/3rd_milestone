@@ -795,6 +795,8 @@ input[value=Login] {
 }
 
 .button {
+  background-color: #d2d6db;
+  font-weight: bold;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 200ms;

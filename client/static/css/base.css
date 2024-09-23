@@ -71,6 +71,8 @@
     margin: 0 auto;
   }
   .button {
+    background-color: #d2d6db;
+    font-weight: bold;
     @apply transition-all duration-200 ease-linear;
   }
 }
