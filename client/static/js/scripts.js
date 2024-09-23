@@ -1,5 +1,7 @@
 $("#copyright").text(new Date().getFullYear());
 
+let messages = []
+
 // nav bar made responsive
 
 $(window).on("resize", function () {
@@ -25,11 +27,11 @@ $("div.cone").on("click", function () {
   }
 });
 
-// sign up page input checks
+// sign up page input checks to be updated
 
 $("input[type=email]").on("change", function (){
   if (!$(this).text().includes('@'))
-    console.log('Invalid email address.');
+    messages.push('Invalid email address.');
 })
 
 $('.button').on('mouseover', function () {

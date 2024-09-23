@@ -8,19 +8,21 @@
   <form method="POST" id="register-form" action="{{ url_for('register') }}" class="m-8 tablet:min-h-fit laptop:mx-4">
     <div class="my-4 laptop:mx-0 grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-1">
       <label for="email" class="text-center mb-2">Username:</label>
-      <input type="text" name="username" id="username" placeholder="Your username"
+      <input type="text" name="username" id="username" placeholder="#bestchef" required
         class="form-control border rounded-md border-main-bg shadow-sm text-center mb-2 justify-self-center min-w-[80%] tablet:min-w-[100%] laptop:min-w-[40%] laptop:max-w-[60%]" />
     </div>
 
     <div class="my-4 laptop:mx-0 grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-1">
       <label for="email" class="text-center mb-2">Email address:</label>
-      <input type="email" name="email_address" id="email" placeholder="youremail@address.com"
+      <input type="email" name="email_address" id="email" placeholder="bestchef@no39.com" required
         class="form-control border rounded-md border-main-bg shadow-sm text-center mb-2 justify-self-center min-w-[80%] tablet:min-w-[100%] laptop:min-w-[40%] laptop:max-w-[60%]" />
     </div>
 
     <div class="my-4 laptop:mx-0 grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-1">
       <label for="password" class="text-center mb-2">Password:</label>
-      <input type="password" name="password" id="password" placeholder="#tryharder"
+      <input type="password" name="password" id="password" placeholder="#tryharder" required
+        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+        title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"
         class="form-control border rounded-md border-main-bg shadow-sm text-center mb-2 justify-self-center min-w-[80%] tablet:min-w-[100%] laptop:min-w-[40%] laptop:max-w-[60%]" />
     </div>
     <div class="grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-1 col-span-2 mt-8 tablet:px-32 text-center">

@@ -3,6 +3,8 @@ from server import app, db, base, session
 from server.models import Users
 from flask import render_template, request, flash, redirect, url_for
 
+loggedin = False
+
 @app.route('/')
 def index_page():
     return render_template("index.html", page_title = 'Main page')
@@ -11,7 +13,10 @@ def index_page():
 
 @app.route('/recipes')
 def recipes_page():
-    return render_template("recipes.html", page_title = 'Recipes page')
+    if session['logged_in'] == True: # does this work??
+        return render_template("recipes_home.html", page_title = 'Recipes page')
+    else:
+        return render_template("recipes.html", page_title = 'Recipes page')
 
 ## route for About page, no login required
 
@@ -37,7 +42,11 @@ def sign_up_page():
 def home_page():
     return render_template("home.html", page_title = 'Home page')
 
-## route for Main page, no login required
+@app.route('/events')
+def events_page():
+    return render_template("events.html", page_title = 'Events page')
+
+## route to log user in, data to be verified is pulled from input fields
 
 @app.route('/login', methods=["POST"])
 def login():
@@ -53,8 +62,14 @@ def login():
     else:
         return render_template('sign_in.html')
 
+## route to log user out from session
 
-## route for Main page, no login required
+@app.route('/logout', methods=["POST"])
+def logout():
+    session.pop([i])
+
+
+## route to register an account, data is pulled from input fields
 
 @app.route('/register', methods=["POST"])
 def register():    
