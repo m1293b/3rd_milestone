@@ -3,9 +3,9 @@
 <div
   class="relative mt-20 tablet:mt-60 mb-4 mx-2 tablet:mx-6 p-10 tablet:p-2 tablet:min-h-[500px] laptop:mx-[15%] desktop:mx-[25%] items-center justify-center border rounded-md border-main-bg shadow-lg"
 >
-  <h1 class="text-center mb-16 font-bold font-mono text-xl">Welcome back!</h1>
+  <h1 class="text-center my-12 font-bold font-mono text-xl">Welcome back!</h1>
   <form id="auth-form" method="POST" action="{{ url_for('login') }}" class="m-8 tablet:min-h-fit laptop:mx-4">
-    <div class="tablet:my-4 laptop:mx-0 grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-1">
+    <div class="tablet:my-4 laptop:mx-0 grid grid-cols-1 gap-6 tablet:grid-cols-2 laptop:grid-cols-1">
       <label for="email" class="text-center mb-2">Username:</label>
       <input
         type="text"
@@ -27,7 +27,7 @@
       />
     </div>
     <div
-      class="grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-1 col-span-2 mt-8 gap-8 tablet:px-32 text-center"
+      class="grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-1 col-span-2 mt-8 tablet:px-32 text-center"
     >
       <input type="submit" value='Login' class="tablet:col-span-2 border rounded-lg p-1 cursor-pointer min-w-[40%] laptop:max-w-[20%] justify-self-center">
     </div>
