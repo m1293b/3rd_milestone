@@ -1,7 +1,7 @@
 import os
 from server import app, routes, models
 
-from flask import Flask, render_template, request, flash, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for
 
 
 # run the app if it wasn't just imported       

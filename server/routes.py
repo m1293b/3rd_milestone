@@ -1,9 +1,8 @@
 import os
-from server import app, db, base, session
+from server import app, db, base, Session
 from server.models import Users
-from flask import render_template, request, flash, redirect, url_for
-
-loggedin = False
+from flask import render_template, request, flash, redirect, url_for, session as sess
+from flask_sqlalchemy import SQLAlchemy
 
 @app.route('/')
 def index_page():
@@ -53,20 +52,23 @@ def login():
     username = request.form['username']
     print(username)
     password = request.form['password']
+    session = Session()
     user = session.query(Users).filter_by(username = username).first()
     if user and user.check_password(password):
-        session['username'] = username
-        session['logged_in'] = True
-        session['user_id'] = int(user.user_id)
+        print('user exists')
+        sess['username'] = username
+        sess['logged_in'] = True
+        sess['user_id'] = int(session.query(Users).select([user_id]).where(username == username))
         return redirect(url_for('home_page'))
     else:
         return render_template('sign_in.html')
 
 ## route to log user out from session
 
-@app.route('/logout', methods=["POST"])
+@app.route('/logout', methods=["GET", "POST"])
 def logout():
-    session.pop([i])
+    sess.pop('user_id')
+    return redirect(url_for('index_page'))
 
 
 ## route to register an account, data is pulled from input fields
@@ -74,22 +76,25 @@ def logout():
 @app.route('/register', methods=["POST"])
 def register():    
     username = request.form['username']
-    print(username)
     password = request.form['password']
     email_address = request.form['email_address']
-    points = 0
-    liked_recipes = []
+    session = Session()
     user = session.query(Users).filter_by(username = username).first()
-    
     if user:
+        print("User already exists")
         return render_template('sign_up.html', error="User already exists")
+        flash("User already exists")
     else:
         new_user = Users()
+        new_user.username = username
         new_user.set_password(password)
         new_user.email_address = email_address
-        new_user.points = points
-        new_user.liked_recipes = liked_recipes
+        new_user.points = 0
+        new_user.liked_recipes = []
+        session = Session()
         session.add(new_user)
         session.commit()
-        session['username'] = username
+        sess['username'] = int(user.user_id)
+        sess['username']['user_id'] = username
+        sess['username']['logged_in'] = True        
         return redirect(url_for('home_page'))
