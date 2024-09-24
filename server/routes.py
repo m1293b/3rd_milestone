@@ -1,7 +1,7 @@
 import os
-from server import app, db, base, Session
+from server import app, db, base
 from server.models import Users
-from flask import render_template, request, flash, redirect, url_for, session as sess
+from flask import render_template, request, flash, redirect, url_for, session
 from flask_sqlalchemy import SQLAlchemy
 
 @app.route('/')
@@ -50,15 +50,10 @@ def events_page():
 @app.route('/login', methods=["POST"])
 def login():
     username = request.form['username']
-    print(username)
     password = request.form['password']
-    session = Session()
-    user = session.query(Users).filter_by(username = username).first()
+    user = Users.query.filter_by(username = username).first()
     if user and user.check_password(password):
-        print('user exists')
-        sess['username'] = username
-        sess['logged_in'] = True
-        sess['user_id'] = int(session.query(Users).select([user_id]).where(username == username))
+        session['username'] = username
         return redirect(url_for('home_page'))
     else:
         return render_template('sign_in.html')
@@ -67,7 +62,7 @@ def login():
 
 @app.route('/logout', methods=["GET", "POST"])
 def logout():
-    sess.pop('user_id')
+    session.pop('username')
     return redirect(url_for('index_page'))
 
 
@@ -78,10 +73,8 @@ def register():
     username = request.form['username']
     password = request.form['password']
     email_address = request.form['email_address']
-    session = Session()
-    user = session.query(Users).filter_by(username = username).first()
+    user = Users.query.filter_by(username = username).first()
     if user:
-        print("User already exists")
         return render_template('sign_up.html', error="User already exists")
         flash("User already exists")
     else:
@@ -91,10 +84,7 @@ def register():
         new_user.email_address = email_address
         new_user.points = 0
         new_user.liked_recipes = []
-        session = Session()
-        session.add(new_user)
-        session.commit()
-        sess['username'] = int(user.user_id)
-        sess['username']['user_id'] = username
-        sess['username']['logged_in'] = True        
+        db.session.add(new_user)
+        db.session.commit()
+        session['username'] = username    
         return redirect(url_for('home_page'))
