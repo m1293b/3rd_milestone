@@ -12,7 +12,7 @@ def index_page():
 
 @app.route('/recipes')
 def recipes_page():
-    if session['logged_in'] == True: # does this work??
+    if "username" in session: # does this work??
         return render_template("recipes_home.html", page_title = 'Recipes page')
     else:
         return render_template("recipes.html", page_title = 'Recipes page')

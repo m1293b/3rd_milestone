@@ -1,12 +1,22 @@
 {% extends "base_home.html" %} {% block content %}
 <!-- Content section-->
 
-<div class="main-page justify-center align-middle tablet:flex">
-  <div class="mt-16 mx-4 grid grid-cols-2 text-center gap-2 border rounded border-main-bg tablet:max-w-[70%]">
-    <div class="cards">Starters</div>
-    <div class="cards">Mains</div>
-    <div class="cards">Desserts</div>
-    <div class="cards">Kids</div>
+<div class="main-page justify-center pb-[70px] grid grid-cols-1">
+  <div id="profile" class="justify-center grid grid-cols-1">
+    <img src="../static/assets/chef.png" alt="A drawing of a chef as a profile picture of the user"
+      class="rounded-[50%] mt-6 justify-self-center mx-6 inline-block">
+    <div class="justify-self-center text-main-text rounded bg-main-bg bg-opacity-80 px-2 py-1 my-4">Welcome back chef
+      <b>{{session.username}}!</b>
+    </div>
+  </div>
+  <div
+    class="mt-16 mx-4 grid grid-cols-2 text-center gap-2 border rounded border-main-bg tablet:max-w-[70%] justify-self-center">
+    <div id="profile-home">
+      <span>My profile</span>
+    </div>
+    <div id="recipes-home">
+      <span>My recipes</span>
+    </div>
   </div>
 </div>
 {% endblock content %}

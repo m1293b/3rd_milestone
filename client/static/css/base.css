@@ -67,12 +67,28 @@
     border-radius: 2px;
     @apply m-2;
   }
-  input[value=Login] {
+  input[value="Login"] {
     margin: 0 auto;
   }
   .button {
     background-color: #d2d6db;
     font-weight: bold;
     @apply transition-all duration-200 ease-linear;
+  }
+  #profile {
+    background-image: url("../assets/head_pic.jpg");
+    background-size: cover;
+  }
+  #profile-home {
+    width: 33%;
+    height: auto;
+    background-image: url("../assets/profile.jpg");
+    background-size: cover;
+  }
+  #recipes-home {
+    width: 33%;
+    height: auto;
+    background-image: url("../assets/recipes.jpg");
+    background-size: cover;
   }
 }
