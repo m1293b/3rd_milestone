@@ -1,22 +1,22 @@
 {% extends "base_home.html" %} {% block content %}
 <!-- Content section-->
 
-<div class="main-page justify-center pb-[70px] grid grid-cols-1">
-  <div id="profile" class="justify-center grid grid-cols-1">
+<div class="main-page pb-[70px] grid grid-cols-1">
+  <div id="profile" class="grid grid-cols-1">
     <img src="../static/assets/chef.png" alt="A drawing of a chef as a profile picture of the user"
-      class="rounded-[50%] mt-6 justify-self-center mx-6 inline-block">
+      class="rounded-[50%] mt-6 justify-self-center mx-6 max-w-[60%]">
     <div class="justify-self-center text-main-text rounded bg-main-bg bg-opacity-80 px-2 py-1 my-4">Welcome back chef
       <b>{{session.username}}!</b>
     </div>
   </div>
+  <div class="grid grid-cols-2 mt-8 justify-center min-w-[90%] laptop:min-w-[80%] desktop:max-w-96 justify-self-center">
+    <div class="max-h-max text-center"><span class="font-serif font-bold text-[150%]">My Profile</span></div>
+    <div class="max-h-max text-center"><span class="font-serif font-bold text-[150%]">My Recipes</span></div>
+  </div>
   <div
-    class="mt-16 mx-4 grid grid-cols-2 text-center gap-2 border rounded border-main-bg tablet:max-w-[70%] justify-self-center">
-    <div id="profile-home">
-      <span>My profile</span>
-    </div>
-    <div id="recipes-home">
-      <span>My recipes</span>
-    </div>
+    class="mx-4 grid grid-cols-2 gap-2 text-center rounded justify-self-center min-w-[90%] laptop:min-w-[80%] desktop:max-w-96 min-h-[30dvh] desktop:min-h-[50dvh]">
+    <a href="{{url_for('my_profile_page')}}" id="profile-home" class="rounded-xl cursor-pointer">
+      <a href="{{url_for('my_recipes_page')}}" id="recipes-home" class="rounded-xl cursor-pointer">
   </div>
 </div>
 {% endblock content %}

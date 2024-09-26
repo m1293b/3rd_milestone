@@ -41,6 +41,14 @@ def sign_up_page():
 def home_page():
     return render_template("home.html", page_title = 'Home page')
 
+@app.route('/my_recipes')
+def my_recipes_page():
+    return render_template("my_recipes.html", page_title = 'My Recipes page')
+
+@app.route('/my_profile')
+def my_profile_page():
+    return render_template("my_profile.html", page_title = 'My Profile page')
+
 @app.route('/events')
 def events_page():
     return render_template("events.html", page_title = 'Events page')

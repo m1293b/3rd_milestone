@@ -78,17 +78,27 @@
   #profile {
     background-image: url("../assets/head_pic.jpg");
     background-size: cover;
+    border-bottom: #334155 3px;
   }
   #profile-home {
-    width: 33%;
     height: auto;
     background-image: url("../assets/profile.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
   }
   #recipes-home {
-    width: 33%;
     height: auto;
     background-image: url("../assets/recipes.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .recipes-row {
+    @apply mb-6 max-w-[90%];
+  }
+  .recipes-header-row {
+    @apply justify-self-start;
+  }
+  .recipes-items-row {
+    @apply grid grid-cols-4;
   }
 }
