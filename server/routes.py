@@ -1,5 +1,5 @@
 import os
-from server import app, db, base
+from server import app, db, base, models
 from server.models import Users
 from flask import render_template, request, flash, redirect, url_for, session
 from flask_sqlalchemy import SQLAlchemy
@@ -45,6 +45,10 @@ def home_page():
 def my_recipes_page():
     return render_template("my_recipes.html", page_title = 'My Recipes page')
 
+@app.route('/new_recipe')
+def add_new_recipe_page():
+    return render_template("add_new_recipe.html", page_title = 'Adding a recipe')
+
 @app.route('/my_profile')
 def my_profile_page():
     return render_template("my_profile.html", page_title = 'My Profile page')
@@ -81,7 +85,7 @@ def register():
     username = request.form['username']
     password = request.form['password']
     email_address = request.form['email_address']
-    user = Users.query.filter_by(username = username).first()
+    user = Users.query.filter(username == username).first()
     if user:
         return render_template('sign_up.html', error="User already exists")
         flash("User already exists")
@@ -94,5 +98,27 @@ def register():
         new_user.liked_recipes = []
         db.session.add(new_user)
         db.session.commit()
-        session['username'] = username    
+        session['user'] = username
+        session['user_id'] = user
+        return redirect(url_for('home_page'))
+    
+@app.route('/adding_new_recipe', methods=["POST"])
+def new_recipe():    
+    recipe_name = request.form['recipe_name']
+    course = request.form['course']
+    email_address = request.form['email_address']
+    user = Users.query.filter(username == username).first()
+    if user:
+        return render_template('sign_up.html', error="User already exists")
+        flash("User already exists")
+    else:
+        new_user = Users()
+        new_user.username = username
+        new_user.set_password(password)
+        new_user.email_address = email_address
+        new_user.points = 0
+        new_user.liked_recipes = []
+        db.session.add(new_user)
+        db.session.commit()
+        session['user'] = user
         return redirect(url_for('home_page'))

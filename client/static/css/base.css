@@ -93,12 +93,28 @@
     background-repeat: no-repeat;
   }
   .recipes-row {
-    @apply mb-6 max-w-[90%];
+    @apply mb-6 max-w-[90%] border-[3px] border-main-bg rounded-lg;
   }
   .recipes-header-row {
     @apply justify-self-start;
   }
   .recipes-items-row {
-    @apply grid grid-cols-4;
+    @apply grid grid-cols-2 tablet:grid-cols-4;
+  }
+  .card-picture {
+    min-width: 100px;
+    height: auto;
+  }
+  .starters > .card-picture {
+    background-image: url("../assets/starters.jpg");
+  }
+  .mains > .card-picture {
+    background-image: url("../assets/mains.jpg");
+  }
+  .desserts > .card-picture {
+    background-image: url("../assets/desserts.jpg");
+  }
+  .kids > .card-picture {
+    background-image: url("../assets/kids.jpg");
   }
 }

@@ -826,6 +826,10 @@ input[value="Login"] {
 .recipes-row {
   margin-bottom: 1.5rem;
   max-width: 90%;
+  border-radius: 0.5rem;
+  border-width: 3px;
+  --tw-border-opacity: 1;
+  border-color: rgb(51 65 85 / var(--tw-border-opacity));
 }
 
 .recipes-header-row {
@@ -834,7 +838,34 @@ input[value="Login"] {
 
 .recipes-items-row {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (min-width: 720px) {
+  .recipes-items-row {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.card-picture {
+  min-width: 100px;
+  height: auto;
+}
+
+.starters > .card-picture {
+  background-image: url("../assets/starters.jpg");
+}
+
+.mains > .card-picture {
+  background-image: url("../assets/mains.jpg");
+}
+
+.desserts > .card-picture {
+  background-image: url("../assets/desserts.jpg");
+}
+
+.kids > .card-picture {
+  background-image: url("../assets/kids.jpg");
 }
 
 .visible {
@@ -1338,6 +1369,10 @@ input[value="Login"] {
 
 .border-2 {
   border-width: 2px;
+}
+
+.border-\[3px\] {
+  border-width: 3px;
 }
 
 .border-r {

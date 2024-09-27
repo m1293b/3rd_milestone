@@ -8,11 +8,11 @@
 
         </div>
         <div class="recipes-items-row">
-            {% for starter in starters %}
+            {% for starter in my_starters %}
             <div class="card">
                 <!-- to create function to fill the space in with cards for 4 recipes -->
                 <div class="card-picture">
-
+                    <img src="{{url_for('../assets/starters.jpg')}}" alt="">
                 </div>
             </div>
             {% endfor %}
@@ -24,11 +24,11 @@
 
         </div>
         <div class="recipes-items-row">
-            {% for main in mains %}
+            {% for main in my_mains %}
             <div class="card">
                 <!-- to create function to fill the space in with cards for 4 recipes -->
                 <div class="card-picture">
-                    halo
+                    <img src="{{url_for('../assets/mains.jpg')}}" alt="">
                 </div>
             </div>
             {% endfor %}
@@ -40,11 +40,11 @@
 
         </div>
         <div class="recipes-items-row">
-            {% for dessert in desserts %}
+            {% for dessert in my_desserts %}
             <div class="card">
                 <!-- to create function to fill the space in with cards for 4 recipes -->
                 <div class="card-picture">
-
+                    <img src="{{url_for('../assets/desserts.jpg')}}" alt="">
                 </div>
             </div>
             {% endfor %}
@@ -56,15 +56,21 @@
 
         </div>
         <div class="recipes-items-row">
-            {% for kids_meal in kids_meals %}
+            {% for kids_meal in my_kids_meals %}
             <div class="card">
                 <!-- to create function to fill the space in with cards for 4 recipes -->
                 <div class="card-picture">
-
+                    <img src="{{url_for('../assets/kids.jpg')}}" alt="">
                 </div>
             </div>
             {% endfor %}
         </div>
+    </div>
+
+    <div class="new-recipe">
+        <hr>
+        <hr>
+        <a href="{{url_for('add_new_recipe_page')}}">Add a new recipe</a>
     </div>
 </div>
 
