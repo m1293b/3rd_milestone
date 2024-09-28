@@ -66,6 +66,7 @@ def login():
     user = Users.query.filter_by(username = username).first()
     if user and user.check_password(password):
         session['username'] = username
+        session['user_id'] = user.user_id
         return redirect(url_for('home_page'))
     else:
         return render_template('sign_in.html')
@@ -85,7 +86,7 @@ def register():
     username = request.form['username']
     password = request.form['password']
     email_address = request.form['email_address']
-    user = Users.query.filter(username == username).first()
+    user = Users.query.filter_by(username = username).first()
     if user:
         return render_template('sign_up.html', error="User already exists")
         flash("User already exists")
@@ -98,8 +99,8 @@ def register():
         new_user.liked_recipes = []
         db.session.add(new_user)
         db.session.commit()
-        session['user'] = username
-        session['user_id'] = user
+        session['username'] = username
+        session['user_id'] = user.user_id
         return redirect(url_for('home_page'))
     
 @app.route('/adding_new_recipe', methods=["POST"])
@@ -107,7 +108,7 @@ def new_recipe():
     recipe_name = request.form['recipe_name']
     course = request.form['course']
     email_address = request.form['email_address']
-    user = Users.query.filter(username == username).first()
+    user = Users.query.filter_by(username = username).first()
     if user:
         return render_template('sign_up.html', error="User already exists")
         flash("User already exists")
@@ -120,5 +121,6 @@ def new_recipe():
         new_user.liked_recipes = []
         db.session.add(new_user)
         db.session.commit()
-        session['user'] = user
+        session['username'] = username
+        session['user_id'] = user.user_id
         return redirect(url_for('home_page'))
