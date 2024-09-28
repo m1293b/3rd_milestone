@@ -49,6 +49,8 @@ def my_recipes_page():
 def add_new_recipe_page():
     return render_template("add_new_recipe.html", page_title = 'Adding a recipe')
 
+## route to take user to their profile page where they will be able to edit their details
+
 @app.route('/my_profile')
 def my_profile_page():
     return render_template("my_profile.html", page_title = 'My Profile page')
@@ -103,24 +105,29 @@ def register():
         session['user_id'] = user.user_id
         return redirect(url_for('home_page'))
     
+## route to add a new recipe, data is pulled from input fields
+    
 @app.route('/adding_new_recipe', methods=["POST"])
-def new_recipe():    
+def adding_new_recipe():    
     recipe_name = request.form['recipe_name']
     course = request.form['course']
-    email_address = request.form['email_address']
-    user = Users.query.filter_by(username = username).first()
+    ingredients = request.form['ingredients']
+    instructions = request.form['instructions']
+    vegetarian = request.form['vegetarian']
+    gluten_free = request.form['gluten_free']
+    nut_free = request.form['nut_free']
+    shellfish_free = request.form['shellfish_free']
+    recipe = Recipes.query.filter_by(recipe_name = recipe_name).first()
     if user:
-        return render_template('sign_up.html', error="User already exists")
-        flash("User already exists")
+        return render_template('my_recipes.html', error="Recipe already exists")
+        flash("Recipe already exists")
     else:
-        new_user = Users()
-        new_user.username = username
-        new_user.set_password(password)
-        new_user.email_address = email_address
-        new_user.points = 0
-        new_user.liked_recipes = []
-        db.session.add(new_user)
+        new_recipe = Recipes()
+        new_recipe.recipes_name = recipe_name
+        new_recipe.course = course #update these
+        new_recipe.ingredients = ingredients
+        new_recipe.points = 0
+        new_recipe.liked_recipes = []
+        db.session.add(new_recipe)
         db.session.commit()
-        session['username'] = username
-        session['user_id'] = user.user_id
-        return redirect(url_for('home_page'))
+        return redirect(url_for('my_recipes_page'))

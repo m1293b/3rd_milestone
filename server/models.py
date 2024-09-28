@@ -28,10 +28,10 @@ class Recipes(db.Model):
     user_id = Column(db.Integer, ForeignKey('users.user_id'), nullable=False)
     ingredients = Column(db.ARRAY(String), nullable=False)
     instructions = Column(db.String, nullable=False)
-    vegetarian = Column(db.Boolean, nullable=False)
-    gluten_free = Column(db.Boolean, nullable=False)
-    nut_free = Column(db.Boolean, nullable=False)
-    shellfish_free = Column(db.Boolean, nullable=False)
+    vegetarian = Column(db.Boolean, nullable=False, default=False)
+    gluten_free = Column(db.Boolean, nullable=False, default=False)
+    nut_free = Column(db.Boolean, nullable=False, default=False)
+    shellfish_free = Column(db.Boolean, nullable=False, default=False)
 
 with app.app_context():
     db.create_all()
