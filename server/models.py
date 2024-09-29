@@ -7,6 +7,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 
 # create a class-based model for the "users" table
 class Users(db.Model):
+    __tablename__ = 'users'
     user_id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String, unique=True, nullable=False)
     password_hash = db.Column(db.String, nullable=False)
@@ -22,16 +23,18 @@ class Users(db.Model):
     
 # create a class-based model for the "recipes" table
 class Recipes(db.Model):
-    recipes_id = Column(db.Integer, primary_key=True)
-    recipes_name = Column(db.String, nullable=False)
-    course = Column(db.String, nullable=False)
-    user_id = Column(db.Integer, ForeignKey('users.user_id'), nullable=False)
-    ingredients = Column(db.ARRAY(String), nullable=False)
-    instructions = Column(db.String, nullable=False)
-    vegetarian = Column(db.Boolean, nullable=False, default=False)
-    gluten_free = Column(db.Boolean, nullable=False, default=False)
-    nut_free = Column(db.Boolean, nullable=False, default=False)
-    shellfish_free = Column(db.Boolean, nullable=False, default=False)
+    __tablename__ = 'recipes'
+    recipe_id = db.Column(db.Integer, primary_key=True)
+    recipe_name = db.Column(db.String, unique=True, nullable=False)
+    course = db.Column(db.String, nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'), nullable=False)
+    users = db.relationship("Users", backref=db.backref("users", uselist=False))
+    ingredients = db.Column(db.String, nullable=False)
+    instructions = db.Column(db.String, nullable=False)
+    vegetarian = db.Column(db.Boolean, default=False)
+    gluten_free = db.Column(db.Boolean, default=False)
+    nut_free = db.Column(db.Boolean, default=False)
+    shellfish_free = db.Column(db.Boolean, default=False)
 
 with app.app_context():
     db.create_all()

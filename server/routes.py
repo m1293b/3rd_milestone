@@ -1,6 +1,6 @@
 import os
 from server import app, db, base, models
-from server.models import Users
+from server.models import Users, Recipes
 from flask import render_template, request, flash, redirect, url_for, session
 from flask_sqlalchemy import SQLAlchemy
 
@@ -71,6 +71,7 @@ def login():
         session['user_id'] = user.user_id
         return redirect(url_for('home_page'))
     else:
+        flash('User does not exist or wrong password was used.')
         return render_template('sign_in.html')
 
 ## route to log user out from session
@@ -78,7 +79,9 @@ def login():
 @app.route('/logout', methods=["GET", "POST"])
 def logout():
     session.pop('username')
-    return redirect(url_for('index_page'))
+    session.pop('user_id')
+    flash('You have been logged out.')
+    return redirect(url_for('sign_in_page'))
 
 
 ## route to register an account, data is pulled from input fields
@@ -90,8 +93,8 @@ def register():
     email_address = request.form['email_address']
     user = Users.query.filter_by(username = username).first()
     if user:
+        flash("User already exists.")
         return render_template('sign_up.html', error="User already exists")
-        flash("User already exists")
     else:
         new_user = Users()
         new_user.username = username
@@ -101,16 +104,19 @@ def register():
         new_user.liked_recipes = []
         db.session.add(new_user)
         db.session.commit()
+        user = Users.query.filter_by(username = username).first()
         session['username'] = username
         session['user_id'] = user.user_id
-        return redirect(url_for('home_page'))
-    
+        return redirect(url_for('home_page'))  
+
 ## route to add a new recipe, data is pulled from input fields
     
 @app.route('/adding_new_recipe', methods=["POST"])
 def adding_new_recipe():    
     recipe_name = request.form['recipe_name']
     course = request.form['course']
+    #username = request.form['username'] #can delete if it works
+    user_id = request.form['user_id']
     ingredients = request.form['ingredients']
     instructions = request.form['instructions']
     vegetarian = request.form['vegetarian']
@@ -118,16 +124,24 @@ def adding_new_recipe():
     nut_free = request.form['nut_free']
     shellfish_free = request.form['shellfish_free']
     recipe = Recipes.query.filter_by(recipe_name = recipe_name).first()
-    if user:
-        return render_template('my_recipes.html', error="Recipe already exists")
+    if recipe:
         flash("Recipe already exists")
+        return render_template('add_new_recipe.html', error="Recipe already exists")
     else:
         new_recipe = Recipes()
-        new_recipe.recipes_name = recipe_name
-        new_recipe.course = course #update these
+        new_recipe.recipe_name = recipe_name
+        new_recipe.course = course
+        new_recipe.user_id = user_id
         new_recipe.ingredients = ingredients
-        new_recipe.points = 0
-        new_recipe.liked_recipes = []
+        new_recipe.instructions = instructions
+        new_recipe.vegetarian = True if vegetarian == "True" else False
+        new_recipe.gluten_free = True if gluten_free == "True" else False
+        new_recipe.nut_free = True if nut_free == "True" else False
+        new_recipe.shellfish_free = True if shellfish_free == "True" else False
+        print(new_recipe)
         db.session.add(new_recipe)
         db.session.commit()
+        #user = Users.query.filter_by(user_id = user_id).first()
+        #session['username'] = user.username
+        #session['user_id'] = user_id
         return redirect(url_for('my_recipes_page'))

@@ -1,12 +1,27 @@
-{% extends "base.html" %}
+{% extends "base_home.html" %}
 
 {% block content %}
 
 <div
     class="relative mt-20 tablet:mt-60 mb-4 mx-2 tablet:mx-6 p-10 tablet:p-2 tablet:min-h-[500px] laptop:mx-[15%] desktop:mx-[25%] items-center justify-center border rounded-md border-main-bg shadow-lg">
     <h1 class="text-center my-12 font-bold font-mono text-xl">Let's see your new favourite</h1>
-    <form id="auth-form" method="POST" action="{{ url_for('login') }}"
+
+    {% with messages = get_flashed_messages()%}
+
+    {% if messages %}
+
+    {% for msg in messages %}
+    <p class="text-center text-wrap text-red"><b>&#x2022 {{msg}}</b></p>
+    {% endfor %}
+
+    {% endif %}
+
+    {% endwith %}
+
+    <form method="POST" action="{{ url_for('adding_new_recipe') }}"
         class="m-8 tablet:min-h-fit laptop:mx-4 text-center">
+        <!-- <input type="text" name="username" id="username" value="{{session.username}}" hidden> -->
+        <input type="text" name="user_id" id="user_id" value="{{session.user_id}}" hidden>
         <div class="tablet:my-4 laptop:mx-0 grid grid-cols-1">
             <label for="recipe_name" class="text-center mb-2"><b>The recipe's name is:</b></label>
             <input type="text" name="recipe_name" id="recipe_name" placeholder="#MyNextBestRecipe" required
@@ -16,24 +31,62 @@
         <b class="justify-self-center">and it is a:</b>
         <div class="mt-2 grid grid-cols-4 tablet:grid-cols-4">
             <div class="tablet:my-4 laptop:mx-0 grid grid-cols-1">
-                <label for="starter" class="text-center mb-2">Starter</label>
-                <input type="radio" name="course" id="starter" value="starter" required class="cursor-pointer" />
+                <label for="starter" class="text-center mb-2 cursor-pointer w-fit justify-self-center">Starter</label>
+                <input type="radio" name="course" id="starter" value="starter" required
+                    class="cursor-pointer w-fit justify-self-center" />
             </div>
             <div class="tablet:my-4 laptop:mx-0 grid grid-cols-1">
-                <label for="main" class="text-center mb-2">Main</label>
-                <input type="radio" name="course" id="main" value="main" class="cursor-pointer" />
+                <label for="main" class="text-center mb-2 cursor-pointer w-fit justify-self-center">Main</label>
+                <input type="radio" name="course" id="main" value="main"
+                    class="cursor-pointer w-fit justify-self-center" />
             </div>
             <div class="tablet:my-4 laptop:mx-0 grid grid-cols-1">
-                <label for="dessert" class="text-center mb-2">Dessert</label>
-                <input type="radio" name="course" id="dessert" value="dessert" class="cursor-pointer" />
+                <label for="dessert" class="text-center mb-2 cursor-pointer w-fit justify-self-center">Dessert</label>
+                <input type="radio" name="course" id="dessert" value="dessert"
+                    class="cursor-pointer w-fit justify-self-center" />
             </div>
             <div class="tablet:my-4 laptop:mx-0 grid grid-cols-1">
-                <label for="kids_meal" class="text-center mb-2">Kid's</label>
-                <input type="radio" name="course" id="kids_meal" value="kids_meal" class="cursor-pointer" />
+                <label for="kids_meal" class="text-center mb-2 cursor-pointer w-fit justify-self-center">Kid's</label>
+                <input type="radio" name="course" id="kids_meal" value="kids_meal"
+                    class="cursor-pointer w-fit justify-self-center" />
             </div>
         </div>
+        <br>
         <hr><br>
-        
+
+        <div class="grid grid-cols-1 text-center mb-2">
+            <label for="ingredients">ingredients</label>
+            <textarea name="ingredients" id="ingredients" rows="4" class="border rounded-lg border-main-bg"
+                required></textarea>
+        </div>
+        <div class="grid grid-cols-1 text-center mb-2">
+            <label for="instructions">instructions</label>
+            <textarea name="instructions" id="instructions" rows="8" class="border rounded-lg border-main-bg"
+                required></textarea>
+        </div>
+        <div class="grid grid-cols-4">
+            <div class="grid grid-cols-1 text-center mb-2">
+                <label for="vegetarian" class="cursor-pointer w-fit justify-self-center">Vegetarian</label>
+                <input type="checkbox" name="vegetarian" id="vegetarian" value="True"
+                    class="cursor-pointer w-fit justify-self-center">
+            </div>
+            <div class="grid grid-cols-1 text-center mb-2">
+                <label for="gluten_free" class="cursor-pointer w-fit justify-self-center">Gluten free</label>
+                <input type="checkbox" name="gluten_free" id="gluten_free" value="True"
+                    class="cursor-pointer w-fit justify-self-center">
+            </div>
+            <div class="grid grid-cols-1 text-center mb-2">
+                <label for="nut_free" class="cursor-pointer w-fit justify-self-center">Nut free</label>
+                <input type="checkbox" name="nut_free" id="nut_free" value="True"
+                    class="cursor-pointer w-fit justify-self-center">
+            </div>
+            <div class="grid grid-cols-1 text-center mb-2">
+                <label for="shellfish_free" class="cursor-pointer w-fit justify-self-center">Shellfish free</label>
+                <input type="checkbox" name="shellfish_free" id="shellfish_free" value="True"
+                    class="cursor-pointer w-fit justify-self-center">
+            </div>
+        </div>
+
         <!-- Submit button to add the above recipe to the database -->
         <div class="grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-1 col-span-2 mt-8 tablet:px-32 text-center">
             <input type="submit" value='Add new recipe'

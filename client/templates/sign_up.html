@@ -5,6 +5,17 @@
   <h1 class="text-center my-12 font-bold font-mono text-xl">
     Let's get you an account ...
   </h1>
+  {% with messages = get_flashed_messages()%}
+
+  {% if messages %}
+
+  {% for msg in messages %}
+  <p class="text-center text-wrap text-red"><b>&#x2022 {{msg}}</b></p>
+  {% endfor %}
+
+  {% endif %}
+
+  {% endwith %}
   <form method="POST" id="register-form" action="{{ url_for('register') }}" class="m-8 tablet:min-h-fit laptop:mx-4">
     <div class="my-4 laptop:mx-0 grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-1">
       <label for="email" class="text-center mb-2">Username:</label>
