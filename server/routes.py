@@ -119,10 +119,10 @@ def adding_new_recipe():
     user_id = request.form['user_id']
     ingredients = request.form['ingredients']
     instructions = request.form['instructions']
-    vegetarian = request.form['vegetarian'] if request.form['vegetarian'] else 'no'
-    gluten_free = request.form['gluten_free'] if request.form['gluten_free'] else 'no'
-    nut_free = request.form['nut_free'] if request.form['nut_free'] else 'no'
-    shellfish_free = request.form['shellfish_free'] if request.form['shellfish_free'] else 'no'
+    vegetarian = request.form['vegetarian'] if request.form.get('vegetarian') else 'no'
+    gluten_free = request.form['gluten_free'] if request.form.get('gluten_free') else 'no'
+    nut_free = request.form['nut_free'] if request.form.get('nut_free') else 'no'
+    shellfish_free = request.form['shellfish_free'] if request.form.get('shellfish_free') else 'no'
     recipe = Recipes.query.filter_by(recipe_name = recipe_name).first()
     if recipe:
         flash("Recipe already exists")
@@ -145,4 +145,5 @@ def adding_new_recipe():
         user = Users.query.filter_by(user_id = user_id).first()
         session['username'] = user.username
         session['user_id'] = user_id
+        flash(f'{recipe_name} has been added to your collection')
         return redirect(url_for('my_recipes_page'))

@@ -1,7 +1,17 @@
 {% extends "base_home.html" %}
 
 {% block content %}
+{% with messages = get_flashed_messages()%}
 
+{% if messages %}
+
+{% for msg in messages %}
+<p class="text-center text-wrap text-red"><b>&#x2022 {{msg}}</b></p>
+{% endfor %}
+
+{% endif %}
+
+{% endwith %}
 <div class="main-page grid grid-cols-1">
     <div class="recipes-row starters">
         <div class="recipes-header-row">
