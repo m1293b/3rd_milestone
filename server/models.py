@@ -14,6 +14,7 @@ class Users(db.Model):
     email_address = db.Column(db.String, nullable=False)
     points = db.Column(db.Integer)
     liked_recipes = db.Column(db.ARRAY(Integer))
+    recipes = db.relationship("Recipes", backref='users')
     
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
@@ -27,14 +28,13 @@ class Recipes(db.Model):
     recipe_id = db.Column(db.Integer, primary_key=True)
     recipe_name = db.Column(db.String, unique=True, nullable=False)
     course = db.Column(db.String, nullable=False)
-    user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'), nullable=False)
-    users = db.relationship("Users", backref=db.backref("users", uselist=False))
+    user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'))
     ingredients = db.Column(db.String, nullable=False)
     instructions = db.Column(db.String, nullable=False)
-    vegetarian = db.Column(db.Boolean, default=False)
-    gluten_free = db.Column(db.Boolean, default=False)
-    nut_free = db.Column(db.Boolean, default=False)
-    shellfish_free = db.Column(db.Boolean, default=False)
+    vegetarian = db.Column(db.String, default='no')
+    gluten_free = db.Column(db.String, default='no')
+    nut_free = db.Column(db.String, default='no')
+    shellfish_free = db.Column(db.String, default='no')
 
 with app.app_context():
     db.create_all()

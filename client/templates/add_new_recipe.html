@@ -20,7 +20,7 @@
 
     <form method="POST" action="{{ url_for('adding_new_recipe') }}"
         class="m-8 tablet:min-h-fit laptop:mx-4 text-center">
-        <!-- <input type="text" name="username" id="username" value="{{session.username}}" hidden> -->
+        <input type="text" name="username" id="username" value="{{session.username}}" hidden>
         <input type="text" name="user_id" id="user_id" value="{{session.user_id}}" hidden>
         <div class="tablet:my-4 laptop:mx-0 grid grid-cols-1">
             <label for="recipe_name" class="text-center mb-2"><b>The recipe's name is:</b></label>
@@ -67,22 +67,22 @@
         <div class="grid grid-cols-4">
             <div class="grid grid-cols-1 text-center mb-2">
                 <label for="vegetarian" class="cursor-pointer w-fit justify-self-center">Vegetarian</label>
-                <input type="checkbox" name="vegetarian" id="vegetarian" value="True"
+                <input type="checkbox" name="vegetarian" id="vegetarian" value="yes"
                     class="cursor-pointer w-fit justify-self-center">
             </div>
             <div class="grid grid-cols-1 text-center mb-2">
                 <label for="gluten_free" class="cursor-pointer w-fit justify-self-center">Gluten free</label>
-                <input type="checkbox" name="gluten_free" id="gluten_free" value="True"
+                <input type="checkbox" name="gluten_free" id="gluten_free" value="yes"
                     class="cursor-pointer w-fit justify-self-center">
             </div>
             <div class="grid grid-cols-1 text-center mb-2">
                 <label for="nut_free" class="cursor-pointer w-fit justify-self-center">Nut free</label>
-                <input type="checkbox" name="nut_free" id="nut_free" value="True"
+                <input type="checkbox" name="nut_free" id="nut_free" value="yes"
                     class="cursor-pointer w-fit justify-self-center">
             </div>
             <div class="grid grid-cols-1 text-center mb-2">
                 <label for="shellfish_free" class="cursor-pointer w-fit justify-self-center">Shellfish free</label>
-                <input type="checkbox" name="shellfish_free" id="shellfish_free" value="True"
+                <input type="checkbox" name="shellfish_free" id="shellfish_free" value="yes"
                     class="cursor-pointer w-fit justify-self-center">
             </div>
         </div>

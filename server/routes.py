@@ -115,33 +115,34 @@ def register():
 def adding_new_recipe():    
     recipe_name = request.form['recipe_name']
     course = request.form['course']
-    #username = request.form['username'] #can delete if it works
+    username = request.form['username']
     user_id = request.form['user_id']
     ingredients = request.form['ingredients']
     instructions = request.form['instructions']
-    vegetarian = request.form['vegetarian']
-    gluten_free = request.form['gluten_free']
-    nut_free = request.form['nut_free']
-    shellfish_free = request.form['shellfish_free']
+    vegetarian = request.form['vegetarian'] if request.form['vegetarian'] else 'no'
+    gluten_free = request.form['gluten_free'] if request.form['gluten_free'] else 'no'
+    nut_free = request.form['nut_free'] if request.form['nut_free'] else 'no'
+    shellfish_free = request.form['shellfish_free'] if request.form['shellfish_free'] else 'no'
     recipe = Recipes.query.filter_by(recipe_name = recipe_name).first()
     if recipe:
         flash("Recipe already exists")
         return render_template('add_new_recipe.html', error="Recipe already exists")
     else:
+        user = Users.query.filter_by(user_id = user_id).first()
         new_recipe = Recipes()
         new_recipe.recipe_name = recipe_name
         new_recipe.course = course
-        new_recipe.user_id = user_id
+        new_recipe.users = user
         new_recipe.ingredients = ingredients
         new_recipe.instructions = instructions
-        new_recipe.vegetarian = True if vegetarian == "True" else False
-        new_recipe.gluten_free = True if gluten_free == "True" else False
-        new_recipe.nut_free = True if nut_free == "True" else False
-        new_recipe.shellfish_free = True if shellfish_free == "True" else False
+        new_recipe.vegetarian = vegetarian
+        new_recipe.gluten_free = gluten_free
+        new_recipe.nut_free = nut_free
+        new_recipe.shellfish_free = shellfish_free
         print(new_recipe)
         db.session.add(new_recipe)
         db.session.commit()
-        #user = Users.query.filter_by(user_id = user_id).first()
-        #session['username'] = user.username
-        #session['user_id'] = user_id
+        user = Users.query.filter_by(user_id = user_id).first()
+        session['username'] = user.username
+        session['user_id'] = user_id
         return redirect(url_for('my_recipes_page'))
