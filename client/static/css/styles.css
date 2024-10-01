@@ -556,6 +556,8 @@ video {
 
 .container {
   width: 100%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 @media (min-width: 720px) {
@@ -825,7 +827,9 @@ input[value="Login"] {
 
 .recipes-row {
   margin-bottom: 1.5rem;
-  max-width: 90%;
+  min-height: 8rem;
+  min-width: 90%;
+  justify-self: center;
   border-radius: 0.5rem;
   border-width: 3px;
   --tw-border-opacity: 1;
@@ -1149,6 +1153,10 @@ input[value="Login"] {
   height: 4rem;
 }
 
+.h-5 {
+  height: 1.25rem;
+}
+
 .max-h-max {
   max-height: -moz-max-content;
   max-height: max-content;
@@ -1160,6 +1168,14 @@ input[value="Login"] {
 
 .min-h-1 {
   min-height: 0.25rem;
+}
+
+.min-h-32 {
+  min-height: 8rem;
+}
+
+.min-h-5 {
+  min-height: 1.25rem;
 }
 
 .min-h-80 {
@@ -1235,10 +1251,6 @@ input[value="Login"] {
 
 .max-w-\[60\%\] {
   max-width: 60%;
-}
-
-.max-w-\[90\%\] {
-  max-width: 90%;
 }
 
 .flex-auto {
@@ -1473,6 +1485,10 @@ input[value="Login"] {
   padding: 1rem;
 }
 
+.p-6 {
+  padding: 1.5rem;
+}
+
 .p-\[3px\] {
   padding: 3px;
 }
@@ -1539,6 +1555,14 @@ input[value="Login"] {
 
 .pb-\[70px\] {
   padding-bottom: 70px;
+}
+
+.pt-12 {
+  padding-top: 3rem;
+}
+
+.pt-6 {
+  padding-top: 1.5rem;
 }
 
 .text-left {

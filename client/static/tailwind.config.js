@@ -13,7 +13,7 @@ module.exports = {
       red: "#EF0107",
       "main-text": "#d2d6db",
       "main-bg": "#334155",
-      "golden": "#fbbf24",
+      golden: "#fbbf24",
     },
     screens: {
       tablet: "720px",
@@ -26,6 +26,9 @@ module.exports = {
       // => @media (min-width: 1280px) { ... }
     },
     extend: {},
+    container: {
+      center: true,
+    },
   },
   plugins: [],
 };

@@ -12,7 +12,7 @@
 {% endif %}
 
 {% endwith %}
-<div class="main-page grid grid-cols-1">
+<div class="main-page pt-12 grid grid-cols-1">
     <div class="recipes-row starters">
         <div class="recipes-header-row">
 
@@ -77,10 +77,10 @@
         </div>
     </div>
 
-    <div class="new-recipe">
-        <hr>
-        <hr>
-        <a href="{{url_for('add_new_recipe_page')}}">Add a new recipe</a>
+    <div class="new-recipe text-center">
+        <a href="{{url_for('add_new_recipe_page')}}"
+            class="button tablet:col-span-2 border-2 rounded-lg p-1 cursor-pointer min-w-[40%] laptop:max-w-[20%]">Add
+            a new recipe</a>
     </div>
 </div>
 
