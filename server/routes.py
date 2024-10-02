@@ -13,8 +13,16 @@ def index_page():
 @app.route('/recipes')
 def recipes_page():
     if "username" in session: # does this work??
+        starters = Recipes.query.filter_by(course = "starter").all()
+        mains = Recipes.query.filter_by(course = "main").all()
+        desserts = Recipes.query.filter_by(course = "dessert").all()
+        kids_meals = Recipes.query.filter_by(course = "kids_meal").all()
         return render_template("recipes_home.html", page_title = 'Recipes page')
     else:
+        starters = Recipes.query.filter_by(course = "starter").all()
+        mains = Recipes.query.filter_by(course = "main").all()
+        desserts = Recipes.query.filter_by(course = "dessert").all()
+        kids_meals = Recipes.query.filter_by(course = "kids_meal").all()
         return render_template("recipes.html", page_title = 'Recipes page')
 
 ## route for About page, no login required
@@ -41,8 +49,12 @@ def sign_up_page():
 def home_page():
     return render_template("home.html", page_title = 'Home page')
 
-@app.route('/my_recipes')
+@app.route('/my_recipes', methods=[])
 def my_recipes_page():
+    starters = Recipes.query.filter_by(course = "starter").all()
+    mains = Recipes.query.filter_by(course = "main").all()
+    desserts = Recipes.query.filter_by(course = "dessert").all()
+    kids_meals = Recipes.query.filter_by(course = "kids_meal").all()
     return render_template("my_recipes.html", page_title = 'My Recipes page')
 
 @app.route('/new_recipe')
