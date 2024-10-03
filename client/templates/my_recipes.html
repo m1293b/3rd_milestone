@@ -15,15 +15,19 @@
 <div class="main-page pt-12 grid grid-cols-1">
     <div class="recipes-row starters">
         <div class="recipes-header-row">
-
+            <p>Starters</p>
         </div>
         <div class="recipes-items-row">
-            {% for starter in my_starters %}
+            {% for starter in starters %}
             <div class="card">
-                <!-- to create function to fill the space in with cards for 4 recipes -->
+                <span>{{starter.recipe_name}}</span>
                 <div class="card-picture">
-                    <img src="{{url_for('../assets/starters.jpg')}}" alt="">
+
                 </div>
+                <form action="{{ url_for('edit_recipe')}}" method="POST">
+                    <input type="hidden" value="{{starter.recipe_id}}" name='selected_recipe'>
+                    <input type="submit" name="edit" id="edit_recipe" value="Edit recipe">
+                </form>
             </div>
             {% endfor %}
         </div>
@@ -31,15 +35,18 @@
     <!-- Mains -->
     <div class="recipes-row mains">
         <div class="recipes-header-row">
-
+            <p>Mains</p>
         </div>
         <div class="recipes-items-row">
-            {% for main in my_mains %}
+            {% for main in mains %}
             <div class="card">
-                <!-- to create function to fill the space in with cards for 4 recipes -->
+                <span>{{main.recipe_name}}</span>
                 <div class="card-picture">
-                    <img src="{{url_for('../assets/mains.jpg')}}" alt="">
                 </div>
+                <form action="{{ url_for('edit_recipe')}}" method="POST">
+                    <input type="hidden" value="{{main.recipe_id}}" name='selected_recipe'>
+                    <input type="submit" name="edit" id="edit_recipe" value="Edit recipe">
+                </form>
             </div>
             {% endfor %}
         </div>
@@ -47,15 +54,18 @@
     <!-- Desserts -->
     <div class="recipes-row desserts">
         <div class="recipes-header-row">
-
+            <p>Desserts</p>
         </div>
         <div class="recipes-items-row">
-            {% for dessert in my_desserts %}
+            {% for dessert in desserts %}
             <div class="card">
-                <!-- to create function to fill the space in with cards for 4 recipes -->
+                <span>{{dessert.recipe_name}}</span>
                 <div class="card-picture">
-                    <img src="{{url_for('../assets/desserts.jpg')}}" alt="">
                 </div>
+                <form action="{{ url_for('edit_recipe')}}" method="POST">
+                    <input type="hidden" value="{{dessert.recipe_id}}" name='selected_recipe'>
+                    <input type="submit" name="edit" id="edit_recipe" value="Edit recipe">
+                </form>
             </div>
             {% endfor %}
         </div>
@@ -63,15 +73,18 @@
     <!-- Kid's meals -->
     <div class="recipes-row kids">
         <div class="recipes-header-row">
-
+            <p>Kid's meals</p>
         </div>
         <div class="recipes-items-row">
-            {% for kids_meal in my_kids_meals %}
+            {% for kids_meal in kids_meals %}
             <div class="card">
-                <!-- to create function to fill the space in with cards for 4 recipes -->
+                <span>{{kids_meal.recipe_name}}</span>
                 <div class="card-picture">
-                    <img src="{{url_for('../assets/kids.jpg')}}" alt="">
                 </div>
+                <form action="{{ url_for('edit_recipe')}}" method="POST">
+                    <input type="hidden" value="{{kids_meal.recipe_id}}" name='selected_recipe'>
+                    <input type="submit" name="edit" id="edit_recipe" value="Edit recipe">
+                </form>
             </div>
             {% endfor %}
         </div>

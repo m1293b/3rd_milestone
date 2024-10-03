@@ -783,6 +783,7 @@ video {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 1rem;
+  padding-bottom: 70px;
 }
 
 .cards {
@@ -828,48 +829,118 @@ input[value="Login"] {
 .recipes-row {
   margin-bottom: 1.5rem;
   min-height: 8rem;
-  min-width: 90%;
+  min-width: 80%;
+  max-width: 90%;
   justify-self: center;
   border-radius: 0.5rem;
   border-width: 3px;
   --tw-border-opacity: 1;
   border-color: rgb(51 65 85 / var(--tw-border-opacity));
+  padding: 0.5rem;
+}
+
+@media (min-width: 720px) {
+  .recipes-row {
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1280px) {
+  .recipes-row {
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+  }
 }
 
 .recipes-header-row {
-  justify-self: start;
+  margin-bottom: 1rem;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 700;
 }
 
 .recipes-items-row {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  justify-content: space-evenly;
+  gap: 1rem;
+  text-wrap: wrap;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 @media (min-width: 720px) {
   .recipes-items-row {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 4rem;
   }
 }
 
 .card-picture {
-  min-width: 100px;
-  height: auto;
+  height: 100px;
+  width: 100px;
+  justify-self: center;
 }
 
-.starters > .card-picture {
+@media (min-width: 1024px) {
+  .card-picture {
+    height: 180px;
+    width: 180px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .card-picture {
+    height: 230px;
+    width: 230px;
+  }
+}
+
+.card-picture {
+  border: #334155;
+  border-radius: 4px;
+  padding: 2px;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  justify-content: center;
+  margin-top: 4px;
+}
+
+.starters .card-picture {
   background-image: url("../assets/starters.jpg");
 }
 
-.mains > .card-picture {
+.mains .card-picture {
   background-image: url("../assets/mains.jpg");
 }
 
-.desserts > .card-picture {
+.desserts .card-picture {
   background-image: url("../assets/desserts.jpg");
 }
 
-.kids > .card-picture {
+.kids .card-picture {
   background-image: url("../assets/kids.jpg");
+}
+
+.card {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  text-align: center;
+  justify-content: center;
+}
+
+.card > span {
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  justify-self: center;
+  border-radius: 0.25rem;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(51 65 85 / var(--tw-border-opacity));
+  padding: 0.25rem;
 }
 
 .visible {
@@ -1157,6 +1228,10 @@ input[value="Login"] {
   height: 1.25rem;
 }
 
+.h-\[100px\] {
+  height: 100px;
+}
+
 .max-h-max {
   max-height: -moz-max-content;
   max-height: max-content;
@@ -1212,6 +1287,10 @@ input[value="Login"] {
   min-height: 100svh;
 }
 
+.w-\[100px\] {
+  width: 100px;
+}
+
 .w-\[92\%\] {
   width: 92%;
 }
@@ -1251,6 +1330,15 @@ input[value="Login"] {
 
 .max-w-\[60\%\] {
   max-width: 60%;
+}
+
+.max-w-\[90\%\] {
+  max-width: 90%;
+}
+
+.max-w-fit {
+  max-width: -moz-fit-content;
+  max-width: fit-content;
 }
 
 .flex-auto {
@@ -1301,6 +1389,10 @@ input[value="Login"] {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.grid-rows-2 {
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+}
+
 .flex-row {
   flex-direction: row;
 }
@@ -1323,6 +1415,14 @@ input[value="Login"] {
 
 .justify-between {
   justify-content: space-between;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+.gap-16 {
+  gap: 4rem;
 }
 
 .gap-2 {
@@ -1589,6 +1689,11 @@ input[value="Login"] {
   font-size: 150%;
 }
 
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -1654,6 +1759,11 @@ input[value="Login"] {
 
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.backdrop-filter {
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
 .transition {
@@ -1808,12 +1918,20 @@ input[value="Login"] {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
+  .tablet\:grid-rows-2 {
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+  }
+
   .tablet\:flex-row {
     flex-direction: row;
   }
 
   .tablet\:justify-center {
     justify-content: center;
+  }
+
+  .tablet\:gap-16 {
+    gap: 4rem;
   }
 
   .tablet\:p-2 {
@@ -1846,6 +1964,14 @@ input[value="Login"] {
     margin-right: 15%;
   }
 
+  .laptop\:h-\[180px\] {
+    height: 180px;
+  }
+
+  .laptop\:w-\[180px\] {
+    width: 180px;
+  }
+
   .laptop\:min-w-\[40\%\] {
     min-width: 40%;
   }
@@ -1873,8 +1999,16 @@ input[value="Login"] {
     margin-right: 25%;
   }
 
+  .desktop\:h-\[230px\] {
+    height: 230px;
+  }
+
   .desktop\:min-h-\[50dvh\] {
     min-height: 50dvh;
+  }
+
+  .desktop\:w-\[230px\] {
+    width: 230px;
   }
 
   .desktop\:max-w-96 {

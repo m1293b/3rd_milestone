@@ -59,7 +59,7 @@
     @apply font-bold mx-6 p-2 border-solid border border-golden rounded bg-golden text-main-bg hover:bg-main-bg hover:text-golden hover:rounded-3xl hover:border hover:border-solid hover:border-golden transition-all duration-200 ease-linear cursor-pointer;
   }
   .main-page {
-    @apply relative top-16 grid grid-cols-1 gap-4;
+    @apply relative top-16 grid grid-cols-1 gap-4 pb-[70px];
   }
   .cards {
     padding: 8px;
@@ -93,28 +93,44 @@
     background-repeat: no-repeat;
   }
   .recipes-row {
-    @apply mb-6 min-h-32 min-w-[90%] border-[3px] border-main-bg rounded-lg justify-self-center;
+    @apply mb-6 p-2 min-h-32 min-w-[80%] max-w-[90%] border-[3px] border-main-bg rounded-lg justify-self-center tablet:grid-rows-2 desktop:grid-rows-1;
   }
   .recipes-header-row {
-    @apply justify-self-start;
+    @apply justify-center text-center mb-4 font-bold text-lg;
   }
   .recipes-items-row {
-    @apply grid grid-cols-2 tablet:grid-cols-4;
+    @apply grid grid-cols-2 tablet:grid-cols-4 gap-4 tablet:gap-16 justify-evenly text-sm text-wrap;
   }
   .card-picture {
-    min-width: 100px;
-    height: auto;
+    @apply h-[100px] w-[100px] laptop:h-[180px] laptop:w-[180px] desktop:h-[230px] desktop:w-[230px] justify-self-center;
+    border: #334155;
+    border-radius: 4px;
+    padding: 2px;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    justify-content: center;
+    margin-top: 4px;
   }
-  .starters > .card-picture {
+  .starters .card-picture {
     background-image: url("../assets/starters.jpg");
   }
-  .mains > .card-picture {
+  .mains .card-picture {
     background-image: url("../assets/mains.jpg");
   }
-  .desserts > .card-picture {
+  .desserts .card-picture {
     background-image: url("../assets/desserts.jpg");
   }
-  .kids > .card-picture {
+  .kids .card-picture {
     background-image: url("../assets/kids.jpg");
+  }
+  .card {
+    @apply grid grid-cols-1;
+    text-align: center;
+    justify-content: center;
+  }
+  .card > span {
+    @apply border border-main-bg rounded p-1 max-w-fit justify-self-center;
   }
 }

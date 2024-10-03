@@ -25,7 +25,7 @@
         <div class="tablet:my-4 laptop:mx-0 grid grid-cols-1">
             <label for="recipe_name" class="text-center mb-2"><b>The recipe's name is:</b></label>
             <input type="text" name="recipe_name" id="recipe_name" placeholder="#MyNextBestRecipe"
-                value="{{current_recipe.recipe_name}}" required
+                value="{{current.recipe_name}}" required
                 class="form-control border rounded-md border-main-bg shadow-sm text-center mb-2 justify-self-center min-w-[80%] tablet:min-w-[100%] laptop:min-w-[40%] laptop:max-w-[60%]" />
         </div>
         <!-- radio buttons to select which course does the new recipe belong to -->
@@ -33,23 +33,23 @@
         <div class="mt-2 grid grid-cols-4 tablet:grid-cols-4">
             <div class="tablet:my-4 laptop:mx-0 grid grid-cols-1">
                 <label for="starter" class="text-center mb-2 cursor-pointer w-fit justify-self-center">Starter</label>
-                <input type="radio" name="course" id="starter" value="starter" required {{'selected' if
-                    current_recipe.course==' starter' else "" }} class="cursor-pointer w-fit justify-self-center" />
+                <input type="radio" name="course" id="starter" value="starter" required {{ "checked" if
+                    current_recipe.course='starter' else '' }} class="cursor-pointer w-fit justify-self-center" />
             </div>
             <div class="tablet:my-4 laptop:mx-0 grid grid-cols-1">
                 <label for="main" class="text-center mb-2 cursor-pointer w-fit justify-self-center">Main</label>
-                <input type="radio" name="course" id="main" value="main" {{'selected' if current_recipe.course==' main'
-                    else "" }} class="cursor-pointer w-fit justify-self-center" />
+                <input type="radio" name="course" id="main" value="main" {{ "checked" if current_recipe.course='main'
+                    else '' }} class="cursor-pointer w-fit justify-self-center" />
             </div>
             <div class="tablet:my-4 laptop:mx-0 grid grid-cols-1">
                 <label for="dessert" class="text-center mb-2 cursor-pointer w-fit justify-self-center">Dessert</label>
-                <input type="radio" name="course" id="dessert" value="dessert" {{'selected' if
-                    current_recipe.course==' dessert' else "" }} class="cursor-pointer w-fit justify-self-center" />
+                <input type="radio" name="course" id="dessert" value="dessert" {{ "checked" if
+                    current_recipe.course='dessert' else '' }} class="cursor-pointer w-fit justify-self-center" />
             </div>
             <div class="tablet:my-4 laptop:mx-0 grid grid-cols-1">
                 <label for="kids_meal" class="text-center mb-2 cursor-pointer w-fit justify-self-center">Kid's</label>
-                <input type="radio" name="course" id="kids_meal" value="kids_meal" {{'selected' if
-                    current_recipe.course==' kids_meal' else "" }} class="cursor-pointer w-fit justify-self-center" />
+                <input type="radio" name="course" id="kids_meal" value="kids_meal" {{ "checked" if
+                    current_recipe.course='kids_meal' else '' }} class="cursor-pointer w-fit justify-self-center" />
             </div>
         </div>
         <br>
@@ -68,23 +68,23 @@
         <div class="grid grid-cols-4">
             <div class="grid grid-cols-1 text-center mb-2">
                 <label for="vegetarian" class="cursor-pointer w-fit justify-self-center">Vegetarian</label>
-                <input type="checkbox" name="vegetarian" id="vegetarian" value="yes" {{ 'checked="checked"' if
-                    current_recipe.vegetarian=='yes' else '' }} class="cursor-pointer w-fit justify-self-center">
+                <input type="checkbox" name="vegetarian" id="vegetarian" value="yes" {{ "checked" if
+                    current_recipe.vegetarian='yes' else '' }} class="cursor-pointer w-fit justify-self-center">
             </div>
             <div class="grid grid-cols-1 text-center mb-2">
                 <label for="gluten_free" class="cursor-pointer w-fit justify-self-center">Gluten free</label>
-                <input type="checkbox" name="gluten_free" id="gluten_free" value="yes" {{ 'checked="checked"' if
-                    current_recipe.gluten_free=='yes' else '' }} class="cursor-pointer w-fit justify-self-center">
+                <input type="checkbox" name="gluten_free" id="gluten_free" value="yes" {{ "checked" if
+                    current_recipe.gluten_free='yes' else '' }} class="cursor-pointer w-fit justify-self-center">
             </div>
             <div class="grid grid-cols-1 text-center mb-2">
                 <label for="nut_free" class="cursor-pointer w-fit justify-self-center">Nut free</label>
-                <input type="checkbox" name="nut_free" id="nut_free" value="yes" {{ 'checked="checked"' if
-                    current_recipe.nut_free=='yes' else '' }} class="cursor-pointer w-fit justify-self-center">
+                <input type="checkbox" name="nut_free" id="nut_free" value="yes" {{ "checked" if
+                    current_recipe.nut_free='yes' else '' }} class="cursor-pointer w-fit justify-self-center">
             </div>
             <div class="grid grid-cols-1 text-center mb-2">
                 <label for="shellfish_free" class="cursor-pointer w-fit justify-self-center">Shellfish free</label>
-                <input type="checkbox" name="shellfish_free" id="shellfish_free" value="yes" {{ 'checked="checked"' if
-                    current_recipe.shellfish_free=='yes' else '' }} class="cursor-pointer w-fit justify-self-center">
+                <input type="checkbox" name="shellfish_free" id="shellfish_free" value="yes" {{ "checked" if
+                    current_recipe.shellfish_free='yes' else '' }} class="cursor-pointer w-fit justify-self-center">
             </div>
         </div>
 

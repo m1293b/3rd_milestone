@@ -2,5 +2,70 @@
 
 {% block content %}
 
+<div class="main-page pt-12 grid grid-cols-1">
+    <div class="recipes-row starters">
+        <div class="recipes-header-row">
+
+        </div>
+        <div class="recipes-items-row">
+            {% for starter in starters %}
+            <div class="card">
+                <!-- to create function to fill the space in with cards for 4 recipes -->
+                <div class="card-picture">
+                    {{starter.recipe_name}}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <!-- Mains -->
+    <div class="recipes-row mains">
+        <div class="recipes-header-row">
+
+        </div>
+        <div class="recipes-items-row">
+            {% for main in mains %}
+            <div class="card">
+                <!-- to create function to fill the space in with cards for 4 recipes -->
+                <div class="card-picture">
+                    {{main.recipe_name}}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <!-- Desserts -->
+    <div class="recipes-row desserts">
+        <div class="recipes-header-row">
+
+        </div>
+        <div class="recipes-items-row">
+            {% for dessert in desserts %}
+            <div class="card">
+                <!-- to create function to fill the space in with cards for 4 recipes -->
+                <div class="card-picture">
+                    {{dessert.recipe_name}}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <!-- Kid's meals -->
+    <div class="recipes-row kids">
+        <div class="recipes-header-row">
+
+        </div>
+        <div class="recipes-items-row">
+            {% for kids_meal in kids_meals %}
+            <div class="card">
+                <!-- to create function to fill the space in with cards for 4 recipes -->
+                <div class="card-picture">
+                    {{kids_meal.recipe_name}}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
 
 {% endblock content %}

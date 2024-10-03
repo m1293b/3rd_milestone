@@ -1,77 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
-    />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="{{ url_for('static', filename='assets/cookbook.png') }}"
-    />
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='css/styles.css') }}"
-      type="text/css"
-    />
-    <title>{{ page_title }}</title>
-  </head>
 
-  <body>
-    <!-- Responsive navbar-->
-    <header class="header">
-      <nav class="navbar">
-        <div class="navbar-brand">
-          <a class="brand-in-header" href="#!">No. 39 Recipes</a>
-          <div class="cone"></div>
-        </div>
-        <div class="navbar-links-list-div menu-icon-nonclicked">
-          <ul class="navbar-link-list">
-            <li class="navbar-links">
-              <a class="nav-link" href="{{ url_for('recipes_page') }}"
-                >Recipes</a
-              >
-            </li>
-            <li class="navbar-links">
-              <a class="nav-link" href="{{ url_for('home_page') }}">Home</a>
-            </li>
-            <li class="navbar-links">
-              <a class="nav-link" href="{{ url_for('events_page') }}">Events</a>
-            </li>
-          </ul>
-        </div>
-        <div class="navbar-sign-in">
-          <a href="{{ url_for('logout') }}">Logout</a>
-        </div>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/cookbook.png') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" type="text/css" />
+  <title>{{ page_title }}</title>
+</head>
 
-    {% block content %} {% endblock content %}
-
-    <!-- Footer-->
-    <footer class="fixed bottom-0 bg-main-bg py-2 text-main-text align-middle">
-      <div class="justify-center w-screen mb-2">
-        <p class="text-center">
-          Copyright &copy; No. 39 Recipes <span id="copyright"></span>
-        </p>
+<body>
+  <!-- Responsive navbar-->
+  <header class="header">
+    <nav class="navbar">
+      <div class="navbar-brand">
+        <a class="brand-in-header" href="#!">No. 39 Recipes</a>
+        <div class="cone"></div>
       </div>
-    </footer>
-    <!-- JQuery JS -->
-    <script src="{{ url_for('static', filename='js/jquery-3.7.1.min.js')}}"></script>
-    <!-- Core theme JS-->
-    <script src="{{ url_for('static', filename='js/scripts.js')}}"></script>
-    <!-- Ionicons JS -->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
-  </body>
+      <div class="navbar-links-list-div menu-icon-nonclicked">
+        <ul class="navbar-link-list">
+          <li class="navbar-links">
+            <a class="nav-link" href="{{ url_for('recipes_page') }}">Recipes</a>
+          </li>
+          <li class="navbar-links">
+            <a class="nav-link" href="{{ url_for('home_page') }}">Home</a>
+          </li>
+          <li class="navbar-links">
+            <a class="nav-link" href="{{ url_for('events_page') }}">Events</a>
+          </li>
+        </ul>
+      </div>
+      <div class="navbar-sign-in">
+        <a href="{{ url_for('logout') }}">Logout</a>
+      </div>
+    </nav>
+  </header>
+
+  {% block content %} {% endblock content %}
+
+  <!-- Footer-->
+  <footer class="fixed bottom-0 bg-main-bg py-2 text-main-text align-middle">
+    <div class="justify-center w-screen mb-2">
+      <p class="text-center">
+        Copyright &copy; No. 39 Recipes <span id="copyright"></span>
+      </p>
+    </div>
+  </footer>
+  <!-- JQuery JS -->
+  <script src="{{ url_for('static', filename='js/jquery-3.7.1.min.js')}}"></script>
+  <!-- Core theme JS-->
+  <script src="{{ url_for('static', filename='js/scripts.js')}}"></script>
+  <!-- Ionicons JS -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
 </html>

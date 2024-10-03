@@ -8,22 +8,24 @@ from flask_sqlalchemy import SQLAlchemy
 def index_page():
     return render_template("index.html", page_title = 'Main page')
 
+current_users = {}
+
 ## route for Recipes page, no login required
 
 @app.route('/recipes')
 def recipes_page():
     if "username" in session: # does this work??
-        starters = Recipes.query.filter_by(course = "starter").all()
-        mains = Recipes.query.filter_by(course = "main").all()
-        desserts = Recipes.query.filter_by(course = "dessert").all()
-        kids_meals = Recipes.query.filter_by(course = "kids_meal").all()
-        return render_template("recipes_home.html", page_title = 'Recipes page')
+        starters = Recipes.query.filter_by(course = "starter").limit(4).all()
+        mains = Recipes.query.filter_by(course = "main").limit(4).all()
+        desserts = Recipes.query.filter_by(course = "dessert").limit(4).all()
+        kids_meals = Recipes.query.filter_by(course = "kids_meal").limit(4).all()
+        return render_template("recipes_home.html", page_title = 'Recipes page', starters = starters, mains = mains, desserts = desserts, kids_meals = kids_meals)
     else:
-        starters = Recipes.query.filter_by(course = "starter").all()
-        mains = Recipes.query.filter_by(course = "main").all()
-        desserts = Recipes.query.filter_by(course = "dessert").all()
-        kids_meals = Recipes.query.filter_by(course = "kids_meal").all()
-        return render_template("recipes.html", page_title = 'Recipes page')
+        starters = Recipes.query.filter_by(course = "starter").limit(4).all()
+        mains = Recipes.query.filter_by(course = "main").limit(4).all()
+        desserts = Recipes.query.filter_by(course = "dessert").limit(4).all()
+        kids_meals = Recipes.query.filter_by(course = "kids_meal").limit(4).all()
+        return render_template("recipes.html", page_title = 'Recipes page', starters = starters, mains = mains, desserts = desserts, kids_meals = kids_meals)
 
 ## route for About page, no login required
 
@@ -49,17 +51,35 @@ def sign_up_page():
 def home_page():
     return render_template("home.html", page_title = 'Home page')
 
-@app.route('/my_recipes', methods=[])
+@app.route('/my_recipes')
 def my_recipes_page():
-    starters = Recipes.query.filter_by(course = "starter").all()
-    mains = Recipes.query.filter_by(course = "main").all()
-    desserts = Recipes.query.filter_by(course = "dessert").all()
-    kids_meals = Recipes.query.filter_by(course = "kids_meal").all()
-    return render_template("my_recipes.html", page_title = 'My Recipes page')
+    starters = Recipes.query.filter_by(course = "starter", user_id = session['user_id']).all()
+    mains = Recipes.query.filter_by(course = "main", user_id = session['user_id']).all()
+    desserts = Recipes.query.filter_by(course = "dessert", user_id = session['user_id']).all()
+    kids_meals = Recipes.query.filter_by(course = "kids_meal", user_id = session['user_id']).all()
+    return render_template("my_recipes.html", page_title = 'My Recipes page', starters = starters, mains = mains, desserts = desserts, kids_meals = kids_meals)
 
 @app.route('/new_recipe')
 def add_new_recipe_page():
     return render_template("add_new_recipe.html", page_title = 'Adding a recipe')
+
+# View selected recipe
+
+@app.route('/view_recipe')
+def view_recipe():
+    starters = Recipes.query.filter_by(course = "starter", user_id = session['user_id']).all()
+    mains = Recipes.query.filter_by(course = "main", user_id = session['user_id']).all()
+    desserts = Recipes.query.filter_by(course = "dessert", user_id = session['user_id']).all()
+    kids_meals = Recipes.query.filter_by(course = "kids_meal", user_id = session['user_id']).all()
+    return render_template("my_recipes.html", page_title = 'My Recipes page', starters = starters, mains = mains, desserts = desserts, kids_meals = kids_meals)
+
+# Edit selected recipe
+
+@app.route('/edit_recipe', methods=["POST"])
+def edit_recipe():
+    selected_recipe = request.form['selected_recipe']
+    current_recipe = Recipes.query.filter_by(recipe_id = selected_recipe).first()
+    return render_template("edit_recipe.html", page_title = 'Edit recipe', current_recipe = current_recipe)
 
 ## route to take user to their profile page where they will be able to edit their details
 

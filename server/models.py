@@ -6,6 +6,7 @@ from sqlalchemy import (
 from werkzeug.security import generate_password_hash, check_password_hash
 
 # create a class-based model for the "users" table
+
 class Users(db.Model):
     __tablename__ = 'users'
     user_id = db.Column(db.Integer, primary_key=True)
@@ -23,10 +24,11 @@ class Users(db.Model):
         return check_password_hash(self.password_hash, password)
     
 # create a class-based model for the "recipes" table
+
 class Recipes(db.Model):
     __tablename__ = 'recipes'
     recipe_id = db.Column(db.Integer, primary_key=True)
-    recipe_name = db.Column(db.String, unique=True, nullable=False)
+    recipe_name = db.Column(db.String(20), unique=True, nullable=False)
     course = db.Column(db.String, nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'))
     ingredients = db.Column(db.String, nullable=False)
@@ -36,9 +38,7 @@ class Recipes(db.Model):
     nut_free = db.Column(db.String, default='no')
     shellfish_free = db.Column(db.String, default='no')
 
-with app.app_context():
-    db.create_all()
-
 # create tables if they don't exist
 
-#base.metadata.create_all(db,base.metadata.tables.values(),checkfirst=True)
+with app.app_context():
+    db.create_all()
