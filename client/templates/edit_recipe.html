@@ -36,18 +36,18 @@
             </div>
             <div class="tablet:my-4 laptop:mx-0 grid grid-cols-1">
                 <label for="main" class="text-center mb-2 cursor-pointer w-fit justify-self-center">Main</label>
-                <input type="radio" name="course" id="main" value="main" {{' checked="checked"' if current_recipe.course=="main" else "" }}
+                <input type="radio" name="course" id="main" value="main"{{ ' checked="checked"' if current_recipe.course=="main" else ""}}
                     class="cursor-pointer w-fit justify-self-center" />
             </div>
             <div class="tablet:my-4 laptop:mx-0 grid grid-cols-1">
                 <label for="dessert" class="text-center mb-2 cursor-pointer w-fit justify-self-center">Dessert</label>
-                <input type="radio" name="course" id="dessert" value="dessert" {{' checked="checked"' if
+                <input type="radio" name="course" id="dessert" value="dessert"{{' checked="checked"' if
                     current_recipe.course=="dessert" else "" }} class="cursor-pointer w-fit justify-self-center" />
             </div>
             <div class="tablet:my-4 laptop:mx-0 grid grid-cols-1">
                 <label for="kids_meal" class="text-center mb-2 cursor-pointer w-fit justify-self-center">Kid' s</label>
                 <input type="radio" name="course" id="kids_meal" value="kids_meal" {{'checked="checked"' if
-                    current_recipe.course=="kids_meal" else "" }} class="cursor-pointer w-fit justify-self-center" />
+                    current_recipe.course=="kids_meal" else ""}} class="cursor-pointer w-fit justify-self-center" />
             </div>
         </div>
         <br>

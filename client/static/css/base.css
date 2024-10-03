@@ -93,7 +93,7 @@
     background-repeat: no-repeat;
   }
   .recipes-row {
-    @apply mb-6 p-2 min-h-32 min-w-[80%] max-w-[90%] border-[3px] border-main-bg rounded-lg justify-self-center tablet:grid-rows-2 desktop:grid-rows-1;
+    @apply mb-6 p-2 pb-4 min-h-32 min-w-[80%] max-w-[90%] border-[3px] border-main-bg rounded-lg justify-self-center tablet:grid-rows-2 desktop:grid-rows-1;
   }
   .recipes-header-row {
     @apply justify-center text-center mb-4 font-bold text-lg;
@@ -131,6 +131,6 @@
     justify-content: center;
   }
   .card > span {
-    @apply border border-main-bg rounded p-1 max-w-fit justify-self-center;
+    @apply border border-main-text bg-main-bg text-main-text rounded p-1 max-w-fit justify-self-center;
   }
 }

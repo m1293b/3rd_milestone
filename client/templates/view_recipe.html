@@ -18,7 +18,7 @@
 
     {% endwith %}
 
-    <form method="POST" action="{{ url_for('adding_new_recipe') }}"
+    <form method="GET" action="{{ url_for('adding_new_recipe') }}"
         class="m-8 tablet:min-h-fit laptop:mx-4 text-center">
         <input type="text" name="username" id="username" value="{{session.username}}" hidden>
         <input type="text" name="user_id" id="user_id" value="{{session.user_id}}" hidden>

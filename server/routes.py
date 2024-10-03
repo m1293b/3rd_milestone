@@ -15,16 +15,16 @@ current_users = {}
 @app.route('/recipes')
 def recipes_page():
     if "username" in session: # does this work??
-        starters = Recipes.query.filter_by(course = "starter").limit(4).all()
-        mains = Recipes.query.filter_by(course = "main").limit(4).all()
-        desserts = Recipes.query.filter_by(course = "dessert").limit(4).all()
-        kids_meals = Recipes.query.filter_by(course = "kids_meal").limit(4).all()
+        starters = Recipes.query.filter_by(course = "starter").order_by(Recipes.recipe_id.desc()).limit(4)
+        mains = Recipes.query.filter_by(course = "main").order_by(Recipes.recipe_id.desc()).limit(4)
+        desserts = Recipes.query.filter_by(course = "dessert").order_by(Recipes.recipe_id.desc()).limit(4)
+        kids_meals = Recipes.query.filter_by(course = "kids_meal").order_by(Recipes.recipe_id.desc()).limit(4)
         return render_template("recipes_home.html", page_title = 'Recipes page', starters = starters, mains = mains, desserts = desserts, kids_meals = kids_meals)
     else:
-        starters = Recipes.query.filter_by(course = "starter").limit(4).all()
-        mains = Recipes.query.filter_by(course = "main").limit(4).all()
-        desserts = Recipes.query.filter_by(course = "dessert").limit(4).all()
-        kids_meals = Recipes.query.filter_by(course = "kids_meal").limit(4).all()
+        starters = Recipes.query.filter_by(course = "starter").order_by(Recipes.recipe_id.desc()).limit(4)
+        mains = Recipes.query.filter_by(course = "main").order_by(Recipes.recipe_id.desc()).limit(4)
+        desserts = Recipes.query.filter_by(course = "dessert").order_by(Recipes.recipe_id.desc()).limit(4)
+        kids_meals = Recipes.query.filter_by(course = "kids_meal").order_by(Recipes.recipe_id.desc()).limit(4)
         return render_template("recipes.html", page_title = 'Recipes page', starters = starters, mains = mains, desserts = desserts, kids_meals = kids_meals)
 
 ## route for About page, no login required
@@ -56,7 +56,7 @@ def my_recipes_page():
     starters = Recipes.query.filter_by(course = "starter", user_id = session['user_id']).all()
     mains = Recipes.query.filter_by(course = "main", user_id = session['user_id']).all()
     desserts = Recipes.query.filter_by(course = "dessert", user_id = session['user_id']).all()
-    kids_meals = Recipes.query.filter_by(course = "kids_meal", user_id = session['user_id']).all()
+    kids_meals = Recipes.query.filter_by(course = "kids_meal", user_id = session['user_id']).order_by(Recipes.recipe_id.desc()).limit(4)
     return render_template("my_recipes.html", page_title = 'My Recipes page', starters = starters, mains = mains, desserts = desserts, kids_meals = kids_meals)
 
 @app.route('/new_recipe')
@@ -67,11 +67,9 @@ def add_new_recipe_page():
 
 @app.route('/view_recipe')
 def view_recipe():
-    starters = Recipes.query.filter_by(course = "starter", user_id = session['user_id']).all()
-    mains = Recipes.query.filter_by(course = "main", user_id = session['user_id']).all()
-    desserts = Recipes.query.filter_by(course = "dessert", user_id = session['user_id']).all()
-    kids_meals = Recipes.query.filter_by(course = "kids_meal", user_id = session['user_id']).all()
-    return render_template("my_recipes.html", page_title = 'My Recipes page', starters = starters, mains = mains, desserts = desserts, kids_meals = kids_meals)
+    selected_recipe = request.form['selected_recipe']
+    current_recipe = Recipes.query.filter_by(recipe_id = selected_recipe).first()
+    return render_template("view_recipe.html", page_title = 'View recipe', current_recipe = current_recipe)
 
 # Edit selected recipe
 
@@ -87,7 +85,7 @@ def edit_recipe():
 def update_recipe():
     selected_recipe = request.form['recipe_id']
     current_recipe = Recipes.query.filter_by(recipe_id = selected_recipe).first()
-    current_recipe.recipe_name = request.form['recipe_name'] if current_recipe.recipe_name!=request.form['recipe_name'] else ''
+    current_recipe.recipe_name = request.form['recipe_name'] if current_recipe.recipe_name!=request.form['recipe_name'] else current_recipe.recipe_name
     current_recipe.course = request.form['course']
     current_recipe.ingredients = request.form['ingredients']
     current_recipe.instructions = request.form['instructions']
@@ -96,6 +94,7 @@ def update_recipe():
     current_recipe.nut_free = request.form['nut_free'] if request.form.get('nut_free') else 'no'
     current_recipe.shellfish_free = request.form['shellfish_free'] if request.form.get('shellfish_free') else 'no'
     db.session.commit()
+    flash(f'"{current_recipe.recipe_name}" has been updated.')
     return render_template("edit_recipe.html", page_title = 'Update recipe', current_recipe = current_recipe)
 
 ## route to take user to their profile page where they will be able to edit their details

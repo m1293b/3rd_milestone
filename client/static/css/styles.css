@@ -837,6 +837,7 @@ input[value="Login"] {
   --tw-border-opacity: 1;
   border-color: rgb(51 65 85 / var(--tw-border-opacity));
   padding: 0.5rem;
+  padding-bottom: 1rem;
 }
 
 @media (min-width: 720px) {
@@ -939,8 +940,12 @@ input[value="Login"] {
   border-radius: 0.25rem;
   border-width: 1px;
   --tw-border-opacity: 1;
-  border-color: rgb(51 65 85 / var(--tw-border-opacity));
+  border-color: rgb(210 214 219 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(51 65 85 / var(--tw-bg-opacity));
   padding: 0.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(210 214 219 / var(--tw-text-opacity));
 }
 
 .visible {
@@ -1516,6 +1521,10 @@ input[value="Login"] {
   border-right-width: 1px;
 }
 
+.border-t {
+  border-top-width: 1px;
+}
+
 .border-solid {
   border-style: solid;
 }
@@ -1651,6 +1660,10 @@ input[value="Login"] {
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+}
+
+.pb-4 {
+  padding-bottom: 1rem;
 }
 
 .pb-\[70px\] {
