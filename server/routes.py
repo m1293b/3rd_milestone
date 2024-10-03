@@ -81,6 +81,23 @@ def edit_recipe():
     current_recipe = Recipes.query.filter_by(recipe_id = selected_recipe).first()
     return render_template("edit_recipe.html", page_title = 'Edit recipe', current_recipe = current_recipe)
 
+# Update selected recipe
+
+@app.route('/update_recipe', methods=["POST"])
+def update_recipe():
+    selected_recipe = request.form['recipe_id']
+    current_recipe = Recipes.query.filter_by(recipe_id = selected_recipe).first()
+    current_recipe.recipe_name = request.form['recipe_name'] if current_recipe.recipe_name!=request.form['recipe_name'] else ''
+    current_recipe.course = request.form['course']
+    current_recipe.ingredients = request.form['ingredients']
+    current_recipe.instructions = request.form['instructions']
+    current_recipe.vegetarian = request.form['vegetarian'] if request.form.get('vegetarian') else 'no'
+    current_recipe.gluten_free = request.form['gluten_free'] if request.form.get('gluten_free') else 'no'
+    current_recipe.nut_free = request.form['nut_free'] if request.form.get('nut_free') else 'no'
+    current_recipe.shellfish_free = request.form['shellfish_free'] if request.form.get('shellfish_free') else 'no'
+    db.session.commit()
+    return render_template("edit_recipe.html", page_title = 'Update recipe', current_recipe = current_recipe)
+
 ## route to take user to their profile page where they will be able to edit their details
 
 @app.route('/my_profile')

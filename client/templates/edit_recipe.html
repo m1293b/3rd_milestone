@@ -18,10 +18,8 @@
 
     {% endwith %}
 
-    <form method="POST" action="{{ url_for('adding_new_recipe') }}"
-        class="m-8 tablet:min-h-fit laptop:mx-4 text-center">
-        <input type="text" name="username" id="username" value="{{session.username}}" hidden>
-        <input type="text" name="user_id" id="user_id" value="{{session.user_id}}" hidden>
+    <form method="POST" action="{{ url_for('update_recipe') }}" class="m-8 tablet:min-h-fit laptop:mx-4 text-center">
+        <input type="hidden" name="recipe_id" id="recipe_id" value="{{current_recipe.user_id}}">
         <div class="tablet:my-4 laptop:mx-0 grid grid-cols-1">
             <label for="recipe_name" class="text-center mb-2"><b>The recipe's name is:</b></label>
             <input type="text" name="recipe_name" id="recipe_name" placeholder="#MyNextBestRecipe"
@@ -33,23 +31,23 @@
         <div class="mt-2 grid grid-cols-4 tablet:grid-cols-4">
             <div class="tablet:my-4 laptop:mx-0 grid grid-cols-1">
                 <label for="starter" class="text-center mb-2 cursor-pointer w-fit justify-self-center">Starter</label>
-                <input type="radio" name="course" id="starter" value="starter" required {{'selected' if
-                    current_recipe.course==' starter' else "" }} class="cursor-pointer w-fit justify-self-center" />
+                <input type="radio" name="course" id="starter" value="starter" required {{'checked="checked"' if
+                    current_recipe.course=="starter" else "" }} class="cursor-pointer w-fit justify-self-center" />
             </div>
             <div class="tablet:my-4 laptop:mx-0 grid grid-cols-1">
                 <label for="main" class="text-center mb-2 cursor-pointer w-fit justify-self-center">Main</label>
-                <input type="radio" name="course" id="main" value="main" {{'selected' if current_recipe.course==' main'
-                    else "" }} class="cursor-pointer w-fit justify-self-center" />
+                <input type="radio" name="course" id="main" value="main" {{' checked="checked"' if current_recipe.course=="main" else "" }}
+                    class="cursor-pointer w-fit justify-self-center" />
             </div>
             <div class="tablet:my-4 laptop:mx-0 grid grid-cols-1">
                 <label for="dessert" class="text-center mb-2 cursor-pointer w-fit justify-self-center">Dessert</label>
-                <input type="radio" name="course" id="dessert" value="dessert" {{'selected' if
-                    current_recipe.course==' dessert' else "" }} class="cursor-pointer w-fit justify-self-center" />
+                <input type="radio" name="course" id="dessert" value="dessert" {{' checked="checked"' if
+                    current_recipe.course=="dessert" else "" }} class="cursor-pointer w-fit justify-self-center" />
             </div>
             <div class="tablet:my-4 laptop:mx-0 grid grid-cols-1">
-                <label for="kids_meal" class="text-center mb-2 cursor-pointer w-fit justify-self-center">Kid's</label>
-                <input type="radio" name="course" id="kids_meal" value="kids_meal" {{'selected' if
-                    current_recipe.course==' kids_meal' else "" }} class="cursor-pointer w-fit justify-self-center" />
+                <label for="kids_meal" class="text-center mb-2 cursor-pointer w-fit justify-self-center">Kid' s</label>
+                <input type="radio" name="course" id="kids_meal" value="kids_meal" {{'checked="checked"' if
+                    current_recipe.course=="kids_meal" else "" }} class="cursor-pointer w-fit justify-self-center" />
             </div>
         </div>
         <br>
@@ -57,19 +55,19 @@
 
         <div class="grid grid-cols-1 text-center mb-2">
             <label for="ingredients">Ingredients</label>
-            <textarea name="ingredients" id="ingredients" rows="4" value="{{current_recipe.ingredients}}"
-                class="border rounded-lg border-main-bg mt-2 p-2" required></textarea>
+            <textarea name="ingredients" id="ingredients" rows="4" class="border rounded-lg border-main-bg mt-2 p-2"
+                required>{{current_recipe.ingredients}}</textarea>
         </div>
         <div class="grid grid-cols-1 text-center mb-2">
             <label for="instructions">Instructions</label>
-            <textarea name="instructions" id="instructions" rows="8" value="{{current_recipe.instructions}}"
-                class="border rounded-lg border-main-bg mt-2 p-2" required></textarea>
+            <textarea name="instructions" id="instructions" rows="8" class="border rounded-lg border-main-bg mt-2 p-2"
+                required>{{current_recipe.instructions}}</textarea>
         </div>
         <div class="grid grid-cols-4">
             <div class="grid grid-cols-1 text-center mb-2">
                 <label for="vegetarian" class="cursor-pointer w-fit justify-self-center">Vegetarian</label>
-                <input type="checkbox" name="vegetarian" id="vegetarian" value="yes" {{ 'checked="checked"' if
-                    current_recipe.vegetarian=='yes' else '' }} class="cursor-pointer w-fit justify-self-center">
+                <input type="checkbox" name="vegetarian" id="vegetarian" value="yes" {{ ' checked="checked"' if
+                    current_recipe.vegetarian==' yes' else '' }} class="cursor-pointer w-fit justify-self-center">
             </div>
             <div class="grid grid-cols-1 text-center mb-2">
                 <label for="gluten_free" class="cursor-pointer w-fit justify-self-center">Gluten free</label>
@@ -90,8 +88,10 @@
 
         <!-- Submit button to add the above recipe to the database -->
         <div class="grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-1 col-span-2 mt-8 tablet:px-32 text-center">
-            <input type="submit" value='Add new recipe'
-                class="button tablet:col-span-2 border-2 rounded-lg p-1 cursor-pointer min-w-[40%] laptop:max-w-[20%] justify-self-center">
+            <input type="submit" value='Update recipe'
+                class="button border-2 rounded-lg p-1 cursor-pointer min-w-[40%] laptop:max-w-[20%] justify-self-center">
+            <a href="{{url_for('my_recipes_page')}}"
+                class="button border-2 rounded-lg p-1 cursor-pointer min-w-[40%] laptop:max-w-[20%] justify-self-center">Cancel</a>
         </div>
     </form>
 </div>
