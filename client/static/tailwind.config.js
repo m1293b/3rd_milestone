@@ -32,5 +32,3 @@ module.exports = {
   },
   plugins: [],
 };
-
-// npx tailwindcss -i ./css/base.css -o ./css/styles.css --watch

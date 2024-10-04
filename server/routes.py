@@ -1,8 +1,9 @@
-import os
-from server import app, db, base, models
+from server import app, db
 from server.models import Users, Recipes
 from flask import render_template, request, flash, redirect, url_for, session
 from flask_sqlalchemy import SQLAlchemy
+
+## route for Main page, no login required
 
 @app.route('/')
 def index_page():
@@ -51,6 +52,8 @@ def sign_up_page():
 def home_page():
     return render_template("home.html", page_title = 'Home page')
 
+# View logged in user's recipes
+
 @app.route('/my_recipes')
 def my_recipes_page():
     starters = Recipes.query.filter_by(course = "starter", user_id = session['user_id']).all()
@@ -67,24 +70,38 @@ def add_new_recipe_page():
 
 @app.route('/view_recipe')
 def view_recipe():
-    selected_recipe = request.form['selected_recipe']
-    current_recipe = Recipes.query.filter_by(recipe_id = selected_recipe).first()
-    return render_template("view_recipe.html", page_title = 'View recipe', current_recipe = current_recipe)
+    session['current_recipe'] = request.form['selected_recipe']
+    current_recipe = Recipes.query.filter_by(recipe_id = session['current_recipe']).first()
+    return render_template("view_recipe.html", page_title = 'View recipe')
 
 # Edit selected recipe
 
 @app.route('/edit_recipe', methods=["POST"])
 def edit_recipe():
-    selected_recipe = request.form['selected_recipe']
-    current_recipe = Recipes.query.filter_by(recipe_id = selected_recipe).first()
+    session['current_recipe'] = request.form['selected_recipe']
+    current_recipe = Recipes.query.filter_by(recipe_id = session['current_recipe']).first()
     return render_template("edit_recipe.html", page_title = 'Edit recipe', current_recipe = current_recipe)
+
+# Delete selected recipe
+
+@app.route('/delete_recipe', methods=["POST"])
+def delete_recipe():
+    session['current_recipe'] = request.form['selected_recipe']
+    current_recipe = Recipes.query.filter_by(recipe_id = session['current_recipe']).first()
+    db.session.delete(current_recipe)
+    db.session.commit()
+    starters = Recipes.query.filter_by(course = "starter", user_id = session['user_id']).all()
+    mains = Recipes.query.filter_by(course = "main", user_id = session['user_id']).all()
+    desserts = Recipes.query.filter_by(course = "dessert", user_id = session['user_id']).all()
+    kids_meals = Recipes.query.filter_by(course = "kids_meal", user_id = session['user_id']).order_by(Recipes.recipe_id.desc()).limit(4)
+    return render_template("my_recipes.html", page_title = 'My recipes', starters = starters, mains = mains, desserts = desserts, kids_meals = kids_meals)
 
 # Update selected recipe
 
 @app.route('/update_recipe', methods=["POST"])
 def update_recipe():
-    selected_recipe = request.form['recipe_id']
-    current_recipe = Recipes.query.filter_by(recipe_id = selected_recipe).first()
+    session['current_recipe'] = request.form['selected_recipe']
+    current_recipe = Recipes.query.filter_by(recipe_id = session['current_recipe']).first()
     current_recipe.recipe_name = request.form['recipe_name'] if current_recipe.recipe_name!=request.form['recipe_name'] else current_recipe.recipe_name
     current_recipe.course = request.form['course']
     current_recipe.ingredients = request.form['ingredients']
@@ -102,6 +119,8 @@ def update_recipe():
 @app.route('/my_profile')
 def my_profile_page():
     return render_template("my_profile.html", page_title = 'My Profile page')
+
+## route to take user to Events page
 
 @app.route('/events')
 def events_page():
@@ -163,8 +182,6 @@ def register():
 def adding_new_recipe():    
     recipe_name = request.form['recipe_name']
     course = request.form['course']
-    username = request.form['username']
-    user_id = request.form['user_id']
     ingredients = request.form['ingredients']
     instructions = request.form['instructions']
     vegetarian = request.form['vegetarian'] if request.form.get('vegetarian') else 'no'
@@ -176,7 +193,7 @@ def adding_new_recipe():
         flash("Recipe already exists")
         return render_template('add_new_recipe.html', error="Recipe already exists")
     else:
-        user = Users.query.filter_by(user_id = user_id).first()
+        user = Users.query.filter_by(user_id = session['user_id']).first()
         new_recipe = Recipes()
         new_recipe.recipe_name = recipe_name
         new_recipe.course = course
@@ -187,11 +204,8 @@ def adding_new_recipe():
         new_recipe.gluten_free = gluten_free
         new_recipe.nut_free = nut_free
         new_recipe.shellfish_free = shellfish_free
-        print(new_recipe)
         db.session.add(new_recipe)
         db.session.commit()
-        user = Users.query.filter_by(user_id = user_id).first()
-        session['username'] = user.username
-        session['user_id'] = user_id
+        user = Users.query.filter_by(user_id = session['user_id']).first()
         flash(f'{recipe_name} has been added to your collection')
         return redirect(url_for('my_recipes_page'))

@@ -1,18 +1,18 @@
 {% extends "base_home.html" %}
 
 {% block content %}
-{% with messages = get_flashed_messages()%}
-
-{% if messages %}
-
-{% for msg in messages %}
-<p class="text-center text-wrap text-red"><b>&#x2022 {{msg}}</b></p>
-{% endfor %}
-
-{% endif %}
-
-{% endwith %}
 <div class="main-page pt-12 grid grid-cols-1">
+    {% with messages = get_flashed_messages()%}
+
+    {% if messages %}
+
+    {% for msg in messages %}
+    <p class="text-center text-wrap text-red"><b>&#x2022 {{msg}}</b></p>
+    {% endfor %}
+
+    {% endif %}
+
+    {% endwith %}
     <div class="recipes-row starters">
         <div class="recipes-header-row">
             <p>Starters</p>
@@ -21,18 +21,20 @@
         <div class="recipes-items-row">
             {% for starter in starters %}
             <div class="card">
-                <span>{{starter.recipe_name}}</span>
+                <span><b>{{starter.recipe_name}}</b></span>
                 <div class="card-picture">
 
                 </div>
-                <div class="grid grid-cols-1 tablet:grid-cols-2">
-                    <form action="{{ url_for('edit_recipe')}}" method="POST">
+                <div class="grid grid-cols-2 mt-1">
+                    <form action="{{ url_for('edit_recipe')}}" method="POST"
+                        class="justify-self-center border border-main-bg rounded px-2 bg-golden font-bold">
                         <input type="hidden" value="{{starter.recipe_id}}" name='selected_recipe'>
-                        <input type="submit" name="edit" id="edit_recipe" value="Edit recipe">
+                        <input type="submit" name="edit" id="edit_recipe" value="Edit">
                     </form>
-                    <form action="{{ url_for('edit_recipe')}}" method="POST"></form>
-                    <input type="hidden" value="{{starter.recipe_id}}" name='selected_recipe'>
-                    <input type="submit" name="delete" id="delete_recipe" value="Delete recipe">
+                    <form action="{{ url_for('delete_recipe')}}" method="POST"
+                        class="justify-self-center border border-main-bg rounded px-1 bg-red font-bold mr-2">
+                        <input type="hidden" value="{{starter.recipe_id}}" name='selected_recipe'>
+                        <input type="submit" name="delete" id="delete_recipe" value="Delete">
                     </form>
                 </div>
             </div>
@@ -48,17 +50,20 @@
         <div class="recipes-items-row">
             {% for main in mains %}
             <div class="card">
-                <span>{{main.recipe_name}}</span>
+                <span><b>{{main.recipe_name}}</b></span>
                 <div class="card-picture">
+
                 </div>
-                <div class="grid grid-cols-1 tablet:grid-cols-2">
-                    <form action="{{ url_for('edit_recipe')}}" method="POST">
+                <div class="grid grid-cols-2 mt-1">
+                    <form action="{{ url_for('edit_recipe')}}" method="POST"
+                        class="justify-self-center border border-main-bg rounded px-2 bg-golden font-bold">
                         <input type="hidden" value="{{main.recipe_id}}" name='selected_recipe'>
-                        <input type="submit" name="edit" id="edit_recipe" value="Edit recipe">
+                        <input type="submit" name="edit" id="edit_recipe" value="Edit">
                     </form>
-                    <form action="{{ url_for('edit_recipe')}}" method="POST"></form>
-                    <input type="hidden" value="{{main.recipe_id}}" name='selected_recipe'>
-                    <input type="submit" name="delete" id="delete_recipe" value="Delete recipe">
+                    <form action="{{ url_for('delete_recipe')}}" method="POST"
+                        class="justify-self-center border border-main-bg rounded px-1 bg-red font-bold mr-2">
+                        <input type="hidden" value="{{main.recipe_id}}" name='selected_recipe'>
+                        <input type="submit" name="delete" id="delete_recipe" value="Delete">
                     </form>
                 </div>
             </div>
@@ -74,17 +79,19 @@
         <div class="recipes-items-row">
             {% for dessert in desserts %}
             <div class="card">
-                <span>{{dessert.recipe_name}}</span>
+                <span><b>{{dessert.recipe_name}}</b></span>
                 <div class="card-picture">
                 </div>
-                <div class="grid grid-cols-1 tablet:grid-cols-2">
-                    <form action="{{ url_for('edit_recipe')}}" method="POST">
+                <div class="grid grid-cols-2 mt-1">
+                    <form action="{{ url_for('edit_recipe')}}" method="POST"
+                        class="justify-self-center border border-main-bg rounded px-2 bg-golden font-bold">
                         <input type="hidden" value="{{dessert.recipe_id}}" name='selected_recipe'>
-                        <input type="submit" name="edit" id="edit_recipe" value="Edit recipe">
+                        <input type="submit" name="edit" id="edit_recipe" value="Edit">
                     </form>
-                    <form action="{{ url_for('edit_recipe')}}" method="POST"></form>
-                    <input type="hidden" value="{{dessert.recipe_id}}" name='selected_recipe'>
-                    <input type="submit" name="delete" id="delete_recipe" value="Delete recipe">
+                    <form action="{{ url_for('delete_recipe')}}" method="POST"
+                        class="justify-self-center border border-main-bg rounded px-1 bg-red font-bold mr-2">
+                        <input type="hidden" value="{{dessert.recipe_id}}" name='selected_recipe'>
+                        <input type="submit" name="delete" id="delete_recipe" value="Delete">
                     </form>
                 </div>
             </div>
@@ -100,17 +107,19 @@
         <div class="recipes-items-row">
             {% for kids_meal in kids_meals %}
             <div class="card">
-                <span>{{kids_meal.recipe_name}}</span>
+                <span><b>{{kids_meal.recipe_name}}</b></span>
                 <div class="card-picture">
                 </div>
-                <div class="grid grid-cols-1 tablet:grid-cols-2">
-                    <form action="{{ url_for('edit_recipe')}}" method="POST">
+                <div class="grid grid-cols-2 mt-1">
+                    <form action="{{ url_for('edit_recipe')}}" method="POST"
+                        class="justify-self-center border border-main-bg rounded px-2 bg-golden font-bold">
                         <input type="hidden" value="{{kids_meal.recipe_id}}" name='selected_recipe'>
-                        <input type="submit" name="edit" id="edit_recipe" value="Edit recipe">
+                        <input type="submit" name="edit" id="edit_recipe" value="Edit">
                     </form>
-                    <form action="{{ url_for('edit_recipe')}}" method="POST"></form>
-                    <input type="hidden" value="{{kids_meal.recipe_id}}" name='selected_recipe'>
-                    <input type="submit" name="delete" id="delete_recipe" value="Delete recipe">
+                    <form action="{{ url_for('delete_recipe')}}" method="POST"
+                        class="justify-self-center border border-main-bg rounded px-1 bg-red font-bold mr-2">
+                        <input type="hidden" value="{{kids_meal.recipe_id}}" name='selected_recipe'>
+                        <input type="submit" name="delete" id="delete_recipe" value="Delete">
                     </form>
                 </div>
             </div>

@@ -3,6 +3,7 @@ env
 .gitignore
 rapid_spoonacular_api
 __pycache__/
+commands.txt
 
 # Logs
 logs
