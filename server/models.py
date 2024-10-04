@@ -15,6 +15,7 @@ class Users(db.Model):
     email_address = db.Column(db.String, nullable=False)
     points = db.Column(db.Integer)
     liked_recipes = db.Column(db.ARRAY(Integer))
+    admin = db.Column(db.Boolean)
     recipes = db.relationship("Recipes", backref='users')
     
     def set_password(self, password):
@@ -37,6 +38,11 @@ class Recipes(db.Model):
     gluten_free = db.Column(db.String, default='no')
     nut_free = db.Column(db.String, default='no')
     shellfish_free = db.Column(db.String, default='no')
+    
+class Updates(db.Model):
+    __tablename__ = "updates"
+    update_id = db.Column(db.Integer, primary_key=True)
+    update_desc = db.Column(db.String, nullable=False)
 
 # create tables if they don't exist
 

@@ -867,7 +867,7 @@ input[value="Login"] {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   justify-content: space-evenly;
-  gap: 1rem;
+  gap: 2rem;
   text-wrap: wrap;
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -1016,6 +1016,10 @@ input[value="Login"] {
 
 .z-\[1\] {
   z-index: 1;
+}
+
+.col-span-1 {
+  grid-column: span 1 / span 1;
 }
 
 .col-span-2 {
@@ -1215,6 +1219,10 @@ input[value="Login"] {
   margin-top: 2rem;
 }
 
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
 .block {
   display: block;
 }
@@ -1410,6 +1418,10 @@ input[value="Login"] {
 
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .grid-cols-4 {
@@ -1930,6 +1942,10 @@ input[value="Login"] {
     margin-bottom: 1rem;
   }
 
+  .tablet\:mr-0 {
+    margin-right: 0px;
+  }
+
   .tablet\:mt-60 {
     margin-top: 15rem;
   }
@@ -1987,6 +2003,10 @@ input[value="Login"] {
     gap: 4rem;
   }
 
+  .tablet\:gap-2 {
+    gap: 0.5rem;
+  }
+
   .tablet\:p-2 {
     padding: 0.5rem;
   }
@@ -2002,6 +2022,10 @@ input[value="Login"] {
 }
 
 @media (min-width: 1024px) {
+  .laptop\:col-span-1 {
+    grid-column: span 1 / span 1;
+  }
+
   .laptop\:mx-0 {
     margin-left: 0px;
     margin-right: 0px;
@@ -2015,6 +2039,10 @@ input[value="Login"] {
   .laptop\:mx-\[15\%\] {
     margin-left: 15%;
     margin-right: 15%;
+  }
+
+  .laptop\:mt-0 {
+    margin-top: 0px;
   }
 
   .laptop\:h-\[180px\] {
@@ -2043,6 +2071,10 @@ input[value="Login"] {
 
   .laptop\:grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .laptop\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 

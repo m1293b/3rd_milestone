@@ -2,8 +2,34 @@
 <!-- Content section-->
 
 <div class="main-page justify-center align-middle tablet:flex">
+  <div class="grid grid-cols-1 mt-10 mx-4">
+    <h2>Things to implement:</h2>
+    <ul>
+      {% for update in updates %}
+      <li class="text-center text-wrap text-red"><b>{update}</b></li>
+      {% endfor %}
+    </ul>
+  </div>
   <div class="mt-16 mx-4 grid grid-cols-2 text-center gap-2 border rounded border-main-bg tablet:max-w-[70%]">
-    <div class="cards">Starters</div>
+    <div class="recipes-row starters">
+      <div class="recipes-header-row">
+        <p>Starters</p>
+        <hr>
+      </div>
+      <div class="card">
+        <span><b>{{top_starter.recipe_name}}</b></span>
+        <div class="card-picture">
+
+        </div>
+        <div class="grid grid-cols-1 mt-1">
+          <form action="{{ url_for('view_recipe')}}" method="POST"
+            class="justify-self-center border border-main-bg rounded px-2 bg-golden font-bold">
+            <input type="hidden" value="{{top_starter.recipe_id}}" name='selected_recipe'>
+            <input type="submit" name="view" id="View_recipe" value="View">
+          </form>
+        </div>
+      </div>
+    </div>
     <div class="cards">Mains</div>
     <div class="cards">Desserts</div>
     <div class="cards">Kids</div>

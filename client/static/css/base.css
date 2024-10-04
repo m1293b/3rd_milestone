@@ -99,7 +99,7 @@
     @apply justify-center text-center mb-4 font-bold text-lg;
   }
   .recipes-items-row {
-    @apply grid grid-cols-2 tablet:grid-cols-4 gap-4 tablet:gap-16 justify-evenly text-sm text-wrap;
+    @apply grid grid-cols-2 tablet:grid-cols-4 gap-8 tablet:gap-16 justify-evenly text-sm text-wrap;
   }
   .card-picture {
     @apply h-[100px] w-[100px] laptop:h-[180px] laptop:w-[180px] desktop:h-[230px] desktop:w-[230px] justify-self-center;

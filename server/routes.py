@@ -7,7 +7,12 @@ from flask_sqlalchemy import SQLAlchemy
 
 @app.route('/')
 def index_page():
-    return render_template("index.html", page_title = 'Main page')
+    top_starter = Recipes.query.filter_by(course = "starter").order_by(Recipes.recipe_id.desc()).first()
+    top_main = Recipes.query.filter_by(course = "main").order_by(Recipes.recipe_id.desc()).first()
+    top_dessert = Recipes.query.filter_by(course = "dessert").order_by(Recipes.recipe_id.desc()).first()
+    top_kids_meal = Recipes.query.filter_by(course = "kids_meal").order_by(Recipes.recipe_id.desc()).first()
+    updates = Updates.query.all()
+    return render_template("index.html", page_title = 'Main page', top_starter = top_starter, top_main = top_main, top_dessert = top_dessert, top_kids_meal = top_kids_meal, updates = updates)
 
 current_users = {}
 
@@ -15,18 +20,11 @@ current_users = {}
 
 @app.route('/recipes')
 def recipes_page():
-    if "username" in session: # does this work??
-        starters = Recipes.query.filter_by(course = "starter").order_by(Recipes.recipe_id.desc()).limit(4)
-        mains = Recipes.query.filter_by(course = "main").order_by(Recipes.recipe_id.desc()).limit(4)
-        desserts = Recipes.query.filter_by(course = "dessert").order_by(Recipes.recipe_id.desc()).limit(4)
-        kids_meals = Recipes.query.filter_by(course = "kids_meal").order_by(Recipes.recipe_id.desc()).limit(4)
-        return render_template("recipes_home.html", page_title = 'Recipes page', starters = starters, mains = mains, desserts = desserts, kids_meals = kids_meals)
-    else:
-        starters = Recipes.query.filter_by(course = "starter").order_by(Recipes.recipe_id.desc()).limit(4)
-        mains = Recipes.query.filter_by(course = "main").order_by(Recipes.recipe_id.desc()).limit(4)
-        desserts = Recipes.query.filter_by(course = "dessert").order_by(Recipes.recipe_id.desc()).limit(4)
-        kids_meals = Recipes.query.filter_by(course = "kids_meal").order_by(Recipes.recipe_id.desc()).limit(4)
-        return render_template("recipes.html", page_title = 'Recipes page', starters = starters, mains = mains, desserts = desserts, kids_meals = kids_meals)
+    starters = Recipes.query.filter_by(course = "starter").order_by(Recipes.recipe_id.desc()).limit(4)
+    mains = Recipes.query.filter_by(course = "main").order_by(Recipes.recipe_id.desc()).limit(4)
+    desserts = Recipes.query.filter_by(course = "dessert").order_by(Recipes.recipe_id.desc()).limit(4)
+    kids_meals = Recipes.query.filter_by(course = "kids_meal").order_by(Recipes.recipe_id.desc()).limit(4)
+    return render_template("recipes.html", page_title = 'Recipes page', starters = starters, mains = mains, desserts = desserts, kids_meals = kids_meals)
 
 ## route for About page, no login required
 
@@ -68,11 +66,11 @@ def add_new_recipe_page():
 
 # View selected recipe
 
-@app.route('/view_recipe')
+@app.route('/view_recipe', methods=["POST"])
 def view_recipe():
     session['current_recipe'] = request.form['selected_recipe']
     current_recipe = Recipes.query.filter_by(recipe_id = session['current_recipe']).first()
-    return render_template("view_recipe.html", page_title = 'View recipe')
+    return render_template("view_recipe.html", page_title = 'View recipe', current_recipe = current_recipe)
 
 # Edit selected recipe
 
@@ -90,11 +88,7 @@ def delete_recipe():
     current_recipe = Recipes.query.filter_by(recipe_id = session['current_recipe']).first()
     db.session.delete(current_recipe)
     db.session.commit()
-    starters = Recipes.query.filter_by(course = "starter", user_id = session['user_id']).all()
-    mains = Recipes.query.filter_by(course = "main", user_id = session['user_id']).all()
-    desserts = Recipes.query.filter_by(course = "dessert", user_id = session['user_id']).all()
-    kids_meals = Recipes.query.filter_by(course = "kids_meal", user_id = session['user_id']).order_by(Recipes.recipe_id.desc()).limit(4)
-    return render_template("my_recipes.html", page_title = 'My recipes', starters = starters, mains = mains, desserts = desserts, kids_meals = kids_meals)
+    redirect(url_for('my_recipes_page'))
 
 # Update selected recipe
 
