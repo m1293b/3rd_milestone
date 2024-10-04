@@ -11,8 +11,8 @@ def index_page():
     top_main = Recipes.query.filter_by(course = "main").order_by(Recipes.recipe_id.desc()).first()
     top_dessert = Recipes.query.filter_by(course = "dessert").order_by(Recipes.recipe_id.desc()).first()
     top_kids_meal = Recipes.query.filter_by(course = "kids_meal").order_by(Recipes.recipe_id.desc()).first()
-    updates = Updates.query.all()
-    return render_template("index.html", page_title = 'Main page', top_starter = top_starter, top_main = top_main, top_dessert = top_dessert, top_kids_meal = top_kids_meal, updates = updates)
+    # updates = Updates.query.all()
+    return render_template("index.html", page_title = 'Main page', top_starter = top_starter, top_main = top_main, top_dessert = top_dessert, top_kids_meal = top_kids_meal) #updates = updates)
 
 current_users = {}
 
