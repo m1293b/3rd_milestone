@@ -10,10 +10,11 @@
       {% endfor %}
     </ul>
   </div> -->
-  <div class="mt-16 mx-4 grid grid-cols-2 text-center gap-2 border rounded border-main-bg tablet:max-w-[70%]">
-    <div class="recipes-row starters">
+  <div
+    class="mt-16 mx-4 grid grid-cols-1 tablet:grid-cols-4 text-center gap-2 border rounded border-main-bg tablet:max-w-[90%]">
+    <div class="recipes-row starters mt-4">
       <div class="recipes-header-row">
-        <p>Starters</p>
+        <p>Top Starter</p>
         <hr>
       </div>
       <div class="card">
@@ -21,18 +22,72 @@
         <div class="card-picture">
 
         </div>
-        <div class="grid grid-cols-1 mt-1">
+        <div class="grid grid-cols-1 mt-1 justify-self-center">
           <form action="{{ url_for('view_recipe')}}" method="POST"
             class="justify-self-center border border-main-bg rounded px-2 bg-golden font-bold">
             <input type="hidden" value="{{top_starter.recipe_id}}" name='selected_recipe'>
-            <input type="submit" name="view" id="View_recipe" value="View">
+            <input type="submit" name="view" id="View_recipe" value="View" class="cursor-pointer">
           </form>
         </div>
       </div>
     </div>
-    <div class="cards">Mains</div>
-    <div class="cards">Desserts</div>
-    <div class="cards">Kids</div>
+    <div class="recipes-row mains mt-4">
+      <div class="recipes-header-row">
+        <p>Top Main</p>
+        <hr>
+      </div>
+      <div class="card">
+        <span><b>{{top_main.recipe_name}}</b></span>
+        <div class="card-picture">
+
+        </div>
+        <div class="grid grid-cols-1 mt-1 justify-self-center">
+          <form action="{{ url_for('view_recipe')}}" method="POST"
+            class="justify-self-center border border-main-bg rounded px-2 bg-golden font-bold">
+            <input type="hidden" value="{{top_main.recipe_id}}" name='selected_recipe'>
+            <input type="submit" name="view" id="View_recipe" value="View" class="cursor-pointer">
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="recipes-row desserts mt-4">
+      <div class="recipes-header-row">
+        <p>Top Dessert</p>
+        <hr>
+      </div>
+      <div class="card">
+        <span><b>{{top_dessert.recipe_name}}</b></span>
+        <div class="card-picture">
+
+        </div>
+        <div class="grid grid-cols-1 mt-1 justify-self-center">
+          <form action="{{ url_for('view_recipe')}}" method="POST"
+            class="justify-self-center border border-main-bg rounded px-2 bg-golden font-bold">
+            <input type="hidden" value="{{top_dessert.recipe_id}}" name='selected_recipe'>
+            <input type="submit" name="view" id="View_recipe" value="View" class="cursor-pointer">
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="recipes-row kids mt-4">
+      <div class="recipes-header-row">
+        <p>Top Kid's meal</p>
+        <hr>
+      </div>
+      <div class="card">
+        <span><b>{{top_kids_meal.recipe_name}}</b></span>
+        <div class="card-picture">
+
+        </div>
+        <div class="grid grid-cols-1 mt-1 justify-self-center">
+          <form action="{{ url_for('view_recipe')}}" method="POST"
+            class="justify-self-center border border-main-bg rounded px-2 bg-golden font-bold">
+            <input type="hidden" value="{{top_kids_meal.recipe_id}}" name='selected_recipe'>
+            <input type="submit" name="view" id="View_recipe" value="View" class="cursor-pointer">
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 {% endblock content %}

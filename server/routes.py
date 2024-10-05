@@ -11,8 +11,9 @@ def index_page():
     top_main = Recipes.query.filter_by(course = "main").order_by(Recipes.recipe_id.desc()).first()
     top_dessert = Recipes.query.filter_by(course = "dessert").order_by(Recipes.recipe_id.desc()).first()
     top_kids_meal = Recipes.query.filter_by(course = "kids_meal").order_by(Recipes.recipe_id.desc()).first()
+    session['prev_url'] = 'index_page'
     # updates = Updates.query.all()
-    return render_template("index.html", page_title = 'Main page', top_starter = top_starter, top_main = top_main, top_dessert = top_dessert, top_kids_meal = top_kids_meal) #updates = updates)
+    return render_template("index.html", page_title = 'Main page', top_starter = top_starter, top_main = top_main, top_dessert = top_dessert, top_kids_meal = top_kids_meal, prev_page = session['prev_url']) #updates = updates)
 
 current_users = {}
 
@@ -24,7 +25,8 @@ def recipes_page():
     mains = Recipes.query.filter_by(course = "main").order_by(Recipes.recipe_id.desc()).limit(4)
     desserts = Recipes.query.filter_by(course = "dessert").order_by(Recipes.recipe_id.desc()).limit(4)
     kids_meals = Recipes.query.filter_by(course = "kids_meal").order_by(Recipes.recipe_id.desc()).limit(4)
-    return render_template("recipes.html", page_title = 'Recipes page', starters = starters, mains = mains, desserts = desserts, kids_meals = kids_meals)
+    session['prev_url'] = 'recipes_page'
+    return render_template("recipes.html", page_title = 'Recipes page', starters = starters, mains = mains, desserts = desserts, kids_meals = kids_meals, prev_page = session['prev_url'])
 
 ## route for About page, no login required
 
@@ -58,7 +60,8 @@ def my_recipes_page():
     mains = Recipes.query.filter_by(course = "main", user_id = session['user_id']).all()
     desserts = Recipes.query.filter_by(course = "dessert", user_id = session['user_id']).all()
     kids_meals = Recipes.query.filter_by(course = "kids_meal", user_id = session['user_id']).order_by(Recipes.recipe_id.desc()).limit(4)
-    return render_template("my_recipes.html", page_title = 'My Recipes page', starters = starters, mains = mains, desserts = desserts, kids_meals = kids_meals)
+    session['prev_url'] = 'my_recipes_page'
+    return render_template("my_recipes.html", page_title = 'My Recipes page', starters = starters, mains = mains, desserts = desserts, kids_meals = kids_meals, prev_page = session['prev_url'])
 
 @app.route('/new_recipe')
 def add_new_recipe_page():

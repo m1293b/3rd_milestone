@@ -25,7 +25,7 @@
                 <div class="card-picture">
 
                 </div>
-                <div class="grid grid-cols-2 laptop:grid-cols-3 mt-1">
+                <div class="grid grid-cols-2 laptop:grid-cols-3 mt-1 justify-self-center">
                     <form action="{{ url_for('edit_recipe')}}" method="POST"
                         class="justify-self-center border border-main-bg rounded px-2 bg-golden font-bold">
                         <input type="hidden" value="{{starter.recipe_id}}" name='selected_recipe'>
@@ -59,7 +59,7 @@
                 <div class="card-picture">
 
                 </div>
-                <div class="grid grid-cols-2 laptop:grid-cols-3 mt-1">
+                <div class="grid grid-cols-2 laptop:grid-cols-3 mt-1 justify-self-center">
                     <form action="{{ url_for('edit_recipe')}}" method="POST"
                         class="justify-self-center border border-main-bg rounded px-2 bg-golden font-bold">
                         <input type="hidden" value="{{main.recipe_id}}" name='selected_recipe'>
@@ -92,7 +92,7 @@
                 <span><b>{{dessert.recipe_name}}</b></span>
                 <div class="card-picture">
                 </div>
-                <div class="grid grid-cols-2 laptop:grid-cols-3 mt-1">
+                <div class="grid grid-cols-2 laptop:grid-cols-3 mt-1 justify-self-center">
                     <form action="{{ url_for('edit_recipe')}}" method="POST"
                         class="justify-self-center border border-main-bg rounded px-2 bg-golden font-bold">
                         <input type="hidden" value="{{dessert.recipe_id}}" name='selected_recipe'>
@@ -125,7 +125,7 @@
                 <span><b>{{kids_meal.recipe_name}}</b></span>
                 <div class="card-picture">
                 </div>
-                <div class="grid grid-cols-2 laptop:grid-cols-3 mt-1">
+                <div class="grid grid-cols-2 laptop:grid-cols-3 mt-1 justify-self-center">
                     <form action="{{ url_for('edit_recipe')}}" method="POST"
                         class="justify-self-center border border-main-bg rounded px-2 bg-golden font-bold">
                         <input type="hidden" value="{{kids_meal.recipe_id}}" name='selected_recipe'>
