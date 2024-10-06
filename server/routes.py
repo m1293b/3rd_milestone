@@ -97,9 +97,10 @@ def edit_recipe():
 def delete_recipe():
     session['current_recipe'] = request.form['selected_recipe']
     current_recipe = Recipes.query.filter_by(recipe_id = session['current_recipe']).first()
+    flash(f'{current_recipe.recipe_name} has been successfully deleted.')
     db.session.delete(current_recipe)
     db.session.commit()
-    redirect(url_for('my_recipes_page'))
+    return redirect(url_for('my_recipes_page'))
 
 # Update selected recipe
 

@@ -819,7 +819,22 @@ input[name="edit"] {
   font-weight: 700;
 }
 
-input[name="delete"] {
+.delete {
+  cursor: pointer;
+  justify-self: center;
+  border-radius: 0.25rem;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(51 65 85 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 1 7 / var(--tw-bg-opacity));
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  font-weight: 700;
+}
+
+.delete-confirm {
+  cursor: pointer;
   justify-self: center;
   border-radius: 0.25rem;
   border-width: 1px;
@@ -845,14 +860,15 @@ input[name="view"] {
   font-weight: 700;
 }
 
-#cancel {
+.cancel {
+  margin-bottom: 0.25rem;
   justify-self: center;
   border-radius: 0.25rem;
   border-width: 1px;
   --tw-border-opacity: 1;
   border-color: rgb(51 65 85 / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
-  background-color: rgb(239 1 7 / var(--tw-bg-opacity));
+  background-color: rgb(251 191 36 / var(--tw-bg-opacity));
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   font-weight: 700;
@@ -1158,6 +1174,10 @@ input[value="View all"] {
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+.mb-1 {
+  margin-bottom: 0.25rem;
 }
 
 .mb-16 {

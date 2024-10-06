@@ -47,25 +47,23 @@ $('input[type="password"]').on("change", function () {
   console.log("#yep");
 });
 
-$(".delete").click(deleteConfirm);
+$(".delete").on("click", function () {
+  let wrapDiv = $(this).parent();
+  let deleteConfirm = wrapDiv.siblings("#delete-confirm");
+  wrapDiv.hide();
+  deleteConfirm.show();
+});
 
-function deleteConfirm() {
-  let recipeId = $(this).siblings('input[type="hidden"]').attr("value");
-  let wrapDiv = $(this).closest("form").parent();
-  let wrapDivHtml = $(this).closest("form").parent().html();
+$(".cancel").on("click", function () {
+  let cardButtons = $(this).parent();
+  let wrapDiv = cardButtons.siblings("#card-buttons");
+  cardButtons.hide();
+  wrapDiv.show();
+});
 
-  wrapDiv.html(`
-    <form action="{{ url_for('delete_recipe')}}" method="POST" class="px-1 mr-1 tablet:mr-0">
-        <input type="hidden" value="${recipeId}" name='selected_recipe'>
-        <input type="submit" name="delete" id="delete_recipe" value="Confirm" class="delete">
-    </form>
-    <button class="bg-red justify-self-center px-1" name="cancel" id="cancel">
-        <b>X</b>
-    </button>
-    </form>
-    `);
-  $("#cancel").on("click", function () {
-    wrapDiv.html(wrapDivHtml);
-  });
-  $(".delete").on("click", deleteConfirm());
-}
+// $(".cancel").on("click", function () {
+//   let wrapDiv = $(this).parent();
+//   let deleteConfirm = $("").find("");
+//   wrapDiv.hide();
+//   deleteConfirm.show();
+// });

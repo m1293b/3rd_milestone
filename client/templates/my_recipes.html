@@ -25,18 +25,24 @@
                 <div class="card-picture">
 
                 </div>
-                <div class="grid grid-cols-2 laptop:grid-cols-3 mt-1 justify-self-center">
-                    <form action="{{ url_for('edit_recipe')}}" method="POST" class="px-2">
+                <div class="grid grid-cols-2 laptop:grid-cols-3 mt-1 justify-self-center" id="card-buttons">
+                    <form action="{{ url_for('edit_recipe')}}" method="POST" class="px-1">
                         <input type="hidden" value="{{starter.recipe_id}}" name='selected_recipe'>
                         <input type="submit" name="edit" id="edit_recipe" value="Edit">
                     </form>
-                    <form action="{{ url_for('delete_recipe')}}" method="POST" class="px-1 mr-1 tablet:mr-0">
-                        <input type="hidden" value="{{starter.recipe_id}}" name='selected_recipe'>
-                        <input type="submit" name="delete" id="delete_recipe" value="Delete">
-                    </form>
-                    <form action="{{ url_for('view_recipe')}}" method="POST" class="px-2 mt-1 laptop:mt-0">
+                    <div id="delete_recipe" class="delete">Delete</div>
+                    <form action="{{ url_for('view_recipe')}}" method="POST"
+                        class="px-1 mt-1 laptop:mt-0 col-span-2 tablet:col-span-1">
                         <input type="hidden" value="{{starter.recipe_id}}" name='selected_recipe'>
                         <input type="submit" name="view" id="View_recipe" value="View">
+                    </form>
+                </div>
+                <div class="grid grid-cols-1 mt-1 justify-self-center" id="delete-confirm" style="display: none;">
+                    <div class="cancel">X</div>
+                    <form action="{{ url_for('delete_recipe')}}" method="POST" class="px-1 mr-1 tablet:mr-0">
+                        <input type="hidden" value="{{starter.recipe_id}}" name='selected_recipe'>
+                        <input type="submit" name="delete" id="delete_recipe" value="Confirm"
+                            class="delete cursor-pointer">
                     </form>
                 </div>
             </div>
@@ -56,19 +62,24 @@
                 <div class="card-picture">
 
                 </div>
-                <div class="grid grid-cols-2 laptop:grid-cols-3 mt-1 justify-self-center">
+                <div class="grid grid-cols-2 laptop:grid-cols-3 mt-1 justify-self-center" id="card-buttons">
                     <form action="{{ url_for('edit_recipe')}}" method="POST" class="px-1">
                         <input type="hidden" value="{{main.recipe_id}}" name='selected_recipe'>
                         <input type="submit" name="edit" id="edit_recipe" value="Edit">
                     </form>
-                    <form action="{{ url_for('delete_recipe')}}" method="POST" class="px-1 mr-1 tablet:mr-0">
-                        <input type="hidden" value="{{main.recipe_id}}" name='selected_recipe'>
-                        <a type="button" name="delete" id="delete_recipe" class="delete">Delete</a>
-                    </form>
+                    <div id="delete_recipe" class="delete">Delete</div>
                     <form action="{{ url_for('view_recipe')}}" method="POST"
                         class="px-1 mt-1 laptop:mt-0 col-span-2 tablet:col-span-1">
                         <input type="hidden" value="{{main.recipe_id}}" name='selected_recipe'>
                         <input type="submit" name="view" id="View_recipe" value="View">
+                    </form>
+                </div>
+                <div class="grid grid-cols-1 mt-1 justify-self-center" id="delete-confirm" style="display: none;">
+                    <div class="cancel">X</div>
+                    <form action="{{ url_for('delete_recipe')}}" method="POST" class="px-1 mr-1 tablet:mr-0">
+                        <input type="hidden" value="{{main.recipe_id}}" name='selected_recipe'>
+                        <input type="submit" name="delete" id="delete_recipe" value="Confirm"
+                            class="delete cursor-pointer">
                     </form>
                 </div>
             </div>
@@ -87,18 +98,24 @@
                 <span><b>{{dessert.recipe_name}}</b></span>
                 <div class="card-picture">
                 </div>
-                <div class="grid grid-cols-2 laptop:grid-cols-3 mt-1 justify-self-center">
-                    <form action="{{ url_for('edit_recipe')}}" method="POST" class="px-2">
+                <div class="grid grid-cols-2 laptop:grid-cols-3 mt-1 justify-self-center" id="card-buttons">
+                    <form action="{{ url_for('edit_recipe')}}" method="POST" class="px-1">
                         <input type="hidden" value="{{dessert.recipe_id}}" name='selected_recipe'>
                         <input type="submit" name="edit" id="edit_recipe" value="Edit">
                     </form>
-                    <form action="{{ url_for('delete_recipe')}}" method="POST" class="px-1 mr-1 tablet:mr-0">
-                        <input type="hidden" value="{{dessert.recipe_id}}" name='selected_recipe'>
-                        <input type="submit" name="delete" id="delete_recipe" value="Delete">
-                    </form>
-                    <form action="{{ url_for('view_recipe')}}" method="POST" class="px-2 mt-1 laptop:mt-0">
+                    <div id="delete_recipe" class="delete">Delete</div>
+                    <form action="{{ url_for('view_recipe')}}" method="POST"
+                        class="px-1 mt-1 laptop:mt-0 col-span-2 tablet:col-span-1">
                         <input type="hidden" value="{{dessert.recipe_id}}" name='selected_recipe'>
                         <input type="submit" name="view" id="View_recipe" value="View">
+                    </form>
+                </div>
+                <div class="grid grid-cols-1 mt-1 justify-self-center" id="delete-confirm" style="display: none;">
+                    <div class="cancel">X</div>
+                    <form action="{{ url_for('delete_recipe')}}" method="POST" class="px-1 mr-1 tablet:mr-0">
+                        <input type="hidden" value="{{dessert.recipe_id}}" name='selected_recipe'>
+                        <input type="submit" name="delete" id="delete_recipe" value="Confirm"
+                            class="delete cursor-pointer">
                     </form>
                 </div>
             </div>
@@ -117,18 +134,24 @@
                 <span><b>{{kids_meal.recipe_name}}</b></span>
                 <div class="card-picture">
                 </div>
-                <div class="grid grid-cols-2 laptop:grid-cols-3 mt-1 justify-self-center">
-                    <form action="{{ url_for('edit_recipe')}}" method="POST" class="px-2">
+                <div class="grid grid-cols-2 laptop:grid-cols-3 mt-1 justify-self-center" id="card-buttons">
+                    <form action="{{ url_for('edit_recipe')}}" method="POST" class="px-1">
                         <input type="hidden" value="{{kids_meal.recipe_id}}" name='selected_recipe'>
                         <input type="submit" name="edit" id="edit_recipe" value="Edit">
                     </form>
-                    <form action="{{ url_for('delete_recipe')}}" method="POST" class="px-1mr-1 tablet:mr-0">
-                        <input type="hidden" value="{{kids_meal.recipe_id}}" name='selected_recipe'>
-                        <input type="submit" name="delete" id="delete_recipe" value="Delete">
-                    </form>
-                    <form action="{{ url_for('view_recipe')}}" method="POST" class="px-2 mt-1 laptop:mt-0">
+                    <div id="delete_recipe" class="delete">Delete</div>
+                    <form action="{{ url_for('view_recipe')}}" method="POST"
+                        class="px-1 mt-1 laptop:mt-0 col-span-2 tablet:col-span-1">
                         <input type="hidden" value="{{kids_meal.recipe_id}}" name='selected_recipe'>
                         <input type="submit" name="view" id="View_recipe" value="View">
+                    </form>
+                </div>
+                <div class="grid grid-cols-1 mt-1 justify-self-center" id="delete-confirm" style="display: none;">
+                    <div class="cancel">X</div>
+                    <form action="{{ url_for('delete_recipe')}}" method="POST" class="px-1 mr-1 tablet:mr-0">
+                        <input type="hidden" value="{{kids_meal.recipe_id}}" name='selected_recipe'>
+                        <input type="submit" name="delete" id="delete_recipe" value="Confirm"
+                            class="delete cursor-pointer">
                     </form>
                 </div>
             </div>
