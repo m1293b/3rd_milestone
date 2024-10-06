@@ -1,6 +1,6 @@
 $("#copyright").text(new Date().getFullYear());
 
-let messages = []
+let messages = [];
 
 // nav bar made responsive
 
@@ -29,21 +29,43 @@ $("div.cone").on("click", function () {
 
 // sign up page input checks to be updated
 
-$("input[type=email]").on("change", function (){
-  if (!$(this).text().includes('@'))
-    messages.push('Invalid email address.');
-})
+$("input[type=email]").on("change", function () {
+  if (!$(this).text().includes("@")) messages.push("Invalid email address.");
+});
 
-$('.button').on('mouseover', function () {
-  $(this).css("color","#d2d6db");
-  $(this).css("background","#334155");
-})
+$(".button").on("mouseover", function () {
+  $(this).css("color", "#d2d6db");
+  $(this).css("background", "#334155");
+});
 
-$('.button').on('mouseleave', function () {
-  $(this).css("color","#334155");
-  $(this).css("background","#d2d6db");
-})
+$(".button").on("mouseleave", function () {
+  $(this).css("color", "#334155");
+  $(this).css("background", "#d2d6db");
+});
 
-$('input[type="password"]').on('change', function () {
-  console.log('#yep');
-})
+$('input[type="password"]').on("change", function () {
+  console.log("#yep");
+});
+
+$(".delete").click(deleteConfirm);
+
+function deleteConfirm() {
+  let recipeId = $(this).siblings('input[type="hidden"]').attr("value");
+  let wrapDiv = $(this).closest("form").parent();
+  let wrapDivHtml = $(this).closest("form").parent().html();
+
+  wrapDiv.html(`
+    <form action="{{ url_for('delete_recipe')}}" method="POST" class="px-1 mr-1 tablet:mr-0">
+        <input type="hidden" value="${recipeId}" name='selected_recipe'>
+        <input type="submit" name="delete" id="delete_recipe" value="Confirm" class="delete">
+    </form>
+    <button class="bg-red justify-self-center px-1" name="cancel" id="cancel">
+        <b>X</b>
+    </button>
+    </form>
+    `);
+  $("#cancel").on("click", function () {
+    wrapDiv.html(wrapDivHtml);
+  });
+  $(".delete").on("click", deleteConfirm());
+}

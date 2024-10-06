@@ -63,9 +63,10 @@
                     </form>
                     <form action="{{ url_for('delete_recipe')}}" method="POST" class="px-1 mr-1 tablet:mr-0">
                         <input type="hidden" value="{{main.recipe_id}}" name='selected_recipe'>
-                        <input type="submit" name="delete" id="delete_recipe" value="Delete">
+                        <a type="button" name="delete" id="delete_recipe" class="delete">Delete</a>
                     </form>
-                    <form action="{{ url_for('view_recipe')}}" method="POST" class="px-1mt-1 laptop:mt-0">
+                    <form action="{{ url_for('view_recipe')}}" method="POST"
+                        class="px-1 mt-1 laptop:mt-0 col-span-2 tablet:col-span-1">
                         <input type="hidden" value="{{main.recipe_id}}" name='selected_recipe'>
                         <input type="submit" name="view" id="View_recipe" value="View">
                     </form>

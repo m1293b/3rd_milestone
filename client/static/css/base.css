@@ -85,6 +85,9 @@
   input[name="view"] {
     @apply justify-self-center border border-main-bg rounded px-2 bg-golden font-bold;
   }
+  #cancel {
+    @apply justify-self-center border border-main-bg rounded px-2 bg-red font-bold;
+  }
   form:has(> input[value="View all"]) {
     @apply mt-2;
   }
