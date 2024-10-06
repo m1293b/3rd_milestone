@@ -81,7 +81,8 @@ def view_recipe():
 def all_recipes():
     session['current_course'] = request.form['selected_course']
     current_recipes = Recipes.query.filter_by(course = session['current_course']).all()
-    return render_template("all_recipes.html", page_title = 'All recipe', current_recipes = current_recipes, course = current_recipes[0].course.capitalize() + "s", course_class = current_recipes[0].course + "s")
+    course = session['current_course'] + "s"
+    return render_template("all_recipes.html", page_title = 'All recipe', current_recipes = current_recipes, course = current_recipes[0].course.capitalize() + "s", course_class = current_recipes[0].course + "s", course_path = f"{{url_for('../assets/{course}.jpg')}}")
 
 # Edit selected recipe
 

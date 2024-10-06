@@ -143,17 +143,17 @@
     justify-content: center;
     margin-top: 4px;
   }
-  .starters .card-picture {
-    background-image: url("../assets/starters.jpg");
+  .starters .card-picture > img {
+    width: 100%;
   }
   .mains .card-picture {
-    background-image: url("../assets/mains.jpg");
+    width: 100%;
   }
   .desserts .card-picture {
-    background-image: url("../assets/desserts.jpg");
+    width: 100%;
   }
   .kids_meals .card-picture {
-    background-image: url("../assets/kids.jpg");
+    width: 100%;
   }
   .card {
     @apply grid grid-cols-1;

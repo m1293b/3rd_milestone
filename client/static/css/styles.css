@@ -1001,20 +1001,20 @@ input[value="View all"] {
   margin-top: 4px;
 }
 
-.starters .card-picture {
-  background-image: url("../assets/starters.jpg");
+.starters .card-picture > img {
+  width: 100%;
 }
 
 .mains .card-picture {
-  background-image: url("../assets/mains.jpg");
+  width: 100%;
 }
 
 .desserts .card-picture {
-  background-image: url("../assets/desserts.jpg");
+  width: 100%;
 }
 
 .kids_meals .card-picture {
-  background-image: url("../assets/kids.jpg");
+  width: 100%;
 }
 
 .card {
@@ -1347,12 +1347,12 @@ input[value="View all"] {
   width: 100px;
 }
 
-.w-\[75dvw\] {
-  width: 75dvw;
-}
-
 .w-\[85\%\] {
   width: 85%;
+}
+
+.w-\[90dvw\] {
+  width: 90dvw;
 }
 
 .w-\[92\%\] {

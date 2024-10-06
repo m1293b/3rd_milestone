@@ -18,6 +18,7 @@
             <div class="card mb-2">
                 <span><b>{{recipe.recipe_name}}</b></span>
                 <div class="card-picture">
+                    <img src="{{course_path}}" alt="">
                 </div>
                 <div class="grid grid-cols-1 mt-1 justify-self-center">
                     <form action="{{ url_for('view_recipe')}}" method="POST" class="px-2mt-1 laptop:mt-0">
