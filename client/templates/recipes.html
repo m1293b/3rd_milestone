@@ -10,7 +10,11 @@
     <!-- Starters -->
     <div class="recipes-row starters">
         <div class="recipes-header-row">
-            <p>Starters</p>
+            <p>Top 4 Starters</p>
+            <form action="{{url_for('all_recipes')}}" method="POST">
+                <input type="hidden" name="selected_course" value="starter">
+                <input type="submit" name="view" value="View all">
+            </form>
             <hr>
         </div>
         <div class="recipes-items-row">
@@ -21,7 +25,7 @@
                 </div>
                 <div class="grid grid-cols-1 mt-1 justify-self-center">
                     <form action="{{ url_for('view_recipe')}}" method="POST"
-                        class="justify-self-center border border-main-bg rounded px-2 bg-golden font-bold mt-1 laptop:mt-0 col-span-2 laptop:col-span-1">
+                        class="mt-1 laptop:mt-0 col-span-2 laptop:col-span-1">
                         <input type="hidden" value="{{starter.recipe_id}}" name='selected_recipe'>
                         <input type="submit" name="view" id="View_recipe" value="View">
                     </form>
@@ -33,7 +37,11 @@
     <!-- Mains -->
     <div class="recipes-row mains">
         <div class="recipes-header-row">
-            <p>Mains</p>
+            <p>Top 4 Mains</p>
+            <form action="{{url_for('all_recipes')}}" method="POST">
+                <input type="hidden" name="selected_course" value="main">
+                <input type="submit" name="view" value="View all">
+            </form>
             <hr>
         </div>
         <div class="recipes-items-row">
@@ -44,7 +52,7 @@
                 </div>
                 <div class="grid grid-cols-1 mt-1 justify-self-center">
                     <form action="{{ url_for('view_recipe')}}" method="POST"
-                        class="justify-self-center border border-main-bg rounded px-2 bg-golden font-bold mt-1 laptop:mt-0 col-span-2 laptop:col-span-1">
+                        class="mt-1 laptop:mt-0 col-span-2 laptop:col-span-1">
                         <input type="hidden" value="{{main.recipe_id}}" name='selected_recipe'>
                         <input type="submit" name="view" id="View_recipe" value="View">
                     </form>
@@ -56,7 +64,11 @@
     <!-- Desserts -->
     <div class="recipes-row desserts">
         <div class="recipes-header-row">
-            <p>Desserts</p>
+            <p>Top 4 Desserts</p>
+            <form action="{{url_for('all_recipes')}}" method="POST">
+                <input type="hidden" name="selected_course" value="dessert">
+                <input type="submit" name="view" value="View all">
+            </form>
             <hr>
         </div>
         <div class="recipes-items-row">
@@ -67,7 +79,7 @@
                 </div>
                 <div class="grid grid-cols-1 mt-1 justify-self-center">
                     <form action="{{ url_for('view_recipe')}}" method="POST"
-                        class="justify-self-center border border-main-bg rounded px-2 bg-golden font-bold mt-1 laptop:mt-0 col-span-2 laptop:col-span-1">
+                        class="mt-1 laptop:mt-0 col-span-2 laptop:col-span-1">
                         <input type="hidden" value="{{dessert.recipe_id}}" name='selected_recipe'>
                         <input type="submit" name="view" id="View_recipe" value="View">
                     </form>
@@ -77,9 +89,13 @@
         </div>
     </div>
     <!-- Kid's meals -->
-    <div class="recipes-row kids">
+    <div class="recipes-row kids_meals">
         <div class="recipes-header-row">
-            <p>Kid's meals</p>
+            <p>Top 4 Kid's meals</p>
+            <form action="{{url_for('all_recipes')}}" method="POST">
+                <input type="hidden" name="selected_course" value="kids_meal">
+                <input type="submit" name="view" value="View all">
+            </form>
             <hr>
         </div>
         <div class="recipes-items-row">
@@ -90,7 +106,7 @@
                 </div>
                 <div class="grid grid-cols-1 mt-1 justify-self-center">
                     <form action="{{ url_for('view_recipe')}}" method="POST"
-                        class="justify-self-center border border-main-bg rounded px-2 bg-golden font-bold mt-1 laptop:mt-0 col-span-2 laptop:col-span-1">
+                        class="mt-1 laptop:mt-0 col-span-2 laptop:col-span-1">
                         <input type="hidden" value="{{kids_meal.recipe_id}}" name='selected_recipe'>
                         <input type="submit" name="view" id="View_recipe" value="View">
                     </form>
@@ -98,12 +114,6 @@
             </div>
             {% endfor %}
         </div>
-    </div>
-
-    <div class="new-recipe text-center">
-        <a href="{{url_for('add_new_recipe_page')}}"
-            class="button tablet:col-span-2 border-2 rounded-lg p-1 cursor-pointer min-w-[40%] laptop:max-w-[20%]">Add
-            a new recipe</a>
     </div>
 </div>
 

@@ -15,7 +15,7 @@
     {% endwith %}
     <div class="recipes-row starters">
         <div class="recipes-header-row">
-            <p>Starters</p>
+            <p>My starters</p>
             <hr>
         </div>
         <div class="recipes-items-row">
@@ -26,18 +26,15 @@
 
                 </div>
                 <div class="grid grid-cols-2 laptop:grid-cols-3 mt-1 justify-self-center">
-                    <form action="{{ url_for('edit_recipe')}}" method="POST"
-                        class="justify-self-center border border-main-bg rounded px-2 bg-golden font-bold">
+                    <form action="{{ url_for('edit_recipe')}}" method="POST" class="px-2">
                         <input type="hidden" value="{{starter.recipe_id}}" name='selected_recipe'>
                         <input type="submit" name="edit" id="edit_recipe" value="Edit">
                     </form>
-                    <form action="{{ url_for('delete_recipe')}}" method="POST"
-                        class="justify-self-center border border-main-bg rounded px-1 bg-red font-bold mr-1 tablet:mr-0">
+                    <form action="{{ url_for('delete_recipe')}}" method="POST" class="px-1 mr-1 tablet:mr-0">
                         <input type="hidden" value="{{starter.recipe_id}}" name='selected_recipe'>
                         <input type="submit" name="delete" id="delete_recipe" value="Delete">
                     </form>
-                    <form action="{{ url_for('view_recipe')}}" method="POST"
-                        class="justify-self-center border border-main-bg rounded px-2 bg-golden font-bold mt-1 laptop:mt-0 col-span-2 laptop:col-span-1">
+                    <form action="{{ url_for('view_recipe')}}" method="POST" class="px-2 mt-1 laptop:mt-0">
                         <input type="hidden" value="{{starter.recipe_id}}" name='selected_recipe'>
                         <input type="submit" name="view" id="View_recipe" value="View">
                     </form>
@@ -49,7 +46,7 @@
     <!-- Mains -->
     <div class="recipes-row mains">
         <div class="recipes-header-row">
-            <p>Mains</p>
+            <p>My mains</p>
             <hr>
         </div>
         <div class="recipes-items-row">
@@ -60,18 +57,15 @@
 
                 </div>
                 <div class="grid grid-cols-2 laptop:grid-cols-3 mt-1 justify-self-center">
-                    <form action="{{ url_for('edit_recipe')}}" method="POST"
-                        class="justify-self-center border border-main-bg rounded px-2 bg-golden font-bold">
+                    <form action="{{ url_for('edit_recipe')}}" method="POST" class="px-1">
                         <input type="hidden" value="{{main.recipe_id}}" name='selected_recipe'>
                         <input type="submit" name="edit" id="edit_recipe" value="Edit">
                     </form>
-                    <form action="{{ url_for('delete_recipe')}}" method="POST"
-                        class="justify-self-center border border-main-bg rounded px-1 bg-red font-bold mr-1 tablet:mr-0">
+                    <form action="{{ url_for('delete_recipe')}}" method="POST" class="px-1 mr-1 tablet:mr-0">
                         <input type="hidden" value="{{main.recipe_id}}" name='selected_recipe'>
                         <input type="submit" name="delete" id="delete_recipe" value="Delete">
                     </form>
-                    <form action="{{ url_for('view_recipe')}}" method="POST"
-                        class="justify-self-center border border-main-bg rounded px-2 bg-golden font-bold mt-1 laptop:mt-0 col-span-2 laptop:col-span-1">
+                    <form action="{{ url_for('view_recipe')}}" method="POST" class="px-1mt-1 laptop:mt-0">
                         <input type="hidden" value="{{main.recipe_id}}" name='selected_recipe'>
                         <input type="submit" name="view" id="View_recipe" value="View">
                     </form>
@@ -83,7 +77,7 @@
     <!-- Desserts -->
     <div class="recipes-row desserts">
         <div class="recipes-header-row">
-            <p>Desserts</p>
+            <p>My desserts</p>
             <hr>
         </div>
         <div class="recipes-items-row">
@@ -93,18 +87,15 @@
                 <div class="card-picture">
                 </div>
                 <div class="grid grid-cols-2 laptop:grid-cols-3 mt-1 justify-self-center">
-                    <form action="{{ url_for('edit_recipe')}}" method="POST"
-                        class="justify-self-center border border-main-bg rounded px-2 bg-golden font-bold">
+                    <form action="{{ url_for('edit_recipe')}}" method="POST" class="px-2">
                         <input type="hidden" value="{{dessert.recipe_id}}" name='selected_recipe'>
                         <input type="submit" name="edit" id="edit_recipe" value="Edit">
                     </form>
-                    <form action="{{ url_for('delete_recipe')}}" method="POST"
-                        class="justify-self-center border border-main-bg rounded px-1 bg-red font-bold mr-1 tablet:mr-0">
+                    <form action="{{ url_for('delete_recipe')}}" method="POST" class="px-1 mr-1 tablet:mr-0">
                         <input type="hidden" value="{{dessert.recipe_id}}" name='selected_recipe'>
                         <input type="submit" name="delete" id="delete_recipe" value="Delete">
                     </form>
-                    <form action="{{ url_for('view_recipe')}}" method="POST"
-                        class="justify-self-center border border-main-bg rounded px-2 bg-golden font-bold mt-1 laptop:mt-0 col-span-2 laptop:col-span-1">
+                    <form action="{{ url_for('view_recipe')}}" method="POST" class="px-2 mt-1 laptop:mt-0">
                         <input type="hidden" value="{{dessert.recipe_id}}" name='selected_recipe'>
                         <input type="submit" name="view" id="View_recipe" value="View">
                     </form>
@@ -114,9 +105,9 @@
         </div>
     </div>
     <!-- Kid's meals -->
-    <div class="recipes-row kids">
+    <div class="recipes-row kids_meals">
         <div class="recipes-header-row">
-            <p>Kid's meals</p>
+            <p>My meals for kids</p>
             <hr class="bg-main-bg">
         </div>
         <div class="recipes-items-row">
@@ -126,18 +117,15 @@
                 <div class="card-picture">
                 </div>
                 <div class="grid grid-cols-2 laptop:grid-cols-3 mt-1 justify-self-center">
-                    <form action="{{ url_for('edit_recipe')}}" method="POST"
-                        class="justify-self-center border border-main-bg rounded px-2 bg-golden font-bold">
+                    <form action="{{ url_for('edit_recipe')}}" method="POST" class="px-2">
                         <input type="hidden" value="{{kids_meal.recipe_id}}" name='selected_recipe'>
                         <input type="submit" name="edit" id="edit_recipe" value="Edit">
                     </form>
-                    <form action="{{ url_for('delete_recipe')}}" method="POST"
-                        class="justify-self-center border border-main-bg rounded px-1 bg-red font-bold mr-1 tablet:mr-0">
+                    <form action="{{ url_for('delete_recipe')}}" method="POST" class="px-1mr-1 tablet:mr-0">
                         <input type="hidden" value="{{kids_meal.recipe_id}}" name='selected_recipe'>
                         <input type="submit" name="delete" id="delete_recipe" value="Delete">
                     </form>
-                    <form action="{{ url_for('view_recipe')}}" method="POST"
-                        class="justify-self-center border border-main-bg rounded px-2 bg-golden font-bold mt-1 laptop:mt-0 col-span-2 laptop:col-span-1">
+                    <form action="{{ url_for('view_recipe')}}" method="POST" class="px-2 mt-1 laptop:mt-0">
                         <input type="hidden" value="{{kids_meal.recipe_id}}" name='selected_recipe'>
                         <input type="submit" name="view" id="View_recipe" value="View">
                     </form>

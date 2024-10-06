@@ -1,0 +1,34 @@
+{% if session['username'] %}
+{% extends "base_home.html" %}
+{% else %}
+{% extends "base.html" %}
+{% endif %}
+
+{% block content %}
+
+<div class="main-page pt-12 grid grid-cols-1">
+    <!-- Starters -->
+    <div class="recipes-row {{course_class}}">
+        <div class="recipes-header-row">
+            <p>All {{course}}</p>
+            <hr>
+        </div>
+        <div class="recipes-items-row">
+            {% for recipe in current_recipes %}
+            <div class="card mb-2">
+                <span><b>{{recipe.recipe_name}}</b></span>
+                <div class="card-picture">
+                </div>
+                <div class="grid grid-cols-1 mt-1 justify-self-center">
+                    <form action="{{ url_for('view_recipe')}}" method="POST" class="px-2mt-1 laptop:mt-0">
+                        <input type="hidden" value="{{recipe.recipe_id}}" name='selected_recipe'>
+                        <input type="submit" name="view" id="View_recipe" value="View">
+                    </form>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

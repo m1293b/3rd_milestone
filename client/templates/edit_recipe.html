@@ -3,21 +3,15 @@
 {% block content %}
 
 <div
-    class="relative mt-20 tablet:mt-60 mb-4 mx-2 tablet:mx-6 p-10 tablet:p-2 tablet:min-h-[500px] laptop:mx-[15%] desktop:mx-[25%] items-center justify-center border rounded-md border-main-bg shadow-lg">
+    class="main-page mt-4 mx-4 tablet:min-h-[500px] laptop:mx-[15%] desktop:mx-[25%] items-center justify-center border rounded-md border-main-bg shadow-lg">
     <h1 class="text-center my-12 font-bold font-mono text-xl">Let's see your new favourite</h1>
-
     {% with messages = get_flashed_messages()%}
-
     {% if messages %}
-
     {% for msg in messages %}
     <p class="text-center text-wrap text-red"><b>&#x2022 {{msg}}</b></p>
     {% endfor %}
-
     {% endif %}
-
     {% endwith %}
-
     <form method="POST" action="{{ url_for('update_recipe') }}" class="m-8 tablet:min-h-fit laptop:mx-4 text-center">
         <input type="hidden" name="recipe_id" id="recipe_id" value="{{current_recipe.recipe_id}}">
         <div class="tablet:my-4 laptop:mx-0 grid grid-cols-1">

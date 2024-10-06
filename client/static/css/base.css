@@ -59,7 +59,7 @@
     @apply font-bold mx-6 p-2 border-solid border border-golden rounded bg-golden text-main-bg hover:bg-main-bg hover:text-golden hover:rounded-3xl hover:border hover:border-solid hover:border-golden transition-all duration-200 ease-linear cursor-pointer;
   }
   .main-page {
-    @apply relative top-16 grid grid-cols-1 gap-4 mb-[70px];
+    @apply relative top-16 grid grid-cols-1 gap-4 mb-[160px];
   }
   .cards {
     padding: 8px;
@@ -67,8 +67,32 @@
     border-radius: 2px;
     @apply m-2;
   }
+  .card-picture + form {
+    @apply justify-self-center;
+  }
   input[value="Login"] {
     margin: 0 auto;
+  }
+  input[type="submit"] {
+    @apply cursor-pointer;
+  }
+  input[name="edit"] {
+    @apply justify-self-center border border-main-bg rounded px-2 bg-[#3B7A57] font-bold;
+  }
+  input[name="delete"] {
+    @apply justify-self-center border border-main-bg rounded px-2 bg-red font-bold;
+  }
+  input[name="view"] {
+    @apply justify-self-center border border-main-bg rounded px-2 bg-golden font-bold;
+  }
+  form:has(> input[value="View all"]) {
+    @apply mt-2;
+  }
+  input[value="View all"] {
+    @apply text-sm;
+  }
+  .recipes-header-row hr {
+    @apply mt-3;
   }
   .button {
     background-color: #d2d6db;
@@ -93,7 +117,7 @@
     background-repeat: no-repeat;
   }
   .recipes-row {
-    @apply mb-6 pt-3 pb-4 px-4 min-h-32 w-[85%] border-[3px] border-main-bg rounded-lg justify-self-center tablet:grid-rows-2 desktop:grid-rows-1;
+    @apply mb-6 pt-3 pb-4 px-4 min-h-40 w-[85%] border-[3px] border-main-bg rounded-lg justify-self-center tablet:grid-rows-2 desktop:grid-rows-1;
   }
   .recipes-header-row {
     @apply justify-center text-center mb-4 font-bold text-lg;
@@ -122,13 +146,13 @@
   .desserts .card-picture {
     background-image: url("../assets/desserts.jpg");
   }
-  .kids .card-picture {
+  .kids_meals .card-picture {
     background-image: url("../assets/kids.jpg");
   }
   .card {
     @apply grid grid-cols-1;
     text-align: center;
-    justify-content: center;
+    justify-items: center;
   }
   .card > span {
     @apply border border-main-text bg-main-bg text-main-text rounded p-1 max-w-fit justify-self-center;
