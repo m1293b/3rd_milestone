@@ -51,27 +51,22 @@
 
   ### As a first time view
 
-  - **I want** to be able to find out 
-  - **So that**
+  - **I want** to be able to register an account for myself.
+  - **So that** I can post my recipes.
 
-  ### As a
+  ### As a returning user
 
-  - **I want**
-  - **So that**
+  - **I want** to be able to update my recipes.
+  - **So that** I can improve them.
 
-  ### As a
+  ### As a returning user
 
-  - **I want**
-  - **So that**
-
-  ### As a
-
-  - **I want**
-  - **So that**
+  - **I want** to be able to delete my recipes.
+  - **So that** I don't have them anymore in my collection.
 
 - ## Project goals
 
-  <!--  -->
+  The goal of this project is to allow users to share their recipes and let them view recipes shared by others as well.
 
 - ## Design choices
 
@@ -146,6 +141,13 @@ It proved to be quite challenging to host my website, as I had trouble signing u
 
 - ![A screenshot of the initial Lighthouse mobile result.](./readme_files/lighthouse_mobile_test.png "A screenshot of the initial Lighthouse mobile result.")
 - ![A screenshot of the initial Lighthouse desktop result.](./readme_files/lighthouse_desktop_test.png "A screenshot of the initial Lighthouse desktop result.")
+- ![A screenshot of the JSLint result.](./readme_files/jslint_result.png "A screenshot of the JSLint result.")
+- ![A screenshot of the CSS validation result.](./readme_files/css_validation.png "A screenshot of the CSS validation result.")
+- ![A screenshot of the initial Lighthouse desktop result.](./readme_files/lighthouse_desktop_test.png "A screenshot of the initial Lighthouse desktop result.")
+- ![A screenshot of the initial Lighthouse desktop result.](./readme_files/lighthouse_desktop_test.png "A screenshot of the initial Lighthouse desktop result.")
+- ![A screenshot of the initial Lighthouse desktop result.](./readme_files/lighthouse_desktop_test.png "A screenshot of the initial Lighthouse desktop result.")
+- ![A screenshot of the initial Lighthouse desktop result.](./readme_files/lighthouse_desktop_test.png "A screenshot of the initial Lighthouse desktop result.")
+-
 
 ## JSLint
 
@@ -224,7 +226,7 @@ I had to learn how to properly bind the element, so the function can use "this".
 
 ## Add extras
 
--
+- Admin settings
 -
 
 # Credits
@@ -259,15 +261,10 @@ I had to learn how to properly bind the element, so the function can use "this".
 
 - Official site like W3School and Tailwind help to create a great layout that functions well.
 - StackOverflow helped me to see how others solved the issues their code had and I manage to use some of the solutions after customising them to fit my code.
-  - [The picture of the hotel room was found on Pexels.com. Direct link to the page I downloaded the picture from](https://www.pexels.com/photo/bathroom-interior-1457847/)
-  - [The picture of the hotel room was found on Pexels.com. Direct link to the page I downloaded the picture from](https://www.pexels.com/photo/bathroom-interior-1457847/)
-  - [The picture of the hotel room was found on Pexels.com. Direct link to the page I downloaded the picture from](https://www.pexels.com/photo/bathroom-interior-1457847/)
-  - [The picture of the hotel room was found on Pexels.com. Direct link to the page I downloaded the picture from](https://www.pexels.com/photo/bathroom-interior-1457847/)
-  <!-- Change these links to StackOverflow links which takes the user to the post that helped with an issue  -->
 
 ## Deployment
 
-- I used GitHub for version control and to deploy my website. I also used Gitpod and its workspace to develope the website. Both of these services are connected to my Virtual Studio Code application on my PC. I have also tried "Code-server" that is hosted in a docker container on my home server, but did not had enough time to configure it properly and it was using way too much RAM so I just used VSCode on my PC.
+- I used GitHub for version control and Linode to deploy my website. I used Visual Studio Code to access code on my server and to push code to GitHub.
 
 ### Deploying with GitHub Pages
 

@@ -1,7 +1,7 @@
-from server import app, db
-from server.models import Users, Recipes
 from flask import render_template, request, flash, redirect, url_for, session
 from flask_sqlalchemy import SQLAlchemy
+from server import app, db
+from server.models import Users, Recipes
 
 ## route for Main page, no login required
 
@@ -80,7 +80,6 @@ def view_recipe():
 def all_recipes():
     session['current_course'] = request.form['selected_course']
     current_recipes = Recipes.query.filter_by(course = session['current_course']).all()
-    course = session['current_course'] + "s"
     return render_template("all_recipes.html", page_title = 'All recipe', current_recipes = current_recipes, course = current_recipes[0].course.capitalize() + "s", course_class = current_recipes[0].course + "s")
 
 # Edit selected recipe
@@ -161,7 +160,7 @@ def logout():
 ## route to register an account, data is pulled from input fields
 
 @app.route('/register', methods=["POST"])
-def register():    
+def register():
     username = request.form['username']
     password = request.form['password']
     email_address = request.form['email_address']
@@ -181,12 +180,12 @@ def register():
         user = Users.query.filter_by(username = username).first()
         session['username'] = username
         session['user_id'] = user.user_id
-        return redirect(url_for('home_page'))  
+        return redirect(url_for('home_page'))
 
 ## route to add a new recipe, data is pulled from input fields
     
 @app.route('/adding_new_recipe', methods=["POST"])
-def adding_new_recipe():    
+def adding_new_recipe():
     recipe_name = request.form['recipe_name']
     course = request.form['course']
     if request.form['picture']:

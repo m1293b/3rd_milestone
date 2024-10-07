@@ -674,8 +674,6 @@ video {
   justify-content: flex-start;
   border-bottom-right-radius: 0.75rem;
   border-bottom-left-radius: 0.75rem;
-  border-top-left-radius: -5;
-  border-top-right-radius: -5;
   --tw-bg-opacity: 1;
   background-color: rgb(51 65 85 / var(--tw-bg-opacity));
   padding-left: 5%;
@@ -864,6 +862,7 @@ input[name="view"] {
 
 .cancel {
   margin-bottom: 0.25rem;
+  cursor: pointer;
   justify-self: center;
   border-radius: 0.25rem;
   border-width: 1px;
@@ -1519,11 +1518,6 @@ input[value="View all"] {
   border-bottom-left-radius: 0.75rem;
 }
 
-.rounded-t-\[-5\] {
-  border-top-left-radius: -5;
-  border-top-right-radius: -5;
-}
-
 .border {
   border-width: 1px;
 }
@@ -1934,10 +1928,6 @@ input[value="View all"] {
 
   .tablet\:gap-2 {
     gap: 0.5rem;
-  }
-
-  .tablet\:p-2 {
-    padding: 0.5rem;
   }
 
   .tablet\:p-4 {

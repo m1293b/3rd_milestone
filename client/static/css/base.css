@@ -44,7 +44,7 @@
     @apply top-16;
   }
   .navbar-links-list-div {
-    @apply absolute tablet:static bg-main-bg text-main-text min-h-min tablet:min-h-0 left-3 tablet:-left-32 tablet:top-1 tablet:min-w-[50%] top-[-300%] flex tablet:justify-center px-[5%] justify-start rounded-b-xl rounded-t-[-5] z-[-1] tablet:z-auto pr-[6dvw];
+    @apply absolute tablet:static bg-main-bg text-main-text min-h-min tablet:min-h-0 left-3 tablet:-left-32 tablet:top-1 tablet:min-w-[50%] top-[-300%] flex tablet:justify-center px-[5%] justify-start rounded-b-xl z-[-1] tablet:z-auto pr-[6dvw];
   }
   .navbar-link-list {
     @apply flex flex-col tablet:flex-row min-w-[100%] justify-between;
@@ -89,7 +89,7 @@
     @apply justify-self-center border border-main-bg rounded px-2 bg-golden font-bold;
   }
   .cancel {
-    @apply justify-self-center border border-main-bg rounded px-2 mb-1 bg-golden font-bold;
+    @apply justify-self-center border border-main-bg rounded px-2 mb-1 bg-golden font-bold cursor-pointer;
   }
   form:has(> input[value="View all"]) {
     @apply mt-2;
