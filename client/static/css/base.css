@@ -77,7 +77,7 @@
     @apply cursor-pointer;
   }
   input[name="edit"] {
-    @apply justify-self-center border border-main-bg rounded px-2 bg-[#3B7A57] font-bold;
+    @apply justify-self-center border border-main-bg rounded px-2 bg-[#063b00] font-bold text-golden;
   }
   .delete {
     @apply justify-self-center border border-main-bg rounded px-2 bg-red font-bold cursor-pointer;

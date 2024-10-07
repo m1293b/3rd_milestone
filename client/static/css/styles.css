@@ -813,10 +813,12 @@ input[name="edit"] {
   --tw-border-opacity: 1;
   border-color: rgb(51 65 85 / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
-  background-color: rgb(59 122 87 / var(--tw-bg-opacity));
+  background-color: rgb(6 59 0 / var(--tw-bg-opacity));
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(251 191 36 / var(--tw-text-opacity));
 }
 
 .delete {
@@ -1553,9 +1555,9 @@ input[value="View all"] {
   border-color: rgb(210 214 219 / var(--tw-border-opacity));
 }
 
-.bg-\[\#3B7A57\] {
+.bg-\[\#063b00\] {
   --tw-bg-opacity: 1;
-  background-color: rgb(59 122 87 / var(--tw-bg-opacity));
+  background-color: rgb(6 59 0 / var(--tw-bg-opacity));
 }
 
 .bg-golden {
