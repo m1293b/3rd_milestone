@@ -22,7 +22,8 @@
         class="m-8 tablet:min-h-fit laptop:mx-4 text-center">
         <div class="tablet:my-4 laptop:mx-0 grid grid-cols-1">
             <label for="recipe_name" class="text-center mb-2"><b>The recipe's name is:</b></label>
-            <input type="text" name="recipe_name" id="recipe_name" placeholder="#MyNextBestRecipe" required
+            <input type="text" name="recipe_name" id="recipe_name" placeholder="#MyNextBestRecipe" maxlength="20"
+                required
                 class="form-control border rounded-md border-main-bg shadow-sm text-center mb-2 justify-self-center min-w-[80%] tablet:min-w-[100%] laptop:min-w-[40%] laptop:max-w-[60%]" />
         </div>
         <!-- radio buttons to select which course does the new recipe belong to -->
@@ -48,6 +49,12 @@
                 <input type="radio" name="course" id="kids_meal" value="kids_meal"
                     class="cursor-pointer w-fit justify-self-center" />
             </div>
+        </div>
+        <div class="tablet:my-4 laptop:mx-0 grid grid-cols-1">
+            <label for="picture" class="text-center mb-2 cursor-pointer w-fit justify-self-center">Recipe's
+                picture:<br><small>It is meant to be a link to the picture, but not required.</small></label>
+            <input type="text" name="picture" id="picture"
+                class="form-control border rounded-md border-main-bg shadow-sm text-center mb-2 justify-self-center min-w-[80%] tablet:min-w-[100%] laptop:min-w-[40%] laptop:max-w-[60%]" />
         </div>
         <br>
         <hr><br>

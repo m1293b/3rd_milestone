@@ -31,6 +31,7 @@ class Recipes(db.Model):
     recipe_id = db.Column(db.Integer, primary_key=True)
     recipe_name = db.Column(db.String(20), unique=True, nullable=False)
     course = db.Column(db.String, nullable=False)
+    picture = db.Column(db.String)
     user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'))
     ingredients = db.Column(db.String, nullable=False)
     instructions = db.Column(db.String, nullable=False)

@@ -134,26 +134,23 @@
   .card-picture {
     @apply h-[100px] w-[100px] laptop:h-[180px] laptop:w-[180px] desktop:h-[230px] desktop:w-[230px] justify-self-center;
     border: #334155;
-    border-radius: 4px;
+    border-radius: 20px;
     padding: 2px;
     text-align: center;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    justify-content: center;
+    justify-items: center;
     margin-top: 4px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  .starters .card-picture > img {
-    width: 100%;
-  }
-  .mains .card-picture {
-    width: 100%;
-  }
-  .desserts .card-picture {
-    width: 100%;
-  }
-  .kids_meals .card-picture {
-    width: 100%;
+  .card-picture > img {
+    object-fit: cover;
+    max-width: 170%;
+    max-height: 170%;
   }
   .card {
     @apply grid grid-cols-1;

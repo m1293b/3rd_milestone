@@ -23,7 +23,7 @@
             <div class="card mb-2">
                 <span><b>{{starter.recipe_name}}</b></span>
                 <div class="card-picture">
-
+                    <img src="{{starter.picture}}" alt="A picture that shows an example dish of the selected course.">
                 </div>
                 <div class="grid grid-cols-2 laptop:grid-cols-3 mt-1 justify-self-center" id="card-buttons">
                     <form action="{{ url_for('edit_recipe')}}" method="POST" class="px-1">
@@ -60,7 +60,7 @@
             <div class="card mb-2">
                 <span><b>{{main.recipe_name}}</b></span>
                 <div class="card-picture">
-
+                    <img src="{{main.picture}}" alt="A picture that shows an example dish of the selected course.">
                 </div>
                 <div class="grid grid-cols-2 laptop:grid-cols-3 mt-1 justify-self-center" id="card-buttons">
                     <form action="{{ url_for('edit_recipe')}}" method="POST" class="px-1">
@@ -97,6 +97,7 @@
             <div class="card mb-2">
                 <span><b>{{dessert.recipe_name}}</b></span>
                 <div class="card-picture">
+                    <img src="{{dessert.picture}}" alt="A picture that shows an example dish of the selected course.">
                 </div>
                 <div class="grid grid-cols-2 laptop:grid-cols-3 mt-1 justify-self-center" id="card-buttons">
                     <form action="{{ url_for('edit_recipe')}}" method="POST" class="px-1">
@@ -133,6 +134,7 @@
             <div class="card mb-2">
                 <span><b>{{kids_meal.recipe_name}}</b></span>
                 <div class="card-picture">
+                    <img src="{{kids_meal.picture}}" alt="A picture that shows an example dish of the selected course.">
                 </div>
                 <div class="grid grid-cols-2 laptop:grid-cols-3 mt-1 justify-self-center" id="card-buttons">
                     <form action="{{ url_for('edit_recipe')}}" method="POST" class="px-1">

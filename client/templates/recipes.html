@@ -22,6 +22,7 @@
             <div class="card mb-2">
                 <span><b>{{starter.recipe_name}}</b></span>
                 <div class="card-picture">
+                    <img src="{{starter.picture}}" alt="A picture that shows an example dish of the selected course.">
                 </div>
                 <div class="grid grid-cols-1 mt-1 justify-self-center">
                     <form action="{{ url_for('view_recipe')}}" method="POST"
@@ -49,6 +50,7 @@
             <div class="card mb-2">
                 <span><b>{{main.recipe_name}}</b></span>
                 <div class="card-picture">
+                    <img src="{{main.picture}}" alt="A picture that shows an example dish of the selected course.">
                 </div>
                 <div class="grid grid-cols-1 mt-1 justify-self-center">
                     <form action="{{ url_for('view_recipe')}}" method="POST"
@@ -76,6 +78,7 @@
             <div class="card mb-2">
                 <span><b>{{dessert.recipe_name}}</b></span>
                 <div class="card-picture">
+                    <img src="{{dessert.picture}}" alt="A picture that shows an example dish of the selected course.">
                 </div>
                 <div class="grid grid-cols-1 mt-1 justify-self-center">
                     <form action="{{ url_for('view_recipe')}}" method="POST"
@@ -103,6 +106,8 @@
             <div class="card mb-2">
                 <span><b>{{kids_meal.recipe_name}}</b></span>
                 <div class="card-picture">
+                    <img src="{{kids_mealcipe.picture}}"
+                        alt="A picture that shows an example dish of the selected course.">
                 </div>
                 <div class="grid grid-cols-1 mt-1 justify-self-center">
                     <form action="{{ url_for('view_recipe')}}" method="POST"

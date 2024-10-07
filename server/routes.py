@@ -12,8 +12,7 @@ def index_page():
     top_dessert = Recipes.query.filter_by(course = "dessert").order_by(Recipes.recipe_id.desc()).first()
     top_kids_meal = Recipes.query.filter_by(course = "kids_meal").order_by(Recipes.recipe_id.desc()).first()
     session['prev_url'] = 'index_page'
-    # updates = Updates.query.all()
-    return render_template("index.html", page_title = 'Main page', top_starter = top_starter, top_main = top_main, top_dessert = top_dessert, top_kids_meal = top_kids_meal, prev_page = session['prev_url']) #updates = updates)
+    return render_template("index.html", page_title = 'Main page', top_starter = top_starter, top_main = top_main, top_dessert = top_dessert, top_kids_meal = top_kids_meal, prev_page = session['prev_url'])
 
 current_users = {}
 
@@ -82,7 +81,7 @@ def all_recipes():
     session['current_course'] = request.form['selected_course']
     current_recipes = Recipes.query.filter_by(course = session['current_course']).all()
     course = session['current_course'] + "s"
-    return render_template("all_recipes.html", page_title = 'All recipe', current_recipes = current_recipes, course = current_recipes[0].course.capitalize() + "s", course_class = current_recipes[0].course + "s", course_path = f"{{url_for('../assets/{course}.jpg')}}")
+    return render_template("all_recipes.html", page_title = 'All recipe', current_recipes = current_recipes, course = current_recipes[0].course.capitalize() + "s", course_class = current_recipes[0].course + "s")
 
 # Edit selected recipe
 
@@ -107,10 +106,11 @@ def delete_recipe():
 
 @app.route('/update_recipe', methods=["POST"])
 def update_recipe():
-    session['current_recipe'] = request.form['selected_recipe']
+    session['current_recipe'] = request.form['recipe_id']
     current_recipe = Recipes.query.filter_by(recipe_id = session['current_recipe']).first()
     current_recipe.recipe_name = request.form['recipe_name'] if current_recipe.recipe_name!=request.form['recipe_name'] else current_recipe.recipe_name
     current_recipe.course = request.form['course']
+    current_recipe.picture = request.form['picture'] if current_recipe.picture!=request.form['picture'] else current_recipe.picture
     current_recipe.ingredients = request.form['ingredients']
     current_recipe.instructions = request.form['instructions']
     current_recipe.vegetarian = request.form['vegetarian'] if request.form.get('vegetarian') else 'no'
@@ -189,6 +189,16 @@ def register():
 def adding_new_recipe():    
     recipe_name = request.form['recipe_name']
     course = request.form['course']
+    if request.form['picture']:
+        picture = request.form['picture']
+    elif course == "starter":
+        picture = "static/assets/starters.jpg"
+    elif course == "main":
+        picture = "static/assets/mains.jpg"
+    elif course == "dessert":
+        picture = "static/assets/desserts.jpg"
+    elif course == "kids_meal":
+        picture = "static/assets/kids.jpg"
     ingredients = request.form['ingredients']
     instructions = request.form['instructions']
     vegetarian = request.form['vegetarian'] if request.form.get('vegetarian') else 'no'
@@ -204,6 +214,7 @@ def adding_new_recipe():
         new_recipe = Recipes()
         new_recipe.recipe_name = recipe_name
         new_recipe.course = course
+        new_recipe.picture = picture
         new_recipe.users = user
         new_recipe.ingredients = ingredients
         new_recipe.instructions = instructions
