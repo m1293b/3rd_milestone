@@ -106,8 +106,7 @@
             <div class="card mb-2">
                 <span><b>{{kids_meal.recipe_name}}</b></span>
                 <div class="card-picture">
-                    <img src="{{kids_mealcipe.picture}}"
-                        alt="A picture that shows an example dish of the selected course.">
+                    <img src="{{kids_meal.picture}}" alt="A picture that shows an example dish of the selected course.">
                 </div>
                 <div class="grid grid-cols-1 mt-1 justify-self-center">
                     <form action="{{ url_for('view_recipe')}}" method="POST"
