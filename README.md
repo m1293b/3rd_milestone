@@ -49,9 +49,9 @@
   - **I want** be able to find meals that are recommended for kids.
   - **So that** I can prepare a meal for my child as quickly as possible.
 
-  ### As a Family
+  ### As a first time view
 
-  - **I want**
+  - **I want** to be able to find out 
   - **So that**
 
   ### As a
@@ -87,19 +87,19 @@
 
 - ## Wireframes
 
-  ![A picture of the rooms.html desktop version.](./readme_files/ "Desktop version of index.html")
-  ![A picture of the rooms.html tablet version.](./readme_files/ "Tablet version of index.html")
-  ![A picture of the rooms.html mobile version.](./readme_files/ "Mobile version of index.html")
-  ![A picture of the rooms.html desktop version.](./readme_files/ "Desktop version of hotel.html")
-  ![A picture of the rooms.html tablet version.](./readme_files/ "Tablet version of hotel.html")
-  ![A picture of the rooms.html mobile version.](./readme_files/ "Mobile version of index.html")
+  ![A picture of the index.html desktop version.](./readme_files/ "Desktop version of index.html")
+  ![A picture of the index.html tablet version.](./readme_files/ "Tablet version of index.html")
+  ![A picture of the index.html mobile version.](./readme_files/ "Mobile version of index.html")
+  ![A picture of the home.html desktop version.](./readme_files/ "Desktop version of hotel.html")
+  ![A picture of the home.html tablet version.](./readme_files/ "Tablet version of home.html")
+  ![A picture of the home.html mobile version.](./readme_files/ "Mobile version of home.html")
 
 # Features
 
 - ## Existing features
 
 * The user can register an account for themselves, so they can also create, edit and delete their recipes, not just view other's.
-* After the user left the website or logged out, they are able to log back in to open a new session where they can alter their recipes.
+* After the user left the website or logged out, they are able to log back in to open a new session where they can alter their recipes.(Update/Delete)
 * The main page showcases the newest recipe in it's category. The recipes page showcases the top 4 newest recipes. Users can view all recipes by clicking on the View All button next to the categories' name.
 
 - ## Features left to be implemented
@@ -142,9 +142,10 @@ It proved to be quite challenging to host my website, as I had trouble signing u
 
 # Testing
 
-![A screenshot of the initial Lighthouse mobile results.](./readme_files/lighthouse_mobile_test.png "A screenshot of the initial Lighthouse mobile results.")
-
 ## Testing with validators
+
+- ![A screenshot of the initial Lighthouse mobile result.](./readme_files/lighthouse_mobile_test.png "A screenshot of the initial Lighthouse mobile result.")
+- ![A screenshot of the initial Lighthouse desktop result.](./readme_files/lighthouse_desktop_test.png "A screenshot of the initial Lighthouse desktop result.")
 
 ## JSLint
 

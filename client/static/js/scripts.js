@@ -1,8 +1,8 @@
+// This jQuery add the current year to the footer's paragraph
+
 $("#copyright").text(new Date().getFullYear());
 
-let messages = [];
-
-// nav bar made responsive
+// nav bar made responsive, on smaller screens the site's name disappears, and the little icon becomes the menu button
 
 $(window).on("resize", function () {
   const win = $(this);
@@ -19,6 +19,8 @@ $(window).on("resize", function () {
   }
 });
 
+// div.cone is the menu button, and this listener controls what happens when the user clicks on it
+
 $("div.cone").on("click", function () {
   if ($("div.navbar-links-list-div").css("top") === "-192px") {
     $("div.navbar-links-list-div").css("top", "64px");
@@ -27,11 +29,7 @@ $("div.cone").on("click", function () {
   }
 });
 
-// sign up page input checks to be updated
-
-$("input[type=email]").on("change", function () {
-  if (!$(this).text().includes("@")) messages.push("Invalid email address.");
-});
+// this listeners control what happens when the user hovers over and then if the mouse leaves any element that has .button as it's class
 
 $(".button").on("mouseover", function () {
   $(this).css("color", "#d2d6db");
@@ -43,9 +41,7 @@ $(".button").on("mouseleave", function () {
   $(this).css("background", "#d2d6db");
 });
 
-$('input[type="password"]').on("change", function () {
-  console.log("#yep");
-});
+// this listeners control what happens when the user clicks on any element that has .delete as it's class
 
 $(".delete").on("click", function () {
   let wrapDiv = $(this).parent();
@@ -54,16 +50,11 @@ $(".delete").on("click", function () {
   deleteConfirm.show();
 });
 
+// this listeners control what happens when the user clicks on any element that has .cancel as it's class
+
 $(".cancel").on("click", function () {
   let cardButtons = $(this).parent();
   let wrapDiv = cardButtons.siblings("#card-buttons");
   cardButtons.hide();
   wrapDiv.show();
 });
-
-// $(".cancel").on("click", function () {
-//   let wrapDiv = $(this).parent();
-//   let deleteConfirm = $("").find("");
-//   wrapDiv.hide();
-//   deleteConfirm.show();
-// });
