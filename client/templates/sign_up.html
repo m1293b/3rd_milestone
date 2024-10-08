@@ -5,6 +5,7 @@
   <h1 class="text-center my-12 font-bold font-mono text-xl">
     Let's get you an account ...
   </h1>
+  <!-- next section to display any flash messages that were sent from function. -->
   {% with messages = get_flashed_messages()%}
 
   {% if messages %}
@@ -17,18 +18,19 @@
 
   {% endwith %}
   <form method="POST" id="register-form" action="{{ url_for('register') }}" class="m-8 tablet:min-h-fit laptop:mx-4">
+    <!-- This is where the user can supply their desired username -->
     <div class="my-4 laptop:mx-0 grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-1">
       <label for="email" class="text-center mb-2">Username:</label>
       <input type="text" name="username" id="username" placeholder="#bestchef" required
         class="form-control border rounded-md border-main-bg shadow-sm text-center mb-2 justify-self-center min-w-[80%] tablet:min-w-[100%] laptop:min-w-[40%] laptop:max-w-[60%]" />
     </div>
-
+    <!-- This is where the user can supply their email address -->
     <div class="my-4 laptop:mx-0 grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-1">
       <label for="email" class="text-center mb-2">Email address:</label>
       <input type="email" name="email_address" id="email" placeholder="bestchef@no39.com" required
         class="form-control border rounded-md border-main-bg shadow-sm text-center mb-2 justify-self-center min-w-[80%] tablet:min-w-[100%] laptop:min-w-[40%] laptop:max-w-[60%]" />
     </div>
-
+    <!-- This is where the user can supply their desired password -->
     <div class="my-4 laptop:mx-0 grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-1">
       <label for="password" class="text-center mb-2">Password:</label>
       <input type="password" name="password" id="password" placeholder="#tryharder" required
@@ -36,13 +38,12 @@
         title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"
         class="form-control border rounded-md border-main-bg shadow-sm text-center mb-2 justify-self-center min-w-[80%] tablet:min-w-[100%] laptop:min-w-[40%] laptop:max-w-[60%]" />
     </div>
+    <!-- Submit button to register the user with the above provided details -->
     <div class="grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-1 col-span-2 mt-8 tablet:px-32 text-center">
       <input type="submit" value='Register'
         class="button tablet:col-span-2 border-2 rounded-lg p-1 cursor-pointer min-w-[40%] laptop:max-w-[20%] justify-self-center">
     </div>
   </form>
 </div>
-
-<!-- update buttons -->
 
 {% endblock content %}

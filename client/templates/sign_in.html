@@ -3,6 +3,7 @@
 <div
   class="main-page mt-4 mx-4 tablet:min-h-[500px] laptop:mx-[15%] desktop:mx-[25%] items-center justify-center border rounded-md border-main-bg shadow-lg">
   <h1 class="text-center my-12 font-bold font-mono text-xl">Welcome back!</h1>
+  <!-- next section to display any flash messages that were sent from function. -->
   {% with messages = get_flashed_messages() %}
 
   {% if messages %}
@@ -15,12 +16,14 @@
 
   {% endwith %}
   <form id="auth-form" method="POST" action="{{ url_for('login') }}" class="m-8 tablet:min-h-fit laptop:mx-4">
+    <!-- The user needs to supply their username here -->
     <div class="tablet:my-4 laptop:mx-0 grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-1">
       <label for="username" class="text-center mb-2">Username:</label>
       <input type="text" name="username" id="username" placeholder="#bestchef" required
         class="form-control border rounded-md border-main-bg shadow-sm text-center mb-2 justify-self-center min-w-[80%] tablet:min-w-[100%] laptop:min-w-[40%] laptop:max-w-[60%]" />
     </div>
 
+    <!-- The user needs to supply their password here -->
     <div class="tablet:my-4 laptop:mx-0 grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-1">
       <label for="password" class="text-center mb-2">Password:</label>
       <input type="password" name="password" id="password" placeholder="Your password" required
@@ -28,6 +31,7 @@
         title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"
         class="form-control border rounded-md border-main-bg shadow-sm text-center mb-2 justify-self-center min-w-[80%] tablet:min-w-[100%] laptop:min-w-[40%] laptop:max-w-[60%]" />
     </div>
+    <!-- This button logs the user in -->
     <div class="grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-1 col-span-2 mt-8 tablet:px-32 text-center">
       <input type="submit" value='Login'
         class="button tablet:col-span-2 border-2 rounded-lg p-1 cursor-pointer min-w-[40%] laptop:max-w-[20%] justify-self-center">

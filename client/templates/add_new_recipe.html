@@ -6,6 +6,7 @@
     class="main-page mt-6 tablet:min-h-[500px] laptop:mx-[15%] desktop:mx-[25%] items-center justify-center border rounded-md border-main-bg shadow-lg">
     <h1 class="text-center my-12 font-bold font-mono text-xl">Let's see your new favourite</h1>
 
+    <!-- next section to display any flash messages that were sent from function. -->
     {% with messages = get_flashed_messages()%}
 
     {% if messages %}
@@ -20,6 +21,7 @@
 
     <form method="POST" action="{{ url_for('adding_new_recipe') }}"
         class="m-8 tablet:min-h-fit laptop:mx-4 text-center">
+        <!-- This section takes the new recipe's name -->
         <div class="tablet:my-4 laptop:mx-0 grid grid-cols-1">
             <label for="recipe_name" class="text-center mb-2"><b>The recipe's name is:</b></label>
             <input type="text" name="recipe_name" id="recipe_name" placeholder="#MyNextBestRecipe" maxlength="20"
@@ -50,6 +52,7 @@
                     class="cursor-pointer w-fit justify-self-center" />
             </div>
         </div>
+        <!-- If the user would rather use a link to a desired picture than the default picture, this is where they can supply it -->
         <div class="tablet:my-4 laptop:mx-0 grid grid-cols-1">
             <label for="picture" class="text-center mb-2 cursor-pointer w-fit justify-self-center">Recipe's
                 picture:<br><small>It is meant to be a link to the picture, but not required.</small></label>
@@ -59,16 +62,19 @@
         <br>
         <hr><br>
 
+        <!-- Here the user can list the ingredients -->
         <div class="grid grid-cols-1 text-center mb-2">
             <label for="ingredients">Ingredients</label>
             <textarea name="ingredients" id="ingredients" rows="4" class="border rounded-lg border-main-bg mt-2 p-2"
                 required></textarea>
         </div>
+        <!-- The user can share the instruction that are necessary to get the dish right -->
         <div class="grid grid-cols-1 text-center mb-2">
             <label for="instructions">Instructions</label>
             <textarea name="instructions" id="instructions" rows="8" class="border rounded-lg border-main-bg mt-2 p-2"
                 required></textarea>
         </div>
+        <!-- The user can select a label to be attached to the recipe. This is not required, but can help other users. -->
         <div class="grid grid-cols-4">
             <div class="grid grid-cols-1 text-center mb-2">
                 <label for="vegetarian" class="cursor-pointer w-fit justify-self-center">Vegetarian</label>

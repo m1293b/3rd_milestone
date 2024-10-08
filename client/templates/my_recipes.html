@@ -2,6 +2,7 @@
 
 {% block content %}
 <div class="main-page pt-12 grid grid-cols-1 gap-4 tablet:gap-2">
+    <!-- next section to display any flash messages that were sent from function. -->
     {% with messages = get_flashed_messages()%}
 
     {% if messages %}
@@ -13,6 +14,7 @@
     {% endif %}
 
     {% endwith %}
+    <!-- Starters -->
     <div class="recipes-row starters">
         <div class="recipes-header-row">
             <p>My starters</p>
@@ -161,6 +163,7 @@
         </div>
     </div>
 
+    <!-- Button to take user to the page where they can add a new recipe to their collection -->
     <div class="new-recipe text-center">
         <a href="{{url_for('add_new_recipe_page')}}"
             class="button tablet:col-span-2 border-2 rounded-lg p-1 cursor-pointer min-w-[40%] laptop:max-w-[20%]">Add
