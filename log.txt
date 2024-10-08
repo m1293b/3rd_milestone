@@ -1,0 +1,7 @@
+nohup: ignoring input
+Traceback (most recent call last):
+  File "/var/www/3rd_milestone/app.py", line 6, in <module>
+    from server import app, models, routes
+  File "/var/www/3rd_milestone/server/__init__.py", line 3, in <module>
+    from flask_sqlalchemy import SQLAlchemy
+ModuleNotFoundError: No module named 'flask_sqlalchemy'
