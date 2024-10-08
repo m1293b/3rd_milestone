@@ -3,11 +3,10 @@
 ## UX
 
 - User stories
-- Project goals
 - Design choices
 - Business goals
 - Developer goals
-- Wire frames
+- Wireframes
 
 ## Features
 
@@ -54,40 +53,40 @@
   - **I want** to be able to register an account for myself.
   - **So that** I can post my recipes.
 
-  ### As a returning user
+  ### As a returning registered user
 
   - **I want** to be able to update my recipes.
   - **So that** I can improve them.
 
-  ### As a returning user
+  ### As a returning registered user
 
   - **I want** to be able to delete my recipes.
   - **So that** I don't have them anymore in my collection.
 
-- ## Project goals
-
-  The goal of this project is to allow users to share their recipes and let them view recipes shared by others as well.
-
 - ## Design choices
 
-  <!--  -->
-
-- ## Business goals
-
-  <!--  -->
-
-- ## Developer goals
-
-  <!--  -->
+  I quite like the dark blue and it goes well with the curved edges. I used the Tailwind framework as it allowed me to quickly and efficiently build a responsive website. As the CSS file is compact, loading times are faster as well.
 
 - ## Wireframes
 
-  ![A picture of the index.html desktop version.](./readme_files/ "Desktop version of index.html")
-  ![A picture of the index.html tablet version.](./readme_files/ "Tablet version of index.html")
-  ![A picture of the index.html mobile version.](./readme_files/ "Mobile version of index.html")
-  ![A picture of the home.html desktop version.](./readme_files/ "Desktop version of hotel.html")
-  ![A picture of the home.html tablet version.](./readme_files/ "Tablet version of home.html")
-  ![A picture of the home.html mobile version.](./readme_files/ "Mobile version of home.html")
+  ![A picture of the index.html desktop version.](./readme_files/wireframe_index_desktop_tablet.png "Desktop version of index.html")
+  ![A picture of the index.html tablet version.](./readme_files/wireframe_index_desktop_tablet.png "Tablet version of index.html")
+  ![A picture of the index.html mobile version.](./readme_files/wireframe_index_mobile.png "Mobile version of index.html")
+  ![A picture of the home.html desktop version.](./readme_files/wireframe_home_desktop_tablet.png "Desktop version of hotel.html")
+  ![A picture of the home.html tablet version.](./readme_files/wireframe_home_desktop_tablet.png "Tablet version of home.html")
+  ![A picture of the home.html mobile version.](./readme_files/wireframe_home_mobile.png "Mobile version of home.html")
+  ![A picture of the recipes.html desktop version.](./readme_files/wireframe_recipes_desktop_tablet.png "Desktop version of recipes.html")
+  ![A picture of the recipes.html tablet version.](./readme_files/wireframe_recipes_desktop_tablet.png "Tablet version of recipes.html")
+  ![A picture of the recipes.html mobile version.](./readme_files/wireframe_recipes_mobile.png "Mobile version of recipes.html")
+  ![A picture of the my_recipes.html desktop version.](./readme_files/wireframe_my_recipes_desktop_tablet.png "Desktop version of my_recipes.html")
+  ![A picture of the my_recipes.html tablet version.](./readme_files/wireframe_my_recipes_desktop_tablet.png "Tablet version of my_recipes.html")
+  ![A picture of the my_recipes.html mobile version.](./readme_files/wireframe_my_recipes_mobile.png "Mobile version of my_recipes.html")
+  ![A picture of the sign_in.html desktop version.](./readme_files/wireframe_sign_in_desktop_tablet.png "Desktop version of sign_in.html")
+  ![A picture of the sign_in.html tablet version.](./readme_files/wireframe_sign_in_desktop_tablet.png "Tablet version of sign_in.html")
+  ![A picture of the sign_in.html mobile version.](./readme_files/wireframe_sign_in_mobile.png "Mobile version of sign_in.html")
+  ![A picture of the sign_up.html desktop version.](./readme_files/wireframe_sign_up_desktop_tablet.png "Desktop version of sign_up.html")
+  ![A picture of the sign_up.html tablet version.](./readme_files/wireframe_sign_up_desktop_tablet.png "Tablet version of sign_up.html")
+  ![A picture of the sign_up.html mobile version.](./readme_files/wireframe_sign_up_mobile.png "Mobile version of sign_up.html")
 
 # Features
 
@@ -123,7 +122,7 @@
 - GitHub - Used for making my files available on the web.
 - Visual Studio Code - Used for the programming environment
 
-1. Websites used
+3. Websites used
 
 - [I used stackoverflow to check for solution when I got tired/stuck.](https://stackoverflow.com/)
 - [I used w3schools to check for correct syntax whenever I had my code stop working.](https://www.w3schools.com/)
@@ -133,50 +132,38 @@
 
 # Bugs
 
-It proved to be quite challenging to host my website, as I had trouble signing up to Heroku with the Github Student Pack, so I ended up needing to host my app on another hosting service, called Linode. I learnt how to install an OS(Debian) to serve as my webserver, host my website with Apache, create a domain and create A records so the user can reach my app with a domain name rather than the fix IP, route all requests through Cloudflare where I was able to enable Full(strict) mode after a lot of reading about how to get a certificate signed for HTTPS connections and get my Apache server to listen to these 443 requests. I quite enjoyed learning all about these, and I hope I could submit a well designed app too.
+It proved to be quite challenging to host my website, as I had trouble signing up to Heroku with the Github Student Pack, so I ended up needing to host my app on another hosting service, called Linode. I learnt how to install an OS(Debian) to serve as my web server, host my website with Apache, create a domain and create A records so the user can reach my app with a domain name rather than the fix IP, route all requests through Cloudflare where I was able to enable Full(strict) mode after a lot of reading about how to get a certificate signed for HTTPS connections and get my Apache server to listen to these 443 requests. I quite enjoyed learning all about these, and I hope I could submit a well designed app too.
 
 # Testing
 
 ## Testing with validators
 
-- ![A screenshot of the initial Lighthouse mobile result.](./readme_files/lighthouse_mobile_test.png "A screenshot of the initial Lighthouse mobile result.")
-- ![A screenshot of the initial Lighthouse desktop result.](./readme_files/lighthouse_desktop_test.png "A screenshot of the initial Lighthouse desktop result.")
+### JSLint
+
 - ![A screenshot of the JSLint result.](./readme_files/jslint_result.png "A screenshot of the JSLint result.")
-- ![A screenshot of the CSS validation result.](./readme_files/css_validation.png "A screenshot of the CSS validation result.")
-- ![A screenshot of the initial Lighthouse desktop result.](./readme_files/lighthouse_desktop_test.png "A screenshot of the initial Lighthouse desktop result.")
-- ![A screenshot of the initial Lighthouse desktop result.](./readme_files/lighthouse_desktop_test.png "A screenshot of the initial Lighthouse desktop result.")
-- ![A screenshot of the initial Lighthouse desktop result.](./readme_files/lighthouse_desktop_test.png "A screenshot of the initial Lighthouse desktop result.")
-- ![A screenshot of the initial Lighthouse desktop result.](./readme_files/lighthouse_desktop_test.png "A screenshot of the initial Lighthouse desktop result.")
--
-
-## JSLint
-
-![A screenshot of the initial JSLint results.](./ "A screenshot of the initial JSLint results.")
-
--
 
 ![A screenshot of the JSLint final results.](./ "A screenshot of the JSLint final results.")
 
-## Lighthouse
+### Lighthouse
 
-![A screenshot of the Lighthouse results for the mobile version](./ "Lighthouse test for the mobile version of the site.")  
- ![A screenshot of the Lighthouse results for the desktop version](./ "Lighthouse test for the desktop version of the website.")
+- ![A screenshot of the Lighthouse results for the mobile version](./ "Lighthouse test for the mobile version of the site.")
+- ![A screenshot of the initial Lighthouse desktop result.](./readme_files/lighthouse_desktop_test.png "A screenshot of the initial Lighthouse desktop result.")
 
 ## W3C HTML
 
-![A screenshot of the W3C testing result. 2 x errors shown, 1 x where it had an issue with a paragraph that I could not find, or it is a validator mistake? The other error is related to the iframe I used for the google maps, and it does not affect anything negatively](./ "Testing HTML of my website with W3C.")
+- ![A screenshot of the home.html validation result.](./readme_files/home_html_validation.png "A screenshot of the home.html validation result.")
+- ![A screenshot of the index.html validation result.](./readme_files/index_html_validation.png "A screenshot of the index.html validation result.")
+- ![A screenshot of the recipes.html validation result.](./readme_files/recipes_html_validation.png "A screenshot of the recipes.html validation result.")
+- ![A screenshot of the sign_in.html validation result.](./readme_files/sign_in_html_validation.png "A screenshot of the sign_in.html validation result.")
+- ![A screenshot of the sign_up.html validation result.](./readme_files/sign_up_html_validation.png "A screenshot of the sign_up.html validation result.")
 
 ## W3C CSS(Jigsaw)
 
-![A screenshot of Jigsaw(W3C) testing result. No error found.](./ "Testing CSS of my website with W3C.")
-
-## W3C CSS(Jigsaw)
-
-![A screenshot of Jigsaw(W3C) testing result. No error found.](./ "Testing CSS of my website with W3C.")
+- ![A screenshot of the CSS validation result.](./readme_files/css_validation.png "A screenshot of the CSS validation result.")
 
 ## Final website
 
-![A screenshot of the finished website on different screen sizes.](./ "A screenshot of the finished website on different screen sizes.")
+![A screenshot of the finished website on different screen sizes.](./readme_files/responsiveness.png "A screenshot of the finished website on different screen sizes.")
 
 ## Manual testing
 
@@ -184,8 +171,8 @@ It proved to be quite challenging to host my website, as I had trouble signing u
 
 #### As a
 
-- **Story**:
-- **Test Result**:
+- **Story**: As a newly found home cook, I want an easy way to find a recipe, so that I can start preparing my meal for the upcoming days.
+- **Test Result**: The first page the user gets to is
 
 #### As a
 
@@ -211,23 +198,6 @@ It proved to be quite challenging to host my website, as I had trouble signing u
 
 - **Story**:
 - **Test Result**:
-
-## Automated testing
-
-I spent a lot of time on the internet, looking for a solution how to test this function. I found the answer after posting on Reddit.
-I had to learn how to properly bind the element, so the function can use "this".
-
-- ![A screenshot of the Jest testing.](./ "A screenshot of the Jest testing.")
-
-## Room category selection testing
-
--
--
-
-## Add extras
-
-- Admin settings
--
 
 # Credits
 
@@ -235,54 +205,164 @@ I had to learn how to properly bind the element, so the function can use "this".
 
 - [The colours used for the website were found on colorhunt.com](https://colorhunt.co/palette/22283131363f76abaeeeeeee)
 
-2. ## Media
-
-- [The picture of the hotel room was found on Pexels.com. Direct link to the page I downloaded the picture from](https://www.pexels.com/photo/cozy-modern-bedroom-3144580/)
-- [The picture of the hotel room was found on Pexels.com. Direct link to the page I downloaded the picture from](https://www.pexels.com/photo/interior-of-modern-bedroom-with-soft-bed-and-wooden-walls-6284232/)
-- [The picture of the hotel room was found on Pexels.com. Direct link to the page I downloaded the picture from](https://www.pexels.com/photo/a-warm-and-comfortable-place-3688261/)
-- [The picture of the hotel room was found on Pexels.com. Direct link to the page I downloaded the picture from](https://www.pexels.com/photo/apartment-interior-with-bed-near-windows-with-curtains-6585757/)
-- [The picture of the hotel room was found on Pexels.com. Direct link to the page I downloaded the picture from](https://www.pexels.com/photo/interior-of-cozy-bedroom-with-comfy-bed-and-tv-hanging-over-chest-of-drawers-6527066/)
-- [The picture of the hotel room was found on Pexels.com. Direct link to the page I downloaded the picture from](https://www.pexels.com/photo/black-and-grey-bedspread-on-bed-and-pillow-164595/)
-- [The picture of the hotel room was found on Pexels.com. Direct link to the page I downloaded the picture from](https://www.pexels.com/photo/black-laptop-placed-on-table-271618/)
-- [The picture of the hotel room was found on Pexels.com. Direct link to the page I downloaded the picture from](https://www.pexels.com/photo/stylish-bathroom-with-glass-elements-in-apartment-6032203/)
-- [The picture of the hotel room was found on Pexels.com. Direct link to the page I downloaded the picture from](https://www.pexels.com/photo/made-bed-in-spacious-bedroom-with-air-conditioner-6316054/)
-- [The picture of the hotel room was found on Pexels.com. Direct link to the page I downloaded the picture from](https://www.pexels.com/photo/interior-details-of-contemporary-bedroom-with-bedside-table-and-wardrobe-6933760/)
-- [The picture of the hotel room was found on Pexels.com. Direct link to the page I downloaded the picture from](https://www.pexels.com/photo/home-design-26571204/)
-- [The picture of the hotel room was found on Pexels.com. Direct link to the page I downloaded the picture from](https://www.pexels.com/photo/room-with-bed-and-wooden-floor-1743229/)
-- [The picture of the hotel room was found on Pexels.com. Direct link to the page I downloaded the picture from](https://www.pexels.com/photo/two-single-beds-in-well-lit-room-2029722/)
-- [The picture of the hotel room was found on Pexels.com. Direct link to the page I downloaded the picture from](https://www.pexels.com/photo/clear-glass-shower-room-271631/)
-- [The picture of the hotel room was found on Pexels.com. Direct link to the page I downloaded the picture from](https://www.pexels.com/photo/a-simple-bedroom-3659683/)
-- [The picture of the hotel room was found on Pexels.com. Direct link to the page I downloaded the picture from](https://www.pexels.com/photo/spacious-bathroom-with-modern-trendy-design-6032424/)
-- [The picture of the hotel room was found on Pexels.com. Direct link to the page I downloaded the picture from](https://www.pexels.com/photo/interior-of-stylish-bathroom-in-cottage-6032425/)
-- [The picture of the hotel room was found on Pexels.com. Direct link to the page I downloaded the picture from](https://www.pexels.com/photo/classic-bedroom-with-armchairs-and-tv-next-to-bed-6587902/)
-- [The picture of the hotel room was found on Pexels.com. Direct link to the page I downloaded the picture from](https://www.pexels.com/photo/bathroom-interior-1457847/)
-
-3. ## Code
+2. ## Code
 
 - Official site like W3School and Tailwind help to create a great layout that functions well.
 - StackOverflow helped me to see how others solved the issues their code had and I manage to use some of the solutions after customising them to fit my code.
+- Codeinstitute's walkthrough videos gave me some ideas of how best to manipulate databases with Python. I had to watch other videos as well to fully understand the purpose of the code.
 
 ## Deployment
 
 - I used GitHub for version control and Linode to deploy my website. I used Visual Studio Code to access code on my server and to push code to GitHub.
 
-### Deploying with GitHub Pages
+### 1. Server Setup
 
-1. **Push your code to the `main` branch** of your GitHub repository:
+Ensure your server has Apache, Python, and necessary modules installed:
 
-   ```sh
-   git add .
-   git commit -m "Deploy website"
-   git push origin main
-   ```
+1. **Update your package list** and install Apache and necessary dependencies:
 
-2. **Enable GitHub Pages**:
+```bash
+sudo apt update
+sudo apt install apache2 python3 python3-venv libapache2-mod-wsgi-py3 git
+```
 
-   - Go to your repository on GitHub.
-   - Click on `Settings`.
-   - Scroll down to the `Pages` section.
-   - Under `Source`, select the branch you want to deploy (e.g., `main`) and `/root` folder.
-   - Click `Save`.
+2. **Clone the GitHub repository** to your server:
 
-3. **Access your website**:
-   - After a few minutes, your site should be available at `https://<username>.github.io/<repository-name>/`.
+Navigate to the desired directory where the application will be hosted and clone the repository:
+
+```bash
+cd /var/www/
+sudo git clone https://github.com/codeim1293b/3rd_milestone.git
+```
+
+3. **Set up the virtual environment:**
+
+Navigate to the application folder and create a virtual environment for the Flask app:
+
+```bash
+cd /var/www/your-flask-app
+python3 -m venv venv
+source venv/bin/activate
+```
+
+4. **Install application dependencies:**
+
+Use pip to install the required packages from the requirements.txt file:
+
+```bash
+pip install -r requirements.txt
+```
+
+5. **Set up environment variables:**
+
+Create an .env file or export the necessary environment variables for Flask (e.g., SECRET_KEY, FLASK_APP, DATABASE_URI, etc.).
+
+### 2. Configure Apache
+
+1. **Create an Apache configuration file** for your Flask app:
+
+Open a new Apache configuration file for your Flask application:
+
+```bash
+sudo nano /etc/apache2/sites-available/your-flask-app.conf
+```
+
+Add the following configuration:
+
+```apache
+<VirtualHost *:5000>
+    ServerName your_domain_or_ip
+
+    WSGIDaemonProcess your-flask-app python-path=/var/www/your-flask-app:/var/www/your-flask-app/venv/lib/python3.8/site-packages
+    WSGIProcessGroup your-flask-app
+    WSGIScriptAlias / /var/www/your-flask-app/your-flask-app.wsgi
+
+    <Directory /var/www/your-flask-app>
+        Require all granted
+    </Directory>
+
+    Alias /static /var/www/your-flask-app/static
+    <Directory /var/www/your-flask-app/static>
+        Require all granted
+    </Directory>
+
+    ErrorLog ${APACHE_LOG_DIR}/your-flask-app-error.log
+    CustomLog ${APACHE_LOG_DIR}/your-flask-app-access.log combined
+</VirtualHost>
+```
+
+2. **Create a WSGI entry point for the Flask app:**
+
+In your application directory, create a your-flask-app.wsgi file:
+
+```bash
+sudo nano /var/www/your-flask-app/your-flask-app.wsgi
+```
+
+Add the following lines to the file:
+
+```python
+import sys
+import os
+
+# Activate your virtual environment
+activate_this = '/var/www/your-flask-app/venv/bin/activate_this.py'
+exec(open(activate_this).read(), dict(__file__=activate_this))
+
+sys.path.insert(0, '/var/www/your-flask-app')
+
+from app import app as application
+```
+
+3. **Enable the new site configuration and the WSGI module:**
+
+```bash
+sudo a2ensite your-flask-app
+sudo a2enmod wsgi
+```
+
+4. **Restart Apache to apply the changes:**
+
+```bash
+sudo systemctl restart apache2
+```
+
+### 3. **Set Up Git for Version Control**
+
+1. **Pull latest changes from GitHub:**
+
+If you make updates to your repository, pull the changes directly to the server:
+
+```bash
+cd /var/www/your-flask-app
+sudo git pull origin main
+```
+
+### 4. **Set Up a Firewall**
+
+Allow HTTP and HTTPS traffic by updating your firewall rules:
+
+```bash
+sudo ufw allow 'Apache Full'
+```
+
+### 5. **Securing the Application**
+
+1. **Install and configure SSL** (optional but recommended):
+
+If using a domain, set up SSL for secure HTTPS access using Certbot:
+
+```bash
+sudo apt install certbot python3-certbot-apache
+sudo certbot --apache -d your_domain
+```
+
+### 6. **Final Checks**
+
+Once all steps are complete, your Flask application should be live and accessible at your server's IP address or domain. You can view the logs for any issues:
+
+```bash
+tail -f /var/log/apache2/your-flask-app-error.log
+```
+
+This setup ensures your Flask app is running on Apache, with GitHub as the version control system for easy updates. Follow these steps for seamless deployment, and feel free to customize as per your specific setup.
