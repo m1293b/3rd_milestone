@@ -3,7 +3,7 @@ The main application to run
 '''
 
 import os
-from server import app
+from server import app, models, routes
 #run the app if it wasn't just imported
 if __name__ == "__main__":
     app.run(

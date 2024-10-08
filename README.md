@@ -32,8 +32,6 @@
 
 ## Deployment
 
----
-
 # UX
 
 - ## User stories
@@ -69,21 +67,38 @@
 
 - ## Wireframes
 
+  ### index.html
+
   ![A picture of the index.html desktop version.](./readme_files/wireframe_index_desktop_tablet.png "Desktop version of index.html")
   ![A picture of the index.html tablet version.](./readme_files/wireframe_index_desktop_tablet.png "Tablet version of index.html")
   ![A picture of the index.html mobile version.](./readme_files/wireframe_index_mobile.png "Mobile version of index.html")
+
+  ### home.html
+
   ![A picture of the home.html desktop version.](./readme_files/wireframe_home_desktop_tablet.png "Desktop version of hotel.html")
   ![A picture of the home.html tablet version.](./readme_files/wireframe_home_desktop_tablet.png "Tablet version of home.html")
   ![A picture of the home.html mobile version.](./readme_files/wireframe_home_mobile.png "Mobile version of home.html")
+
+  ### recipes.html
+
   ![A picture of the recipes.html desktop version.](./readme_files/wireframe_recipes_desktop_tablet.png "Desktop version of recipes.html")
   ![A picture of the recipes.html tablet version.](./readme_files/wireframe_recipes_desktop_tablet.png "Tablet version of recipes.html")
   ![A picture of the recipes.html mobile version.](./readme_files/wireframe_recipes_mobile.png "Mobile version of recipes.html")
+
+  ### my_recipes.html
+
   ![A picture of the my_recipes.html desktop version.](./readme_files/wireframe_my_recipes_desktop_tablet.png "Desktop version of my_recipes.html")
   ![A picture of the my_recipes.html tablet version.](./readme_files/wireframe_my_recipes_desktop_tablet.png "Tablet version of my_recipes.html")
   ![A picture of the my_recipes.html mobile version.](./readme_files/wireframe_my_recipes_mobile.png "Mobile version of my_recipes.html")
+
+  ### sign_in.html
+
   ![A picture of the sign_in.html desktop version.](./readme_files/wireframe_sign_in_desktop_tablet.png "Desktop version of sign_in.html")
   ![A picture of the sign_in.html tablet version.](./readme_files/wireframe_sign_in_desktop_tablet.png "Tablet version of sign_in.html")
   ![A picture of the sign_in.html mobile version.](./readme_files/wireframe_sign_in_mobile.png "Mobile version of sign_in.html")
+
+  ### sign_up.html
+
   ![A picture of the sign_up.html desktop version.](./readme_files/wireframe_sign_up_desktop_tablet.png "Desktop version of sign_up.html")
   ![A picture of the sign_up.html tablet version.](./readme_files/wireframe_sign_up_desktop_tablet.png "Tablet version of sign_up.html")
   ![A picture of the sign_up.html mobile version.](./readme_files/wireframe_sign_up_mobile.png "Mobile version of sign_up.html")
@@ -142,19 +157,37 @@ It proved to be quite challenging to host my website, as I had trouble signing u
 
 - ![A screenshot of the JSLint result.](./readme_files/jslint_result.png "A screenshot of the JSLint result.")
 
-![A screenshot of the JSLint final results.](./ "A screenshot of the JSLint final results.")
-
 ### Lighthouse
 
-- ![A screenshot of the Lighthouse results for the mobile version](./ "Lighthouse test for the mobile version of the site.")
+  ### Lighthouse mobile
+
+- ![A screenshot of the Lighthouse results for the mobile version](./readme_files/lighthouse_mobile_test.png "Lighthouse test for the mobile version of the site.")
+
+  ### Lighthouse desktop
+
 - ![A screenshot of the initial Lighthouse desktop result.](./readme_files/lighthouse_desktop_test.png "A screenshot of the initial Lighthouse desktop result.")
 
 ## W3C HTML
 
+
+  ### home.html
+
 - ![A screenshot of the home.html validation result.](./readme_files/home_html_validation.png "A screenshot of the home.html validation result.")
+
+  ### index.html
+
 - ![A screenshot of the index.html validation result.](./readme_files/index_html_validation.png "A screenshot of the index.html validation result.")
+
+  ### recipes.html
+
 - ![A screenshot of the recipes.html validation result.](./readme_files/recipes_html_validation.png "A screenshot of the recipes.html validation result.")
+
+  ### sign_in.html
+
 - ![A screenshot of the sign_in.html validation result.](./readme_files/sign_in_html_validation.png "A screenshot of the sign_in.html validation result.")
+
+  ### sign_up.html
+
 - ![A screenshot of the sign_up.html validation result.](./readme_files/sign_up_html_validation.png "A screenshot of the sign_up.html validation result.")
 
 ## W3C CSS(Jigsaw)
@@ -169,35 +202,32 @@ It proved to be quite challenging to host my website, as I had trouble signing u
 
 ### User Stories
 
-#### As a
+#### As a newly found home cook
 
-- **Story**: As a newly found home cook, I want an easy way to find a recipe, so that I can start preparing my meal for the upcoming days.
-- **Test Result**: The first page the user gets to is
+- **Story**: I want an easy way to find a recipe, so that I can start preparing my meal for the upcoming days.
+- **Test Result**: The first page the user gets to displays recipes straight away. It also gives options to the user to view more recipes.
 
-#### As a
+#### As a parent
 
-- **Story**:
-- **Test Result**:
+- **Story**: I want to be able to find meals that are recommended for kids, so that I can prepare a meal for my child as quickly as possible.
+- **Test Result**: The Kid's meals are displayed on each site where recipes are shown.
 
-#### As a
+#### As a first time view
 
-- **Story**:
-- **Test Result**:
+- **Story**: I want to be able to register an account for myself., so that I can post my recipes.
+- **Test Result**: As the user gets to the main page, they find the "Sign in" button on the top right corner. By clicking on it, the app takes them to the next page where they can either sign in, or register a new account.
 
-#### As a
+#### As a returning registered user
 
-- **Story**:
-- **Test Result**:
+- **Story**: I want to be able to update my recipes, so that I can improve them.
+- **Test Result**: As the user signs in, they can view all of their recipes by clicking on the picture under the "My recipes" header. On the next page, under each displayed recipe there is an "Edit" button.
+  By clicking on it, the user is able to edit the selected recipe on the next page.
 
-#### As a
+#### As a returning registered user
 
-- **Story**:
-- **Test Result**:
-
-#### As a
-
-- **Story**:
-- **Test Result**:
+- **Story**: I want to be able to delete my recipes so that I don't have them anymore in my collection.
+- **Test Result**: The user could also delete any of their recipes by clicking on the "Delete" button under the recipe.
+  They will have to confirm this action by clicking on the next appearing "Confirm" button, or cancel the action by clicking on the "X".
 
 # Credits
 
@@ -270,12 +300,15 @@ sudo nano /etc/apache2/sites-available/your-flask-app.conf
 Add the following configuration:
 
 ```apache
-<VirtualHost *:5000>
+<VirtualHost *:443>
     ServerName your_domain_or_ip
 
     WSGIDaemonProcess your-flask-app python-path=/var/www/your-flask-app:/var/www/your-flask-app/venv/lib/python3.8/site-packages
     WSGIProcessGroup your-flask-app
     WSGIScriptAlias / /var/www/your-flask-app/your-flask-app.wsgi
+    ProxyPass / http://server_IP:5000/
+    ProxyPassReverse / http://server_IP:5000/
+
 
     <Directory /var/www/your-flask-app>
         Require all granted
@@ -364,5 +397,3 @@ Once all steps are complete, your Flask application should be live and accessibl
 ```bash
 tail -f /var/log/apache2/your-flask-app-error.log
 ```
-
-This setup ensures your Flask app is running on Apache, with GitHub as the version control system for easy updates. Follow these steps for seamless deployment, and feel free to customize as per your specific setup.
