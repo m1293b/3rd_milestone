@@ -7,6 +7,7 @@
 - Business goals
 - Developer goals
 - Wireframes
+- Data model
 
 ## Features
 
@@ -102,6 +103,96 @@
   ![A picture of the sign_up.html desktop version.](./readme_files/wireframe_sign_up_desktop_tablet.png "Desktop version of sign_up.html")
   ![A picture of the sign_up.html tablet version.](./readme_files/wireframe_sign_up_desktop_tablet.png "Tablet version of sign_up.html")
   ![A picture of the sign_up.html mobile version.](./readme_files/wireframe_sign_up_mobile.png "Mobile version of sign_up.html")
+
+---
+
+## Database Schema
+
+This project uses a relational database to manage `Users` and `Recipes`. Below is a detailed description of the data schema for each table and the relationships between them.
+
+### Users Table (`users`)
+
+| **Column Name**   | **Data Type**   | **Constraints**                      | **Description**                                                |
+|-------------------|-----------------|--------------------------------------|----------------------------------------------------------------|
+| `user_id`         | `Integer`       | `Primary Key`, `Auto Increment`      | Unique identifier for each user.                               |
+| `username`        | `String`        | `Unique`, `Not Null`                 | User's chosen username, must be unique.                        |
+| `password_hash`   | `String`        | `Not Null`                           | Hashed password for secure storage.                            |
+| `email_address`   | `String`        | `Not Null`                           | User's email address, required for communication.              |
+| `points`          | `Integer`       |                                      | User's points, representing rewards or system credit.          |
+| `liked_recipes`   | `ARRAY(Integer)`|                                      | Array of `recipe_id`s that the user has liked.                 |
+| `admin`           | `Boolean`       |                                      | Flag indicating if the user has admin privileges. To be implemented|
+
+#### Relationships:
+- **One-to-Many with Recipes**: A user can create multiple recipes. This relationship is facilitated by the `user_id` foreign key in the `recipes` table, which references the `user_id` in the `users` table.
+
+---
+
+### Recipes Table (`recipes`)
+
+| **Column Name**     | **Data Type**     | **Constraints**                     | **Description**                                                |
+|---------------------|-------------------|-------------------------------------|----------------------------------------------------------------|
+| `recipe_id`         | `Integer`         | `Primary Key`, `Auto Increment`     | Unique identifier for each recipe.                             |
+| `recipe_name`       | `String(20)`      | `Unique`, `Not Null`                | Name of the recipe, must be unique and less than 20 characters. |
+| `course`            | `String`          | `Not Null`                          | Course type, e.g., starter, main course, etc.                |
+| `picture`           | `String`          |                                     | URL or path to the recipe's picture.                           |
+| `user_id`           | `Integer`         | `Foreign Key(users.user_id)`        | Links the recipe to the user who created it.                   |
+| `ingredients`       | `String`          | `Not Null`                          | List of ingredients used in the recipe.                        |
+| `instructions`      | `String`          | `Not Null`                          | Cooking instructions for the recipe.                           |
+| `vegetarian`        | `String`          | `Default='no'`                      | Indicates if the recipe is vegetarian (yes/no).                |
+| `gluten_free`       | `String`          | `Default='no'`                      | Indicates if the recipe is gluten-free (yes/no).               |
+| `nut_free`          | `String`          | `Default='no'`                      | Indicates if the recipe is nut-free (yes/no).                  |
+| `shellfish_free`    | `String`          | `Default='no'`                      | Indicates if the recipe is shellfish-free (yes/no).            |
+
+#### Relationships:
+- **Many-to-One with Users**: The `user_id` is a foreign key that establishes a relationship with the `users` table, indicating that each recipe is created by one user.
+
+---
+
+### Entity-Relationship (ER) Overview
+
+- **Users (`users`)**: Users have unique profiles identified by `user_id`. They can like multiple recipes (stored in `liked_recipes`) and create multiple recipes. A user can also have admin privileges(to be implemented).
+- **Recipes (`recipes`)**: Each recipe is identified by `recipe_id` and is created by a specific user (`user_id`). Recipes also contain essential information such as name, ingredients, instructions, and dietary labels (vegetarian, gluten-free, nut-free, shellfish-free).
+
+---
+
+### Relationships
+
+1. **One-to-Many Relationship (Users to Recipes)**: Each user can have multiple recipes associated with them. This is facilitated by the `user_id` foreign key in the `recipes` table, which references the `user_id` in the `users` table.
+   
+2. **Optional Liked Recipes**: Users can store an array of liked recipe IDs (`liked_recipes`) in their profile, which allows tracking which recipes the user has liked. This array contains references to the `recipe_id` from the `recipes` table.
+
+---
+
+### SQL Representation
+
+```sql
+CREATE TABLE users (
+    user_id SERIAL PRIMARY KEY,
+    username VARCHAR(255) UNIQUE NOT NULL,
+    password_hash VARCHAR(255) NOT NULL,
+    email_address VARCHAR(255) NOT NULL,
+    points INTEGER,
+    liked_recipes INTEGER[],
+    admin BOOLEAN
+);
+
+CREATE TABLE recipes (
+    recipe_id SERIAL PRIMARY KEY,
+    recipe_name VARCHAR(20) UNIQUE NOT NULL,
+    course VARCHAR(255) NOT NULL,
+    picture VARCHAR(255),
+    user_id INTEGER REFERENCES users(user_id),
+    ingredients TEXT NOT NULL,
+    instructions TEXT NOT NULL,
+    vegetarian VARCHAR(3) DEFAULT 'no',
+    gluten_free VARCHAR(3) DEFAULT 'no',
+    nut_free VARCHAR(3) DEFAULT 'no',
+    shellfish_free VARCHAR(3) DEFAULT 'no'
+);
+```
+---
+
+This schema captures the relationships and attributes for managing user data, their associated recipes, and dietary options.
 
 # Features
 
