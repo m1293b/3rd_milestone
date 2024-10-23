@@ -6,7 +6,7 @@
   <div class="grid grid-cols-1 mt-10 mx-4">
     <h2>Things to implement:</h2>
     <ul>
-       <!-- next section to display any flash messages that were sent from function. -->
+      <!-- next section to display any flash messages that were sent from function. -->
       {% for update in updates %}
       <li class="text-center text-wrap text-red"><b>{update}</b></li>
       {% endfor %}
@@ -21,7 +21,7 @@
           <p>Top Starter</p>
           <form action="{{url_for('all_recipes')}}" method="POST">
             <input type="hidden" name="selected_course" value="starter">
-            <input type="submit" name="view" value="View all">
+            <input type="submit" name="view" value="View all starters">
           </form>
           <hr>
         </div>
@@ -43,7 +43,7 @@
           <p>Top Main</p>
           <form action="{{url_for('all_recipes')}}" method="POST">
             <input type="hidden" name="selected_course" value="main">
-            <input type="submit" name="view" value="View all">
+            <input type="submit" name="view" value="View all mains">
           </form>
           <hr>
         </div>
@@ -65,7 +65,7 @@
           <p>Top Dessert</p>
           <form action="{{url_for('all_recipes')}}" method="POST">
             <input type="hidden" name="selected_course" value="dessert">
-            <input type="submit" name="view" value="View all">
+            <input type="submit" name="view" value="View all desserts">
           </form>
           <hr>
         </div>
@@ -87,7 +87,7 @@
           <p>Top Kid's meal</p>
           <form action="{{url_for('all_recipes')}}" method="POST">
             <input type="hidden" name="selected_course" value="kids_meal">
-            <input type="submit" name="view" value="View all">
+            <input type="submit" name="view" value="View all kid's meals">
           </form>
           <hr>
         </div>

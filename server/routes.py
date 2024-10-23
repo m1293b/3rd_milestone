@@ -72,7 +72,8 @@ def add_new_recipe_page():
 def view_recipe():
     session['current_recipe'] = request.form['selected_recipe']
     current_recipe = Recipes.query.filter_by(recipe_id = session['current_recipe']).first()
-    return render_template("view_recipe.html", page_title = 'View recipe', current_recipe = current_recipe)
+    free_from = [{'vegetarian': current_recipe.vegetarian}, {'gluten free': current_recipe.gluten_free}, {'nut free': current_recipe.nut_free}, {'shellfish free': current_recipe.shellfish_free}]
+    return render_template("view_recipe.html", page_title = 'View recipe', current_recipe = current_recipe, free_from = free_from)
 
 # List all recipe
 
@@ -118,8 +119,8 @@ def update_recipe():
     current_recipe.shellfish_free = request.form['shellfish_free'] if request.form.get('shellfish_free') else 'no'
     db.session.commit()
     flash(f'"{current_recipe.recipe_name}" has been updated.')
-    return render_template("edit_recipe.html", page_title = 'Update recipe', current_recipe = current_recipe)
-
+    return redirect(url_for('my_recipes_page'))
+    
 ## route to take user to their profile page where they will be able to edit their details
 
 @app.route('/my_profile')
