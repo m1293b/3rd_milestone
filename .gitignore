@@ -4,6 +4,8 @@ env
 rapid_spoonacular_api
 __pycache__/
 commands.txt
+nohup*
+log.*
 
 # Logs
 logs

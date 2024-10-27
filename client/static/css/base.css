@@ -91,10 +91,10 @@
   .cancel {
     @apply justify-self-center border border-main-bg rounded px-2 mb-1 bg-golden font-bold cursor-pointer;
   }
-  form:has(> input[value="View all"]) {
+  form:has(> .view-all) {
     @apply mt-2;
   }
-  input[value="View all"] {
+  .view-all {
     @apply text-sm;
   }
   .recipes-header-row hr {

@@ -875,11 +875,11 @@ input[name="view"] {
   font-weight: 700;
 }
 
-form:has(> input[value="View all"]) {
+form:has(> .view-all) {
   margin-top: 0.5rem;
 }
 
-input[value="View all"] {
+.view-all {
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
@@ -1593,10 +1593,6 @@ input[value="View all"] {
   padding: 1.5rem;
 }
 
-.p-\[3px\] {
-  padding: 3px;
-}
-
 .px-1 {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
@@ -1845,18 +1841,9 @@ input[value="View all"] {
     grid-column: span 2 / span 2;
   }
 
-  .tablet\:m-4 {
-    margin: 1rem;
-  }
-
   .tablet\:mx-6 {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
-  }
-
-  .tablet\:mx-8 {
-    margin-left: 2rem;
-    margin-right: 2rem;
   }
 
   .tablet\:mx-\[15\%\] {
@@ -1871,10 +1858,6 @@ input[value="View all"] {
 
   .tablet\:mr-0 {
     margin-right: 0px;
-  }
-
-  .tablet\:mt-60 {
-    margin-top: 15rem;
   }
 
   .tablet\:flex {
@@ -1928,10 +1911,6 @@ input[value="View all"] {
 
   .tablet\:gap-2 {
     gap: 0.5rem;
-  }
-
-  .tablet\:p-4 {
-    padding: 1rem;
   }
 
   .tablet\:px-32 {
