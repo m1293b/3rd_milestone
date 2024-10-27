@@ -11,17 +11,17 @@
     <!-- Displaying th selected recipe -->
     <div class="m-8 tablet:min-h-fit laptop:mx-4 text-center">
         <div class="tablet:my-4 laptop:mx-0 grid grid-cols-1">
-            <p>The recipe's name is <b>{{current_recipe.recipe_name}}</b>, and it is a <b>{{current_recipe.course.replace("_", " ")}}</b>.</p>
+            <p>The recipe's name is <span class="rounded-md bg-golden border-transparent"><b>{{current_recipe.recipe_name}}</b></span>, and it is a <b>{{current_recipe.course.replace("_", " ")}}</b>.</p>
         </div>
         {% if  free_from|length != 0 %}
-        <p>It is also:
+        <p class="mt-2 tablet:mt-0">It is also:
             <ul class="mt-2">
                 
                 {% for i in range(free_from|length) %}
                     
                     {% for key in  free_from[i] %}
                         <li>
-                        {% if free_from[i][key] == "yes" %}
+                        {% if free_from[i][key] == "yes"%}
                             <b>{{key}}</b>
                         {% endif %}
                             </li>
@@ -37,45 +37,12 @@
         <!-- Ingredients are shown here -->
         <div class="grid grid-cols-1 text-center mb-2">
             <label for="ingredients">The ingredients are:</label>
-            <textarea name="ingredients" id="ingredients" rows="4" value="{{current_recipe.ingredients}}"
-                class="border rounded-lg border-main-bg mt-2 p-2" disable>{{current_recipe.ingredients}}</textarea>
+            <div class="border rounded-lg border-main-bg mt-2 p-2 min-h-[200px]"><span>{{current_recipe.ingredients}}</span></div>
         </div>
         <!-- Instructions are shown here -->
         <div class="grid grid-cols-1 text-center mb-2">
-            <label for="instructions">Instructions:</label>
-            <textarea name="instructions" id="instructions" rows="8" value="{{current_recipe.instructions}}"
-                class="border rounded-lg border-main-bg mt-2 p-2" disable>{{current_recipe.instructions}}</textarea>
-        </div>
-        <!-- If a label was selected by the user, that specific label or labels will be shown -->
-        <div class="grid grid-cols-2 tablet:grid-cols-4 gap-5 justify-items-center">
-            <div class="grid grid-cols-1 text-center mb-2">
-                <label for="vegetarian" class="cursor-pointer w-fit justify-self-center" {{ "hidden" if
-                    current_recipe.vegetarian !='yes' else '' }}><b>Vegetarian</b></label>
-                <input type="checkbox" name="vegetarian" id="vegetarian" value="yes" disabled {{ "checked" if
-                    current_recipe.vegetarian=='yes' else '' }} {{ "hidden" if current_recipe.vegetarian !='yes' else ''
-                    }} class="cursor-pointer w-fit justify-self-center">
-            </div>
-            <div class="grid grid-cols-1 text-center mb-2">
-                <label for="gluten_free" class="cursor-pointer w-fit justify-self-center" {{ "hidden" if
-                    current_recipe.gluten_free !='yes' else '' }}><b>Gluten free</b></label>
-                <input type="checkbox" name="gluten_free" id="gluten_free" value="yes" disabled {{ "checked" if
-                    current_recipe.gluten_free=='yes' else '' }} {{ "hidden" if current_recipe.gluten_free !='yes'
-                    else '' }} class="cursor-pointer w-fit justify-self-center">
-            </div>
-            <div class="grid grid-cols-1 text-center mb-2">
-                <label for="nut_free" class="cursor-pointer w-fit justify-self-center" {{ "hidden" if
-                    current_recipe.nut_free !='yes' else '' }}><b>Nut free</b></label>
-                <input type="checkbox" name="nut_free" id="nut_free" value="yes" disabled {{ "checked" if
-                    current_recipe.nut_free=='yes' else '' }} {{ "hidden" if current_recipe.nut_free !='yes' else '' }}
-                    class="cursor-pointer w-fit justify-self-center">
-            </div>
-            <div class="grid grid-cols-1 text-center mb-2">
-                <label for="shellfish_free" class="cursor-pointer w-fit justify-self-center" {{ "hidden" if
-                    current_recipe.shellfish_free !='yes' else '' }}><b>Shellfish free</b></label>
-                <input type="checkbox" name="shellfish_free" id="shellfish_free" value="yes" disabled {{ "checked" if
-                    current_recipe.shellfish_free=='yes' else '' }} {{ "hidden" if current_recipe.shellfish_free !='yes'
-                    else '' }} class="cursor-pointer w-fit justify-self-center">
-            </div>
+            <label for="instructions">And follow these instructions:</label>
+            <div class="border rounded-lg border-main-bg mt-2 p-2 min-h-[200px]"><span class="inline-block align-middle">{{current_recipe.instructions}}</span></div>
         </div>
     </div>
 </div>

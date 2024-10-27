@@ -1321,6 +1321,10 @@ form:has(> .view-all) {
   min-height: 10rem;
 }
 
+.min-h-\[100px\] {
+  min-height: 100px;
+}
+
 .min-h-\[30dvh\] {
   min-height: 30dvh;
 }
@@ -1337,6 +1341,10 @@ form:has(> .view-all) {
 .min-h-min {
   min-height: -moz-min-content;
   min-height: min-content;
+}
+
+.min-h-\[200px\] {
+  min-height: 200px;
 }
 
 .w-\[100px\] {
@@ -1547,6 +1555,10 @@ form:has(> .view-all) {
 .border-main-text {
   --tw-border-opacity: 1;
   border-color: rgb(210 214 219 / var(--tw-border-opacity));
+}
+
+.border-transparent {
+  border-color: transparent;
 }
 
 .bg-\[\#063b00\] {
@@ -1858,6 +1870,10 @@ form:has(> .view-all) {
 
   .tablet\:mr-0 {
     margin-right: 0px;
+  }
+
+  .tablet\:mt-0 {
+    margin-top: 0px;
   }
 
   .tablet\:flex {
