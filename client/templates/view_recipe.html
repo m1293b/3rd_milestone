@@ -11,13 +11,9 @@
     <!-- Displaying th selected recipe -->
     <div class="m-8 tablet:min-h-fit laptop:mx-4 text-center">
         <div class="tablet:my-4 laptop:mx-0 grid grid-cols-1">
-            <p>The recipe's name is: </p>
-            <br>
-            <div class="form-control border rounded-md border-main-text bg-golden font-bold shadow-sm text-center mb-2 px-2 justify-self-center">{{current_recipe.recipe_name}}</div>
+            <p>The recipe's name is <b>{{current_recipe.recipe_name}}</b>, and it is a <b>{{current_recipe.course.replace("_", " ")}}</b>.</p>
         </div>
-        <!-- Only the appropriate radio button will be visible -->
-        <span class="justify-self-center">and it is a <b>{{current_recipe.course.capitalize().replace("_", " ")}}</b>.</span>
-        <br><br><br>
+        {% if  free_from|length != 0 %}
         <p>It is also:
             <ul class="mt-2">
                 
@@ -34,7 +30,8 @@
                 {% endfor %}
                     
             </ul>
-        </p> 
+        </p>
+        {% endif %}
         <br><br><hr><br>       
 
         <!-- Ingredients are shown here -->

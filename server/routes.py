@@ -72,7 +72,8 @@ def add_new_recipe_page():
 def view_recipe():
     session['current_recipe'] = request.form['selected_recipe']
     current_recipe = Recipes.query.filter_by(recipe_id = session['current_recipe']).first()
-    free_from = [{'vegetarian': current_recipe.vegetarian}, {'gluten free': current_recipe.gluten_free}, {'nut free': current_recipe.nut_free}, {'shellfish free': current_recipe.shellfish_free}]
+    free_from = [{x.replace("_", " ").capitalize() : current_recipe.__dict__[x]} for x in current_recipe.__dict__ if current_recipe.__dict__[x] == 'yes']
+    #free_from = [vegetarian = 'yes' if current_recipe.vegetarian == 'yes' else None, gluten_free = 'yes' if current_recipe.gluten_free == 'yes' else None, nut_free = 'yes' if current_recipe.nut_free == 'yes' else None, shellfish_free = 'yes' if current_recipe.shellfish_free == 'yes' else None, ]
     return render_template("view_recipe.html", page_title = 'View recipe', current_recipe = current_recipe, free_from = free_from)
 
 # List all recipe
