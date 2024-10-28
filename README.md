@@ -7,7 +7,7 @@
 - Business goals
 - Developer goals
 - Wireframes
-- Data model
+- Data schema
 
 ## Features
 
@@ -68,55 +68,25 @@
 
 - ## Wireframes
 
-| **index.html** | **home.html** | **recipes.html** | **my_recipes.html** | **sign_in.html** | **sign_up.html** |
-| ![A picture of the index.html desktop version.](./readme_files/wireframe_index_desktop_tablet.png =100x200) | ![A picture of the home.html desktop version.](./readme_files/wireframe_home_desktop_tablet.png "Desktop version of hotel.html") | ![A picture of the recipes.html desktop version.](./readme_files/wireframe_recipes_desktop_tablet.png "Desktop version of recipes.html") | ![A picture of the my_recipes.html desktop version.](./readme_files/wireframe_my_recipes_desktop_tablet.png "Desktop version of my_recipes.html") | ![A picture of the sign_in.html desktop version.](./readme_files/wireframe_sign_in_desktop_tablet.png "Desktop version of sign_in.html") | ![A picture of the sign_up.html desktop version.](./readme_files/wireframe_sign_up_desktop_tablet.png "Desktop version of sign_up.html") |
-| ![A picture of the index.html tablet version.](./readme_files/wireframe_index_desktop_tablet.png "Tablet version of index.html") | ![A picture of the home.html tablet version.](./readme_files/wireframe_home_desktop_tablet.png "Tablet version of home.html") | ![A picture of the recipes.html tablet version.](./readme_files/wireframe_recipes_desktop_tablet.png "Tablet version of recipes.html") | ![A picture of the my_recipes.html tablet version.](./readme_files/wireframe_my_recipes_desktop_tablet.png "Tablet version of my_recipes.html") | ![A picture of the sign_in.html tablet version.](./readme_files/wireframe_sign_in_desktop_tablet.png "Tablet version of sign_in.html") | ![A picture of the sign_up.html tablet version.](./readme_files/wireframe_sign_up_desktop_tablet.png "Tablet version of sign_up.html") |
-| ![A picture of the index.html mobile version.](./readme_files/wireframe_index_mobile.png "Mobile version of index.html") | ![A picture of the home.html mobile version.](./readme_files/wireframe_home_mobile.png "Mobile version of home.html") | ![A picture of the recipes.html mobile version.](./readme_files/wireframe_recipes_mobile.png "Mobile version of recipes.html") | ![A picture of the my_recipes.html mobile version.](./readme_files/wireframe_my_recipes_mobile.png "Mobile version of my_recipes.html") | ![A picture of the sign_in.html mobile version.](./readme_files/wireframe_sign_in_mobile.png "Mobile version of sign_in.html") | ![A picture of the sign_up.html mobile version.](./readme_files/wireframe_sign_up_mobile.png "Mobile version of sign_up.html") |
+| **index.html** | **home.html** | **recipes.html** |
+|----------------|---------------|------------------|
+| ![A picture of the index.html desktop version.](./readme_files/wireframe_index_desktop_tablet.png "Desktop version of index.html") | ![A picture of the home.html desktop version.](./readme_files/wireframe_home_desktop_tablet.png "Desktop version of hotel.html") | ![A picture of the recipes.html desktop version.](./readme_files/wireframe_recipes_desktop_tablet.png "Desktop version of recipes.html") |
+| ![A picture of the index.html tablet version.](./readme_files/wireframe_index_desktop_tablet.png "Tablet version of index.html") | ![A picture of the home.html tablet version.](./readme_files/wireframe_home_desktop_tablet.png "Tablet version of home.html") | ![A picture of the recipes.html tablet version.](./readme_files/wireframe_recipes_desktop_tablet.png "Tablet version of recipes.html") |
+| ![A picture of the index.html mobile version.](./readme_files/wireframe_index_mobile.png "Mobile version of index.html") | ![A picture of the home.html mobile version.](./readme_files/wireframe_home_mobile.png "Mobile version of home.html") | ![A picture of the recipes.html mobile version.](./readme_files/wireframe_recipes_mobile.png "Mobile version of recipes.html") |
 
 
-  ### index.html
+| **my_recipes.html** | **sign_in.html** | **sign_up.html** |
+|---------------------|------------------|------------------|
+| ![A picture of the my_recipes.html desktop version.](./readme_files/wireframe_my_recipes_desktop_tablet.png "Desktop version of my_recipes.html") | ![A picture of the sign_in.html desktop version.](./readme_files/wireframe_sign_in_desktop_tablet.png "Desktop version of sign_in.html") | ![A picture of the sign_up.html desktop version.](./readme_files/wireframe_sign_up_desktop_tablet.png "Desktop version of sign_up.html") |
+| ![A picture of the my_recipes.html tablet version.](./readme_files/wireframe_my_recipes_desktop_tablet.png "Tablet version of my_recipes.html") | ![A picture of the sign_in.html tablet version.](./readme_files/wireframe_sign_in_desktop_tablet.png "Tablet version of sign_in.html") | ![A picture of the sign_up.html tablet version.](./readme_files/wireframe_sign_up_desktop_tablet.png "Tablet version of sign_up.html") |
+| ![A picture of the my_recipes.html mobile version.](./readme_files/wireframe_my_recipes_mobile.png "Mobile version of my_recipes.html") | ![A picture of the sign_in.html mobile version.](./readme_files/wireframe_sign_in_mobile.png "Mobile version of sign_in.html") | ![A picture of the sign_up.html mobile version.](./readme_files/wireframe_sign_up_mobile.png "Mobile version of sign_up.html") |
 
-  ![A picture of the index.html desktop version.](./readme_files/wireframe_index_desktop_tablet.png "Desktop version of index.html")
-  ![A picture of the index.html tablet version.](./readme_files/wireframe_index_desktop_tablet.png "Tablet version of index.html")
-  ![A picture of the index.html mobile version.](./readme_files/wireframe_index_mobile.png "Mobile version of index.html")
-
-  ### home.html
-
-  ![A picture of the home.html desktop version.](./readme_files/wireframe_home_desktop_tablet.png "Desktop version of hotel.html")
-  ![A picture of the home.html tablet version.](./readme_files/wireframe_home_desktop_tablet.png "Tablet version of home.html")
-  ![A picture of the home.html mobile version.](./readme_files/wireframe_home_mobile.png "Mobile version of home.html")
-
-  ### recipes.html
-
-  ![A picture of the recipes.html desktop version.](./readme_files/wireframe_recipes_desktop_tablet.png "Desktop version of recipes.html")
-  ![A picture of the recipes.html tablet version.](./readme_files/wireframe_recipes_desktop_tablet.png "Tablet version of recipes.html")
-  ![A picture of the recipes.html mobile version.](./readme_files/wireframe_recipes_mobile.png "Mobile version of recipes.html")
-
-  ### my_recipes.html
-
-  ![A picture of the my_recipes.html desktop version.](./readme_files/wireframe_my_recipes_desktop_tablet.png "Desktop version of my_recipes.html")
-  ![A picture of the my_recipes.html tablet version.](./readme_files/wireframe_my_recipes_desktop_tablet.png "Tablet version of my_recipes.html")
-  ![A picture of the my_recipes.html mobile version.](./readme_files/wireframe_my_recipes_mobile.png "Mobile version of my_recipes.html")
-
-  ### sign_in.html
-
-  ![A picture of the sign_in.html desktop version.](./readme_files/wireframe_sign_in_desktop_tablet.png "Desktop version of sign_in.html")
-  ![A picture of the sign_in.html tablet version.](./readme_files/wireframe_sign_in_desktop_tablet.png "Tablet version of sign_in.html")
-  ![A picture of the sign_in.html mobile version.](./readme_files/wireframe_sign_in_mobile.png "Mobile version of sign_in.html")
-
-  ### sign_up.html
-
-  ![A picture of the sign_up.html desktop version.](./readme_files/wireframe_sign_up_desktop_tablet.png "Desktop version of sign_up.html")
-  ![A picture of the sign_up.html tablet version.](./readme_files/wireframe_sign_up_desktop_tablet.png "Tablet version of sign_up.html")
-  ![A picture of the sign_up.html mobile version.](./readme_files/wireframe_sign_up_mobile.png "Mobile version of sign_up.html")
-
----
 
 ## Database Schema
 
 This project uses a relational database to manage `Users` and `Recipes`. Below is a detailed description of the data schema for each table and the relationships between them.
 
-### Users Table (`users`)
+### Users Model (`users`)
 
 | **Column Name**   | **Data Type**   | **Constraints**                      | **Description**                                                |
 |-------------------|-----------------|--------------------------------------|----------------------------------------------------------------|
@@ -133,7 +103,7 @@ This project uses a relational database to manage `Users` and `Recipes`. Below i
 
 ---
 
-### Recipes Table (`recipes`)
+### Recipes Model (`recipes`)
 
 | **Column Name**     | **Data Type**     | **Constraints**                     | **Description**                                                |
 |---------------------|-------------------|-------------------------------------|----------------------------------------------------------------|
