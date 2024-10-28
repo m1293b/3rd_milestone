@@ -1321,8 +1321,8 @@ form:has(> .view-all) {
   min-height: 10rem;
 }
 
-.min-h-\[100px\] {
-  min-height: 100px;
+.min-h-\[200px\] {
+  min-height: 200px;
 }
 
 .min-h-\[30dvh\] {
@@ -1341,10 +1341,6 @@ form:has(> .view-all) {
 .min-h-min {
   min-height: -moz-min-content;
   min-height: min-content;
-}
-
-.min-h-\[200px\] {
-  min-height: 200px;
 }
 
 .w-\[100px\] {
@@ -1559,6 +1555,11 @@ form:has(> .view-all) {
 
 .border-transparent {
   border-color: transparent;
+}
+
+.border-b-golden {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(251 191 36 / var(--tw-border-opacity));
 }
 
 .bg-\[\#063b00\] {
@@ -1818,6 +1819,18 @@ form:has(> .view-all) {
 .hover\:text-main-bg:hover {
   --tw-text-opacity: 1;
   color: rgb(51 65 85 / var(--tw-text-opacity));
+}
+
+.hover\:shadow-lg:hover {
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.hover\:shadow-xl:hover {
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 @media (min-width: 720px) {

@@ -11,13 +11,19 @@
     </div>
   </div>
   <div class="grid grid-cols-2 mt-8 justify-center min-w-[90%] laptop:min-w-[80%] desktop:max-w-96 justify-self-center">
-    <div class="max-h-max text-center"><span class="font-serif font-bold text-[150%]">My Profile</span></div>
-    <div class="max-h-max text-center"><span class="font-serif font-bold text-[150%]">My Recipes</span></div>
+    <div class="max-h-max text-center">
+      <span class="font-serif font-bold text-[150%]">My Profile</span>
+      <p><small><i>( Update your details )</i></small></p>
+    </div>
+    <div class="max-h-max text-center">
+      <span class="font-serif font-bold text-[150%]">My Recipes</span>
+      <p><small><i>( Add, edit, delete recipes )</i></small></p>
+    </div>
   </div>
   <div
     class="mx-4 grid grid-cols-2 gap-2 text-center rounded justify-self-center min-w-[90%] laptop:min-w-[80%] desktop:max-w-96 min-h-[30dvh] desktop:min-h-[50dvh]">
-    <a href="{{url_for('my_profile_page')}}" id="profile-home" class="rounded-xl cursor-pointer"></a>
-    <a href="{{url_for('my_recipes_page')}}" id="recipes-home" class="rounded-xl cursor-pointer"></a>
+    <a href="{{url_for('my_profile_page')}}" id="profile-home" class="rounded-xl cursor-pointer hover:shadow-xl hover:border border-golden"></a>
+    <a href="{{url_for('my_recipes_page')}}" id="recipes-home" class="rounded-xl cursor-pointer hover:shadow-xl hover:border border-golden"></a>
   </div>
 </div>
 {% endblock content %}
