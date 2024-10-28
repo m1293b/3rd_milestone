@@ -267,6 +267,12 @@ It proved to be quite challenging to host my website, as I had trouble signing u
 
 ## Manual testing
 
+### Function testing
+
+| Action | Image | Description |
+|--------|-------|-------------|
+|        |       |             |
+
 ### User Stories
 
 #### As a newly found home cook
