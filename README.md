@@ -269,9 +269,18 @@ It proved to be quite challenging to host my website, as I had trouble signing u
 
 ### Function testing
 
-| Action | Image | Description |
-|--------|-------|-------------|
-|        |       |             |
+| **Action** | **Image** |
+|------------|-----------|
+| Adding a new recipe | ![A picture of testing adding a new recipe.](./readme_files/testing_adding_new_recipe.png "Adding new recipe test.") |
+| Confirming deletion of a recipe | ![A picture of testing the need of confirmation before recipe deletion.](./readme_files/testing_confirmation_before_delete.png "Confirming before recipe deletion.") |
+| Recipe deletion | ![A picture of testing recipe deletion.](./readme_files/testing_deletion.png "Testing recipe deletion.") |
+| Updating recipe | ![A picture of testing updating recipe.](./readme_files/testing_updating_recipe.png "Updating recipe.") |
+| Form validation while adding new recipe | ![A picture of testing form validation while adding a new recipe.](./readme_files/testing_form_validation_add_recipe_page.png "Form validation test while trying to add new recipe.") |
+| Form validation(username) on sign up page. | ![A picture of testing form validation(username) on sign up page.](./readme_files/testing_form_validation_sign_up_username.png "Form validation(username) on sign up page.") |
+| Form validation(password) on sign up page. | ![A picture of testing form validation(password) on sign up page.](./readme_files/testing_form_validation_sign_up_password.png "Form validation(password) on sign up page.") |
+| Logging out of the session | ![A picture of testing the logout function..](./readme_files/testing_logout.png "Testing the logout function.") |
+| Testing models.py | ![A picture of testing models.py.](./readme_files/testing_models_py.png "Testing models.py") |
+| Testing routes.py | ![A picture of testing routes.py.](./readme_files/testing_routes_py.png "Adding new recipe test.") |
 
 ### User Stories
 
